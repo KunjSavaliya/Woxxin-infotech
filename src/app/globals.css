@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  /* cursor: none;  */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-gradient {
+    background: linear-gradient(-90deg, #9387ff 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text2-gradient {
+    background: linear-gradient(
+      #b9b8b8 13%,
+      #c9c9c9 35%,
+      #ffffff 60%,
+      rgba(0, 0, 0, 0) 82.5%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ActiveUser-gradient {
+    background: linear-gradient(
+      to bottom,
+      #6c63ff 20%,
+      /* vibrant blue-purple */ #3b35aa 40%,
+      /* darker blue to blend down */ rgba(0, 0, 0, 0.6) 100%
+        /* soft fade to black */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  .text-gradient-mobileApp {
+    background: linear-gradient(to right, #58cfff, #c08bff, #ff7ecf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-mobileGames {
+    background: linear-gradient(to right, #6c63ff, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-mobiletext {
+    background: linear-gradient(
+      to right,
+      #f87bff,
+      #fb92cf,
+      #ffdd9b,
+      #c2f0b1,
+      #2fd8fe
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-mobilePro {
+    background: linear-gradient(to right, #ffd6a8 20%, #6c63ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-lasttext {
+    background: linear-gradient(to right, #000000 20%, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-Mobetext {
+    background: linear-gradient(to right, #14d4ff 20%, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-publish {
+    background: linear-gradient(to right, #ffffff 20%, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-Home {
+    background: linear-gradient(to right, #ffffff 10%, #8477fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-Hero {
+    background: linear-gradient(to right, #000000 20%, #ff6a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-EcoDrive {
+    background: linear-gradient(to right, #F7D5FF 20%, #E1FF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@layer utilities {
+  .animate-animate1 {
+    animation: animate1 2s linear infinite;
+    animation-delay: 0s;
+  }
+  .animate-animate2 {
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.5s;
+  }
+  .animate-animate3 {
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+  }
+  .animate-animate4 {
+    animation: animate4 2s linear infinite;
+    animation-delay: 1.5s;
+  }
+}
+
+
+
+
+
+}
