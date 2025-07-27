@@ -47,7 +47,7 @@ opportunities, or reach out to us directly!"
 
 
                 />
-                <div className='bg-[#110f27] p-10'>
+                <div className='bg-[#110f27] p-2 md:p-10'>
                     <div className="min-h-screen flex items-center justify-center p-4  mt-[-1px]">
                         <form className="w-full p-6 space-y-6 text-white rounded-lg max-w-[92rem]">
                             {/* Company Detail */}
@@ -121,8 +121,8 @@ opportunities, or reach out to us directly!"
                             height={700}
                         />
                     </div>
-                    <div className="absolute top-0 left-0 flex justify-center w-full h-full p-6 items-top">
-                        <div className="w-full max-w-[92rem] px-4">
+                    <div className="absolute top-0 left-0 flex justify-center w-full h-full  items-top ">
+                        <div className="w-full max-w-xl ">
                             <button
                                 type="submit"
                                 className="w-full py-3 text-white border border-[#5961F9] rounded-md hover:bg-[#5961F9]/10 transition duration-300"
