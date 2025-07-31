@@ -29,11 +29,11 @@ function MobilePage() {
               <div className="flex justify-between md:gap-10 lg:gap-5">
                 {/* Left Content */}
                 <div className=" w-auto md:w-[70%] lg:w-1/2">
-                  <img
+                  {/* <img
                     src="/HomePages/Google.png"
                     alt="Google"
                     className="w-32 sm:w-40 md:w-64"
-                  />
+                  /> */}
                   <Text className="text-gradient-mobiletext font-extralight text-6xl sm:text-5xl md:text-[75px]  lg:text-[70px] xl:text-[95px]  text-white text-start mt-6 sm:mt-10">
                     Woxxin Intelligent Mobile Apps
                   </Text>

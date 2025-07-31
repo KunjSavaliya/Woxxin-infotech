@@ -31,13 +31,13 @@ function MainPage() {
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
 
           <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 xl:gap-12 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
-            <div>
+            {/* <div>
               <img
                 src="/HomePages/Google.png"
                 alt="Google"
                 className="w-40 md:w-56"
               />
-            </div>
+            </div> */}
             <Text className="text-gradient-Home text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[100px] font-bold text-white text-start ActiveUser-homePage">
               Accelerate Your App / H5 Game Growth
             </Text>

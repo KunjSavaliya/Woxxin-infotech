@@ -65,7 +65,7 @@ function Publishing() {
           iconSrc="/HomePages/Publishing/PublishingIcon.webp"
           title="Publishing"
           title1="Empower developers to launch impactful mobile
-apps & H5 Games that thrive in the worldwide
+apps & Application that thrive in the worldwide
 marketplace."
           bgImageClassNames="absolute w-full h-[800px] md:h-[1000px] "
           // className=""

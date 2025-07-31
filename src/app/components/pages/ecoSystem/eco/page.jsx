@@ -91,7 +91,7 @@ function Eco() {
 
         <div className="relative bg-[#110f27]">
           <Image
-            src="/HomePages/Eco/EcoDrive.png"
+            src="/HomePages/Eco/EcoDrive.webp"
             alt="EcoDrive Background"
             className="w-full mt-[-4px] h-[400px] xl:h-[650px]"
             width={1920}
@@ -139,7 +139,7 @@ function Eco() {
 
         <div className="relative bg-[#110f27]">
           <Image
-            src="/HomePages/Eco/EcoTouch.png"
+            src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
             className="w-full mt-[-4px] h-[400px] xl:h-[650px]"
             width={1920}
