@@ -36,7 +36,7 @@ function ContactUs() {
                 <MobileAppSection
                     bgImageSrc="/HomePages/Homedesign.png"
                     logoSrc="/HomePages/Google.png"
-                    iconSrc="/HomePages/ContectRocket.png"
+                    iconSrc="/HomePages/ContectRocket.webp"
                     title="Our team is ready for anything"
                     title1="Share your contact details so we can
 discuss about the project and collaboration
@@ -121,7 +121,7 @@ opportunities, or reach out to us directly!"
                             height={700}
                         />
                     </div>
-                    <div className="absolute top-0 left-0 flex justify-center w-full h-full  items-top ">
+                    <div className="absolute top-0 left-0 flex justify-center w-full h-full items-top ">
                         <div className="w-full max-w-xl ">
                             <button
                                 type="submit"

@@ -26,7 +26,7 @@ function H5Game() {
         <MobileAppSection
           bgImageSrc="/HomePages/Homedesign.png"
           logoSrc="/HomePages/Google.png"
-          iconSrc="/HomePages/H5.png"
+          iconSrc="/HomePages/H5.webp"
           title="H5 Games / Quiz"
           title1="For Incremental Revenues and Better Engagement"
           description="Boost your ad revenues with our exciting HTML5 quiz and
@@ -44,7 +44,7 @@ performance."
 
         <div className='sm:px-12 md:px-20 lg:px-20 xl:px-80 xl:pl-80 bg-[#110f27] '>
           <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-            <Text className=" pt-12 sm:pt-24 text-4xl text-white sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl " >
+            <Text className="pt-12 text-4xl text-white  sm:pt-24 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl" >
               Your Future Career Opportunities
             </Text>
           </ScrollAnimation>

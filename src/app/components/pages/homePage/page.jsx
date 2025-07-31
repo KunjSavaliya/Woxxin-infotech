@@ -121,7 +121,7 @@ function MainPage() {
               </Text>
             </div>
             <img
-              src="/HomePages/Appimg.png"
+              src="/HomePages/Appimg.webp"
               alt="Advertisers Icon"
               className="w-auto mx-auto "
             />
@@ -140,7 +140,7 @@ function MainPage() {
       <div className="relative">
         <div>
           <img
-            src="/HomePages/HomeMobile.png"
+            src="/HomePages/HomeMobile.webp"
             alt="Main Background"
             className="w-full mt-[-4px]  h-[500px] sm:h-[600px] md:h-[600px] lg:h-[600px] xl:h-[800px]"
           />
@@ -156,7 +156,7 @@ function MainPage() {
             </ScrollAnimation>
             <div className='flex justify-center p-4'>
               <img
-                src="/HomePages/Mobile.png"
+                src="/HomePages/Mobile.webp"
                 alt="Main Background"
                 className="w-auto mt-[-4px] h-auto  sm:h-[300px] md:h-[300px] lg:h-[600px]"
               />
@@ -176,14 +176,14 @@ function MainPage() {
       <div className='flex flex-wrap justify-center bg-[#110f27] xl:gap-24 lg:px-12 xl:px-48 p-4 sm:p-16 mt-[-2px]'>
         <div>
           <img
-            src="/HomePages/G1.png"
+            src="/HomePages/G1.webp"
             alt="Main Background"
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
           />
         </div>
         <div>
           <img
-            src="/HomePages/G2.png"
+            src="/HomePages/G2.webp"
             alt="Main Background"
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
           />
@@ -204,14 +204,14 @@ function MainPage() {
         </div>
         <div>
           <img
-            src="/HomePages/G5.png"
+            src="/HomePages/G5.webp"
             alt="Main Background"
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
           />
         </div>
         <div>
           <img
-            src="/HomePages/G6.png"
+            src="/HomePages/G6.webp"
             alt="Main Background"
             className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
           />

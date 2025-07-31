@@ -65,7 +65,7 @@ function Eco() {
         <MobileAppSection
           bgImageSrc="/HomePages/Homedesign.png"
           logoSrc="/HomePages/Google.png"
-          iconSrc="/HomePages/Eco/EcoDim.png"
+          iconSrc="/HomePages/Eco/EcoDim.webp"
           title="Innovative Solutions for a Global Audience."
           EcoText1="Explore over 300+ innovative items in 3 popular sectors!"
           EcoText="Innovative solutions paired with efficient strategies for success."
@@ -82,7 +82,7 @@ function Eco() {
           </ScrollAnimation>
           <div className="mt-10 xl:mt-24">
             <img
-              src="/HomePages/Eco/EcoMobileUp.png"
+              src="/HomePages/Eco/EcoMobileUp.webp"
               alt="Main Background"
               className="w-auto mx-auto"
             />

@@ -49,7 +49,7 @@ function MainPage() {
     <>
       <div className="relative bg-[#110f27] w-full h-full overflow-hidden">
         <img
-          src="/HomePages/Career.png"
+          src="/HomePages/Career.webp"
           alt="Main Background"
           className="absolute inset-0 z-0 object-fill w-full h-auto"
         />
@@ -188,7 +188,7 @@ function MainPage() {
           <div className="relative bg-[#0c0b20] rounded-xl w-full max-w-2xl p-6 shadow-lg">
             <button
               onClick={closeForm}
-              className="absolute top-4 right-4 text-white text-2xl hover:text-red-500"
+              className="absolute text-2xl text-white top-4 right-4 hover:text-red-500"
             >
               &times;
             </button>

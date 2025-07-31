@@ -66,7 +66,7 @@ function Investment() {
                 <MobileAppSection
                     bgImageSrc="/HomePages/Homedesign.png"
                     logoSrc="/HomePages/Google.png"
-                    iconSrc="/HomePages/Investment/rocket.png"
+                    iconSrc="/HomePages/Investment/rocket.webp"
                     title="Investment"
                     title1="With a huge resources and the most experience in
 the field of Product Development, Marketing,
@@ -86,7 +86,7 @@ achievements."
                         <div className="flex flex-col justify-between gap-10 px-5 pt-24 md:flex-row sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
                             <div className="flex justify-center w-full md:justify-end md:w-1/2">
                                 <img
-                                    src="/HomePages/Investment/InvestMission.png"
+                                    src="/HomePages/Investment/InvestMission.webp"
                                     alt="Investment"
                                     className="w-3/4 h-auto rounded md:w-auto "
                                 />
@@ -136,7 +136,7 @@ achievements."
                             {/* Image Section */}
                             <div className="flex justify-center md:justify-start">
                                 <img
-                                    src="/HomePages/Investment/InvestTechno.png"
+                                    src="/HomePages/Investment/InvestTechno.webp"
                                     alt="Investment"
                                     className="w-3/4 h-auto rounded md:w-auto "
                                 />
@@ -147,7 +147,7 @@ achievements."
 
                 <div className="relative bg-[#110f27] w-full h-full pb-28">
                     <img
-                        src="/HomePages/Investment/SellApp.png"
+                        src="/HomePages/Investment/SellApp.webp"
                         alt="Main Background"
                         className="absolute w-full h-[800px] md:h-[1000px] "
                     />
@@ -214,7 +214,7 @@ achievements."
                                 >
                                     {loading && (
                                         <svg
-                                            className="animate-spin h-5 w-5 text-white"
+                                            className="w-5 h-5 text-white animate-spin"
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
                                             viewBox="0 0 24 24"

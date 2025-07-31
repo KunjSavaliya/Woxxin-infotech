@@ -65,7 +65,7 @@ function GoogleAds() {
                 <MobileAppSection
                     bgImageSrc="/HomePages/Homedesign.png"
                     logoSrc="/HomePages/Google.png"
-                    iconSrc="/HomePages/GoogleAds/Gads.png"
+                    iconSrc="/HomePages/GoogleAds/Gads.webp"
                     title="Transform Your Google
 Ads Performance"
                     title1="Data-driven strategies that deliver measurable

@@ -60,9 +60,9 @@ function Publishing() {
       <div>
 
         <MobileAppSection
-          bgImageSrc="/HomePages/Publishing/Publishing.png"
+          bgImageSrc="/HomePages/Publishing/Publishing.webp"
           logoSrc="/HomePages/Google.png"
-          iconSrc="/HomePages/Publishing/PublishingIcon.png"
+          iconSrc="/HomePages/Publishing/PublishingIcon.webp"
           title="Publishing"
           title1="Empower developers to launch impactful mobile
 apps & H5 Games that thrive in the worldwide

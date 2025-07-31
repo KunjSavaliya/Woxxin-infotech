@@ -22,7 +22,7 @@ function MobileGame() {
                 <MobileAppSection
                     bgImageSrc="/HomePages/Homedesign.png"
                     logoSrc="/HomePages/Google.png"
-                    iconSrc="/HomePages/MobileGame/MobGame.png"
+                    iconSrc="/HomePages/MobileGame/MobGame.webp"
                     title="Play Connect Innovate"
                     title1="Endless fun awaits you with engaging and easy-to-play games!"
                     description="An enthusiastic and innovative group delivers fresh and thrilling adventures to users every day."
@@ -55,7 +55,7 @@ function MobileGame() {
                         </ScrollAnimation>
                         <div className='flex justify-center'>
                             <img
-                                src="/HomePages/MobileGame/MobImg.png"
+                                src="/HomePages/MobileGame/MobImg.webp"
                                 alt="Main Background"
                                 className="w-auto  h-auto xl:h-[900px]"
                             />
@@ -111,7 +111,7 @@ function MobileGame() {
                         <ScrollAnimation animateIn="animate__animated animate__flipInY">
 
                             <img
-                                src="/HomePages/MobileGame/MobApp1.png"
+                                src="/HomePages/MobileGame/MobApp1.webp"
                                 alt="Line"
                                 className="w-auto"
                             />
@@ -119,7 +119,7 @@ function MobileGame() {
                         <ScrollAnimation animateIn="animate__animated animate__flipInY">
 
                             <img
-                                src="/HomePages/MobileGame/MobApp2.png"
+                                src="/HomePages/MobileGame/MobApp2.webp"
                                 alt="Line"
                                 className="w-auto"
                             />
@@ -127,7 +127,7 @@ function MobileGame() {
                         <ScrollAnimation animateIn="animate__animated animate__flipInY">
 
                             <img
-                                src="/HomePages/MobileGame/MobApp3.png"
+                                src="/HomePages/MobileGame/MobApp3.webp"
                                 alt="Line"
                                 className="w-auto"
                             />
@@ -136,7 +136,7 @@ function MobileGame() {
                     <div className='flex justify-center mb-12'>
                         <ScrollAnimation animateIn="animate__animated animate__flipInY">
                             <img
-                                src="/HomePages/MobileGame/MobApp4.png"
+                                src="/HomePages/MobileGame/MobApp4.webp"
                                 alt="Line"
                                 className="w-auto h-[500px]"
                             />

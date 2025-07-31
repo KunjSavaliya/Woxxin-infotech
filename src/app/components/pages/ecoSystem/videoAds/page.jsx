@@ -20,7 +20,7 @@ function VideoAds() {
         <MobileAppSection
           bgImageSrc="/HomePages/Homedesign.png"
           logoSrc="/HomePages/Google.png"
-          iconSrc="/HomePages/VideoAdsImg.png"
+          iconSrc="/HomePages/VideoAdsImg.webp"
           title="Video Player Ads"
           title1="For Unique Video Content & Ads"
           description="Introducing our cutting-edge AI-powered video player,
@@ -38,7 +38,7 @@ CPMs and fill rates, making it the best choice in the market!"
         <GlobalPartners />
         <div className='sm:px-12 md:px-20 lg:px-20 xl:px-80 xl:pl-80 bg-[#110f27] '>
           <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-            <Text className=" pt-12 sm:pt-24 text-4xl text-white sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl " >
+            <Text className="pt-12 text-4xl text-white  sm:pt-24 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl" >
               Your Future Career Opportunities
             </Text>
           </ScrollAnimation>

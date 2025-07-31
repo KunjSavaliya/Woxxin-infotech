@@ -40,7 +40,7 @@ function MobilePage() {
                 </div>
                 <div className="items-center justify-center hidden md:flex">
                   <img
-                    src="/HomePages/MobileApp/MobileIcon.png"
+                    src="/HomePages/MobileApp/MobileIcon.webp"
                     alt="Mobile Icon"
                     // className="w-32 xl:w-auto"
                     className=" md:w-auto md:h-[250px] lg:w-full lg:h-[300px] xl:h-[400px]"
@@ -77,7 +77,7 @@ function MobilePage() {
         </div>
 
         <img
-          src="/HomePages/MobileApp/MobileMan.png"
+          src="/HomePages/MobileApp/MobileMan.webp"
           alt="Main Background"
           className="w-auto w-full h-auto"
         />
@@ -141,7 +141,7 @@ function MobilePage() {
 
           <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 '>
             <img
-              src="/HomePages/MobileApp/MobileBanner1.png"
+              src="/HomePages/MobileApp/MobileBanner1.webp"
               alt="Main Background"
               className="w-[90%] mx-auto "
             />
@@ -151,7 +151,7 @@ function MobilePage() {
 
           <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 '>
             <img
-              src="/HomePages/MobileApp/MobileBanner3.png"
+              src="/HomePages/MobileApp/MobileBanner3.webp"
               alt="Main Background"
               className="w-[80%] mx-auto "
             />
@@ -166,7 +166,7 @@ function MobilePage() {
 
           <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64'>
             <img
-              src="/HomePages/MobileApp/MobileBanner2.png"
+              src="/HomePages/MobileApp/MobileBanner2.webp"
               alt="Main Background"
               className="w-auto mx-auto "
             />
