@@ -6,9 +6,13 @@ export async function POST(req) {
         const fullName = formData.get('fullName');
         const email = formData.get('email');
         const appUrl = formData.get('appUrl');
-
+        console.log('ENV:', {
+            host: process.env.EMAIL_HOST,
+            port: process.env.EMAIL_PORT,
+            user: process.env.EMAIL_USER,
+            receiver: process.env.EMAIL_RECEIVER,
+        });
         const transporter = nodemailer.createTransport({
-
             host: process.env.EMAIL_HOST,
             port: parseInt(process.env.EMAIL_PORT),
             secure: false,
@@ -16,11 +20,9 @@ export async function POST(req) {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
             },
-        });
-        console.log({
-            host: process.env.EMAIL_HOST,
-            port: process.env.EMAIL_PORT,
-            user: process.env.EMAIL_USER,
+            tls: {
+                rejectUnauthorized: false,
+            },
         });
 
         const mailOptions = {
@@ -33,8 +35,10 @@ export async function POST(req) {
         <p><strong>App URL:</strong> ${appUrl}</p>
       `,
         };
+console.log('About to send email...');
+await transporter.sendMail(mailOptions);
+console.log('Email sent successfully');
 
-        await transporter.sendMail(mailOptions);
         return Response.json({ success: true, message: 'Email sent successfully' });
     } catch (error) {
         console.error('SendMail Error:', error);
