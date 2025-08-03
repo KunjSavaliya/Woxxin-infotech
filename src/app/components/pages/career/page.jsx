@@ -61,7 +61,7 @@ function MainPage() {
             </Text>
             <Text className="text-[18px] md:text-2xl xl:text-4xl text-white font-medium text-start">
               Exciting Prospects: Become part of a thriving industry worth over
-              $120 billion, expanding at a remarkable 20–35 % each year.
+              $10 M+, expanding at a remarkable 20–35 % each year.
             </Text>
             <div className="mb-10 md:mb-40">
               <Button
