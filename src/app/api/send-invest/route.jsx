@@ -8,6 +8,7 @@ export async function POST(req) {
         const appUrl = formData.get('appUrl');
 
         const transporter = nodemailer.createTransport({
+
             host: process.env.EMAIL_HOST,
             port: parseInt(process.env.EMAIL_PORT),
             secure: false,
@@ -15,6 +16,11 @@ export async function POST(req) {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
             },
+        });
+        console.log({
+            host: process.env.EMAIL_HOST,
+            port: process.env.EMAIL_PORT,
+            user: process.env.EMAIL_USER,
         });
 
         const mailOptions = {

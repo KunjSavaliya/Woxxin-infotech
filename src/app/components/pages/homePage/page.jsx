@@ -137,10 +137,10 @@ function MainPage() {
           </div>
         </div>
       </div>
-      <div className="relative">
+      {/* <div className="relative">
         <div>
           <img
-            src="/HomePages/HomeMobile.webp"
+            src="/HomePages/HomeMobile.png"
             alt="Main Background"
             className="w-full mt-[-4px]  h-[500px] sm:h-[600px] md:h-[600px] lg:h-[600px] xl:h-[800px]"
           />
@@ -162,6 +162,22 @@ function MainPage() {
               />
             </div>
           </div>
+        </div>
+      </div> */}
+      <div className='flex flex-col gap-5 bg-[#110f27]' >
+        <ScrollAnimation animateIn="animate__animated animate__zoomIn ">
+          <div className='mt-44'>
+            <Text className="text-center text-5xl mt-[-130px] font-bold leading-relaxed text-white text-[50px]  sm:text-[60px]  md:text-[50px] lg:text-[70px] xl:text-[90px] text-gradient-mobileApp">
+              Mobile Apps
+            </Text>
+          </div>
+        </ScrollAnimation>
+        <div className='flex justify-center p-4'>
+          <img
+            src="/HomePages/Mobile.webp"
+            alt="Main Background"
+            className="w-auto mt-[-4px] h-auto  sm:h-[300px] md:h-[300px] lg:h-[600px]"
+          />
         </div>
       </div>
       <div className='lg:px-28 xl:px-32 bg-[#110f27] mt-[-3px]'>
@@ -252,7 +268,7 @@ function MainPage() {
         </div>
       </div>
       <div className="relative bg-[#110f27] ">
-        <div >
+        <div>
           <img
             src="/HomePages/Home6.png"
             alt="Main Background"
