@@ -180,6 +180,6 @@ const ApplicationForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default ApplicationForm;
