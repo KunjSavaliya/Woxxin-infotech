@@ -25,8 +25,6 @@ export default function RouteLoader({ children }) {
                     <div className="w-4 h-4 bg-[#5961F9] rounded-full animate-bounce [animation-delay:-0.4s]"></div>
                 </div>
 
-
-
             </div>
         );
     }

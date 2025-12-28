@@ -89,7 +89,7 @@ const ApplicationForm = () => {
           <label className="block mb-1 text-sm font-medium">Full Name</label>
           <input
             type="text"
-            name="fullName"
+            name="FullName"
             value={formData.fullName}
             onChange={handleChange}
             className="w-full p-3 rounded-md bg-[#1c1b2f] border border-gray-600 focus:outline-none"
