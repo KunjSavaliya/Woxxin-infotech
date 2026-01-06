@@ -26,7 +26,7 @@ function Page404() {
            <Button
                         text="Go to Home page"
                         iconColor="#6C63FF"
-                        className="w-full  text-xl font-semibold py-3 text-white  rounded-md hover:bg-[#5961F9]/10 transition duration-300 mt-2 sm:mt-5   bg-transparent border border-[#5961F9] bg-[#110F27]"
+                        className="w-full  md:text-xl font-semibold py-3 text-white  rounded-md hover:bg-[#5961F9]/10 transition duration-300 mt-2 sm:mt-5   bg-transparent border border-[#5961F9] bg-[#110F27]"
                       >
         
                       </Button>
