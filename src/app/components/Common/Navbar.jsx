@@ -117,8 +117,8 @@ const Navbar = () => {
           </p>
 
           <p
-            onClick={() => handleNavigation('/components/pages/contactus')}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/contactus') ? 'text-white after:block' : 'after:hidden'}`}
+            onClick={() => handleNavigation('/components/pages/contact-us')}
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/contact-us') ? 'text-white after:block' : 'after:hidden'}`}
           >
             Contact Us
           </p>
@@ -178,7 +178,7 @@ const Navbar = () => {
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/investment')}>Investment</p>
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/publishing')}>Publishing</p>
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/career')}>Career</p>
-            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/contactus')}>Contact Us</p>
+            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/contact-us')}>Contact Us</p>
           </div>
         </div>
       )}
