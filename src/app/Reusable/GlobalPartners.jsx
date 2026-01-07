@@ -17,7 +17,7 @@ const logos = [
 
 export default function GlobalPartners() {
     return (
-        <div className='bg-[#110f27] p-10 md:p-16 '>
+        <div className='bg-[#110f27] p-10 md:p-16  mt-[-3px] '>
             <Text className="text-4xl md:text-2xl lg:text-3xl xl:text-[55px] text-white font-extralight">
                 Global Partners
             </Text>

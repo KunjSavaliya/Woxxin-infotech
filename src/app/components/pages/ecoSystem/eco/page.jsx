@@ -13,11 +13,18 @@ import Image from 'next/image';
 import CustomCursor from '@/app/Reusable/CustomCursor';
 import 'animate.css';
 import Button from '@/app/Reusable/Button';
+import { useRouter } from 'next/navigation';
 
 function Eco() {
+  const router = useRouter();
   useEffect(() => {
     document.title = 'Ecosystem - Woxxin Solution';
   }, []);
+
+   const handleClick = () => {
+    router.push('/components/pages/contactUs');
+  };
+
   const features = [
     {
       icon: <FaChartLine size={40} className="text-blue-500" />,
@@ -141,14 +148,14 @@ function Eco() {
           <Image
             src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
-            className="w-full mt-[-4px] h-[400px] xl:h-[650px]"
+            className="w-full mt-[-4px] h-[50vh] xl:h-[65vh]"
             width={1920}
             height={700}
           />
-          <div className="absolute top-0 left-0 flex items-start justify-center w-full h-full pt-24">
-            <div className="w-full lg:px-72 lg:pl-72">
+          <div className="absolute top-0 left-0 flex items-start justify-center w-full h-full pt-16 md:pt-32">
+            <div className="w-full  xl:pl-40 xl:pr-40">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-                <Text className="p-4 text-4xl font-bold leading-tight text-center text-white sm:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
+                <Text className="p-4 text-[40px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
                   Join Woxxin to open new pathways in the digital future
                 </Text>
               </ScrollAnimation>
@@ -156,7 +163,7 @@ function Eco() {
           </div>
         </div>
 
-        <div className="relative bg-[#110f27]">
+        {/* <div className="relative bg-[#110f27]">
           <Image
             src="/HomePages/Contfooter.png"
             alt="Footer Background"
@@ -171,19 +178,32 @@ function Eco() {
                 iconColor="#6C63FF"
                 className="w-full py-3 text-white  rounded-md hover:bg-[#5961F9]/10 transition duration-300 mt-2 sm:mt-5  bg-transparent border border-[#5961F9] bg-[#110F27]"
               >
-
               </Button>
             </div>
-
-
-
-
-
-
-
-
           </div>
-        </div>
+        </div> */}
+         <div className="relative bg-[#110f27]  mt-[-3px]">
+                <div>
+                  <img
+                    src="/HomePages/Home6.png"
+                    alt="Main Background"
+                     className="w-full h-[25vh] "
+                   
+                  />
+                </div>
+                <div className="absolute top-0 items-center w-full h-full ">
+                  <div className="flex justify-center ">
+                    <Button
+                      text="Apply here"
+                      iconColor="#6C63FF"
+                      className="mt-2 sm:mt-5 text-white bg-transparent border border-[#5961F9] bg-[#110f24] "
+                      onClick={handleClick}
+                    />
+                  </div>
+                </div>
+        
+             
+              </div>
       </div>
     </>
   );
