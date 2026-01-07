@@ -53,7 +53,7 @@ function MainPage() {
 //   };
 
  const handleClickbtn = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
   return (
     <>

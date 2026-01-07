@@ -20,7 +20,7 @@ function Investment() {
         document.title = 'Investment - Woxxin Solution';
     }, []);
      const handleClick = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
     const [loading, setLoading] = useState(false);
 

@@ -25,9 +25,9 @@ function Publishing() {
     document.title = 'Publishing- Woxxin Solution';
   }, []);
    const handleClick = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
-  
+
   const logos = [
     '/HomePages/Gp1.png',
     '/HomePages/Gp2.png',

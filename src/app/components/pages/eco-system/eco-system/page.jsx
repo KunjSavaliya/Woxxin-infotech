@@ -22,7 +22,7 @@ function Eco() {
   }, []);
 
    const handleClick = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
 
   const features = [

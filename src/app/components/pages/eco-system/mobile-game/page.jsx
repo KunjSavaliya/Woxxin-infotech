@@ -19,7 +19,7 @@ function MobileGame() {
         document.title = 'Mobile Game- Woxxin Solution';
     }, []);
      const handleClick = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
     return (
         <>

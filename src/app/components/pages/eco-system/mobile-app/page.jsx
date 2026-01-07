@@ -19,7 +19,7 @@ function MobilePage() {
   }, []);
 
    const handleClick = () => {
-    router.push('/components/pages/contactus');
+    router.push('/components/pages/contact-us');
   };
   return (
 
