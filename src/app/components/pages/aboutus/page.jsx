@@ -16,7 +16,7 @@ function Aboutus() {
   }, []);
 
   const handleClick = () => {
-    router.push('/components/pages/ecosystem/eco');
+    router.push('/components/pages/eco-system/eco-system');
   };
   return (
     <>

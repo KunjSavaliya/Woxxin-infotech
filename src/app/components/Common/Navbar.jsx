@@ -13,11 +13,11 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const dropdownItems = [
-    { title: 'Mobile Apps', navigate: '/components/pages/ecosystem/mobileapp' },
-    { title: 'Mobile Games', navigate: '/components/pages/ecosystem/mobilegame' },
-    { title: 'H5 Games / Quiz', navigate: '/components/pages/ecosystem/h5game' },
-    { title: 'Video Ads', navigate: '/components/pages/ecosystem/videoads' },
-    { title: 'Google Ads', navigate: '/components/pages/ecosystem/googleads' },
+    { title: 'Mobile Apps', navigate: '/components/pages/eco-system/mobile-app' },
+    { title: 'Mobile Games', navigate: '/components/pages/eco-system/mobile-game' },
+    { title: 'H5 Games / Quiz', navigate: '/components/pages/eco-system/h5-game' },
+    { title: 'Video Ads', navigate: '/components/pages/eco-system/video-ads' },
+    { title: 'Google Ads', navigate: '/components/pages/eco-system/google-ads' },
   ];
 
   const handleNavigation = (path) => {
@@ -61,10 +61,11 @@ const Navbar = () => {
           <div className="relative" ref={dropdownRef}>
             <div
               className="relative flex items-center cursor-pointer"
-              onClick={() => handleNavigation('/components/pages/ecosystem/eco')}
+              onClick={() => handleNavigation('/components/pages/eco-system/eco-system')}
+             
             >
               <span
-                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${pathname.startsWith('/components/pages/ecosystem') ? 'text-white after:block' : 'after:hidden'}`}
+                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${pathname.startsWith('/components/eco-system/eco-system') ? 'text-white after:block' : 'after:hidden'}`}
               >
                 Ecosystem
               </span>
@@ -147,7 +148,7 @@ const Navbar = () => {
 
             <div className="mb-2">
               <p className="flex items-center justify-between text-xl font-semibold cursor-pointer"
-                onClick={() => handleNavigation('/components/pages/ecosystem/eco')}
+                onClick={() => handleNavigation('/components/pages/eco-system/eco-system')}
               >
                 Ecosystem
                 <span onClick={(e) => {
