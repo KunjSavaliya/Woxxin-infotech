@@ -27,8 +27,8 @@ function Footer() {
             {/* Head Office */}
             <div className="space-y-4">
               <Text size="text-xl font-semibold text-white text-start" >
-                Head Office
-              </Text>
+Register Office
+  </Text>
 
               <div className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-gray-400 mt-1 shrink-0" />
@@ -42,19 +42,11 @@ function Footer() {
             {/* Branch Office */}
             <div className="space-y-4">
               <Text size="text-xl font-semibold text-white text-start">
-                Branch Office
+                Corporate Office
               </Text>
 
               <ul className="space-y-3 text-[16px] md:text-[18px] leading-relaxed">
-                <li className="flex items-center gap-3">
-                  <FaEnvelope className="text-gray-400 shrink-0" />
-                  <a href="mailto:woxxin@gmail.com">woxxin@gmail.com</a>
-                </li>
-
-                <li className="flex items-center gap-3">
-                  <FaPhoneAlt className="text-gray-400 shrink-0" />
-                  <a href="tel:+919313903561">+91-93139 03561</a>
-                </li>
+            
 
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-gray-400 mt-1 shrink-0" />
@@ -63,6 +55,15 @@ function Footer() {
                     Mota Varachha, Surat,<br />
                     Gujarat, India – 394105
                   </p>
+                </li>
+                    <li className="flex items-center gap-3">
+                  <FaEnvelope className="text-gray-400 shrink-0" />
+                  <a href="mailto:woxxin@gmail.com">woxxin@gmail.com</a>
+                </li>
+
+                <li className="flex items-center gap-3">
+                  <FaPhoneAlt className="text-gray-400 shrink-0" />
+                  <a href="tel:+919313903561">+91-93139 03561</a>
                 </li>
               </ul>
             </div>
@@ -92,13 +93,49 @@ function Footer() {
               <Text size="text-xl font-semibold text-white text-start">
                 Company
               </Text>
+<ul className="space-y-2 text-[16px] md:text-[18px]">
+  <li className="group">
+    <Link
+      href="/components/pages/aboutus"
+      className="relative inline-block pb-1"
+    >
+      About Us
+      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#5961F9] transition-all duration-300 group-hover:w-full" />
+    </Link>
+  </li>
 
-              <ul className="space-y-2 text-[16px] md:text-[18px]">
-                <li><Link href="/about-us">About Us</Link></li>
-                <li><Link href="/career">Career</Link></li>
-                <li><Link href="/contact-us">Contact Us</Link></li>
-                <li><Link href="/investment">Investment</Link></li>
-              </ul>
+  <li className="group">
+    <Link
+      href="/components/pages/career"
+      className="relative inline-block pb-1"
+    >
+      Career
+      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#5961F9] transition-all duration-300 group-hover:w-full" />
+    </Link>
+  </li>
+
+  <li className="group">
+    <Link
+      href="/components/pages/contactus"
+      className="relative inline-block pb-1"
+    >
+      Contact Us
+      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#5961F9] transition-all duration-300 group-hover:w-full" />
+    </Link>
+  </li>
+
+  <li className="group">
+    <Link
+      href="/components/pages/investment"
+      className="relative inline-block pb-1"
+    >
+      Investment
+      <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-[#5961F9] transition-all duration-300 group-hover:w-full" />
+    </Link>
+  </li>
+</ul>
+
+
             </div>
 
           </div>
