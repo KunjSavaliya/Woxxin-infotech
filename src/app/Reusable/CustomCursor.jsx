@@ -5,12 +5,15 @@ export default function CustomCursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [scale, setScale] = useState(1);
   const [visible, setVisible] = useState(true);
+    const [enabled, setEnabled] = useState(true);
+  const [ringPos, setRingPos] = useState({ x: 0, y: 0 });
+
 
   useEffect(() => {
     const onMouseMove = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
       const tag = e.target.tagName?.toLowerCase();
-      const isInteractive = ['a', 'button', 'input', 'textarea', 'select'].includes(tag)
+      const isInteractive = ['a', 'button', 'input', 'span', 'textarea', 'select'].includes(tag)
         || e.target.getAttribute('role')?.match(/button|link/)
         || e.target.classList.contains('cursor-pointer');
 
@@ -27,21 +30,50 @@ export default function CustomCursor() {
     return () => document.removeEventListener('mousemove', onMouseMove);
   }, []);
 
+   useEffect(() => {
+    if (!enabled) return;
+
+    let raf;
+    const follow = () => {
+      setRingPos((prev) => ({
+        x: prev.x + (pos.x - prev.x) * 0.15,
+        y: prev.y + (pos.y - prev.y) * 0.15,
+      }));
+      raf = requestAnimationFrame(follow);
+    };
+    follow();
+    return () => cancelAnimationFrame(raf);
+  }, [pos, enabled]);
+
+  if (!enabled || !visible) return null;
   return (
-    <div
-      className={`fixed top-0 left-0 z-50 pointer-events-none transition-opacity duration-150 ease-out ${visible ? 'opacity-100' : 'opacity-0'}`}
-      style={{
-        transform: `translate3d(${pos.x - 16}px, ${pos.y - 16}px, 0)`,
-      }}
-    >
+   
+     <>
+      {/* Inner Dot */}
       <div
-        className="rounded-full bg-[#7A7AFB]/20 backdrop-blur-sm"
+        className="fixed top-0 left-0 z-[9999] pointer-events-none"
         style={{
-          width: `${32 * scale}px`,
-          height: `${32 * scale}px`,
-          transition: 'width 0.1s ease, height 0.1s ease, opacity 0.1s ease',
+          transform: `translate3d(${pos.x - 4}px, ${pos.y - 4}px, 0)`,
         }}
-      />
-    </div>
+      >
+        <div className="w-2 h-2 rounded-full bg-[#5961F9]" />
+      </div>
+
+      {/* Outer Ring */}
+      <div
+        className="fixed top-0 left-0 z-[9998] pointer-events-none"
+        style={{
+          transform: `translate3d(${ringPos.x - 20}px, ${ringPos.y - 20}px, 0)`,
+        }}
+      >
+        <div
+          className="w-10 h-10 rounded-full border border-[#5961F9]/50"
+          style={{
+            backdropFilter: 'blur(6px)',
+            background: 'rgba(89,97,249,0.08)',
+          }}
+        />
+      </div>
+    </>
   );
 }
