@@ -11,14 +11,28 @@ import Text from '@/app/Reusable/Text';
 import HeroSection from '@/app/Reusable/HeroSection';
 import MobileAppSection from '@/app/Reusable/MobileSection';
 import GlobalPartners from '@/app/Reusable/GlobalPartners';
+import { useRouter } from 'next/navigation';
 
 
 
 function H5Game() {
+          const router = useRouter();
+
   useEffect(() => {
     document.title = 'H5 Games / Quiz - Woxxin Solution';
   }, []);
 
+ const handleQuiz = () => {
+  window.open('https://quizwinz.com/', '_blank', 'noopener,noreferrer');
+};
+
+const handleGame = () => {
+  window.open('https://robuxgames.com/', '_blank', 'noopener,noreferrer');
+};
+
+const handleClick = () => {
+    router.push('/components/pages/career');
+  };
   return (
     <>
       <div>
@@ -38,6 +52,10 @@ performance."
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
           descriptionClassName='text-2xl mt-10'
           buttonText='Quiz Platform'
+                                     onButtonClick={() => handleQuiz()}
+                                     onButtonClick2={() => handleGame()}
+
+
           buttonText1='Game Platform'
         />
         <GlobalPartners />
@@ -49,25 +67,29 @@ performance."
             </Text>
           </ScrollAnimation>
         </div>
-        <div className="relative bg-[#110f27] ">
-          <div >
-            <img
-              src="/HomePages/H5Game.png"
-              alt="Main Background"
-              className="h-[100px] w-full sm:w-full sm:h-full"
-            />
-          </div>
-          <div className="absolute top-0 items-center w-full h-full ">
-            <div className="flex justify-center mt-8 sm:mt-12 lg:mt-10 xl:mt-36">
-              <Button
-                text="Discover Now"
-                iconColor="#6C63FF"
-                className="mt-2 sm:mt-5 text-white bg-transparent border border-[#5961F9] bg-[#110f24] "
-              //  onClick={handleClick}
-              />
+          <div className="relative bg-[#110f27]  mt-[-3px]">
+              <div>
+                <img
+                  src="/HomePages/Home6.png"
+                  alt="Main Background"
+                   className="w-full h-[30vh] "
+                 
+                />
+              </div>
+              <div className="absolute top-0 items-center w-full h-full ">
+                <div className="flex justify-center mt-20 sm:mt-12 lg:mt-10 xl:mt-28">
+                  <Button
+                    text="Discover Now"
+                    iconColor="#6C63FF"
+                    className="mt-2 sm:mt-5 text-white font-bold border border-[#5961F9]  "
+             onButtonClick={handleClick}
+      
+                  />
+                </div>
+              </div>
+      
+           
             </div>
-          </div>
-        </div>
       </div>
     </>
   );

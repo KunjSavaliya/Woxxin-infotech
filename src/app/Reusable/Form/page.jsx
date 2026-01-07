@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
-const ApplicationForm = () => {
+const ApplicationForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -54,15 +54,13 @@ const ApplicationForm = () => {
           title: 'Submitted!',
           text: 'Your application has been submitted successfully.',
           showConfirmButton: false,
-          timer: 2500
+          timer: 1500
         });
-        setFormData({
-          fullName: '',
-          email: '',
-          position: '',
-          resume: null,
-          additionalInfo: '',
-        });
+        setTimeout(() => {
+          
+          onClose();
+        }, 1500);
+     
       } else {
         Swal.fire({
           icon: 'error',

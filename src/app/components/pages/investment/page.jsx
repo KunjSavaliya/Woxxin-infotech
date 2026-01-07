@@ -11,10 +11,17 @@ import Text from '@/app/Reusable/Text';
 import HeroSection from '@/app/Reusable/HeroSection';
 import MobileAppSection from '@/app/Reusable/MobileSection';
 import Swal from 'sweetalert2';
+import { useRouter } from 'next/navigation';
+
 function Investment() {
+        const router = useRouter();
+
     useEffect(() => {
         document.title = 'Investment - Woxxin Solution';
     }, []);
+     const handleClick = () => {
+    router.push('/components/pages/contactus');
+  };
     const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
@@ -249,11 +256,11 @@ achievements."
                 <HeroSection
                     imageSrc="/HomePages/Investment/footerbtn.png"
                     text="Apply for Investment"
-                    textClassName='lg:text-[69px] xl:text-[70px] 2xl:text-[90px] text-gradient-Home'
+                  textClassName='text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
                     text1='We would like to get to know you and your start-up'
                     buttonText="Let`s Talk"
                     text1ClassName='text-white text-xl sm:text-2xl mt-5 p-2'
-                    onButtonClick={() => alert("Button clicked!")}
+                    onButtonClick={() => handleClick()}
                 />
             </div >
         </>

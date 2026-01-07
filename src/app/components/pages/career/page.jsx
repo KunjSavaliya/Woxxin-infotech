@@ -19,8 +19,11 @@ import { MdCampaign } from 'react-icons/md';
 import Image from 'next/image';
 import Form from '../../../Reusable/Form/page';
 // import Form from '../Career/Form'
+import { useRouter } from 'next/navigation';
 
 function MainPage() {
+      const router = useRouter();
+
   useEffect(() => {
     document.title = 'Career - Woxxin Solution';
   }, []);
@@ -45,6 +48,13 @@ function MainPage() {
   const handleClick = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
+//  const handleClickjob = () => {
+//     router.push('/components/pages/contactus');
+//   };
+
+ const handleClickbtn = () => {
+    router.push('/components/pages/contactus');
+  };
   return (
     <>
       <div className="relative bg-[#110f27] w-full h-full overflow-hidden">
@@ -55,7 +65,7 @@ function MainPage() {
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
-            <img src="/HomePages/Google.png" alt="Google" className="w-40 md:w-56" />
+            {/* <img src="/HomePages/Google.png" alt="Google" className="w-40 md:w-56" /> */}
             <Text className="text-gradient-mobiletext text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[100px] font-bold text-white text-start">
               Career
             </Text>
@@ -68,6 +78,7 @@ function MainPage() {
                 text="See jobs & apply"
                 iconColor="#6C63FF"
                 className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
+                //  onButtonClick={() => handleClick()}
               />
             </div>
           </div>
@@ -176,6 +187,7 @@ function MainPage() {
                 text="Contact us"
                 iconColor="#6C63FF"
                 className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
+                 onButtonClick={() => handleClickbtn()}
               />
             </div>
           </div>
@@ -192,7 +204,7 @@ function MainPage() {
             >
               &times;
             </button>
-            <Form />
+          <Form onClose={closeForm} />
           </div>
         </div>
       )}

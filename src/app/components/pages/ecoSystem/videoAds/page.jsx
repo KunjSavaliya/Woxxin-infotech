@@ -9,10 +9,25 @@ import 'swiper/css/autoplay'; // autoplay module
 import GlobalPartners from '@/app/Reusable/GlobalPartners';
 import Button from '@/app/Reusable/Button';
 import Text from '@/app/Reusable/Text';
+import { useRouter } from 'next/navigation';
+
 function VideoAds() {
+          const router = useRouter();
+
   useEffect(() => {
     document.title = 'Video Ads - Woxxin Solution';
   }, []);
+
+   const handleQuiz = () => {
+  window.open('https://quizwinz.com/', '_blank', 'noopener,noreferrer');
+};
+
+
+
+const handleClick = () => {
+    router.push('/components/pages/career');
+  };
+
   return (
     <>
       <div>
@@ -33,6 +48,8 @@ CPMs and fill rates, making it the best choice in the market!"
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
           descriptionClassName='text-2xl '
           buttonText='Quiz Demo'
+                                               onButtonClick={() => handleQuiz()}
+
         />
 
         <GlobalPartners />
@@ -43,25 +60,29 @@ CPMs and fill rates, making it the best choice in the market!"
             </Text>
           </ScrollAnimation>
         </div>
-        <div className="relative bg-[#110f27] ">
-          <div >
-            <img
-              src="/HomePages/VideoADS.png"
-              alt="Main Background"
-              className="h-[100px] w-full sm:w-full sm:h-full"
-            />
-          </div>
-          <div className="absolute top-0 items-center w-full h-full ">
-            <div className="flex justify-center mt-8 sm:mt-12 lg:mt-10 xl:mt-36">
-              <Button
-                text="Discover Now"
-                iconColor="#6C63FF"
-                className="mt-2 sm:mt-5 text-white bg-transparent border border-[#5961F9] bg-[#110f24] "
-              //  onClick={handleClick}
-              />
+        <div className="relative bg-[#110f27]  mt-[-3px]">
+              <div>
+                <img
+                  src="/HomePages/Home6.png"
+                  alt="Main Background"
+                   className="w-full h-[30vh] "
+                 
+                />
+              </div>
+              <div className="absolute top-0 items-center w-full h-full ">
+                <div className="flex justify-center mt-20 sm:mt-12 lg:mt-10 xl:mt-28">
+                  <Button
+                    text="Discover Now"
+                    iconColor="#6C63FF"
+                    className="mt-2 sm:mt-5 text-white font-bold border border-[#5961F9]  "
+             onButtonClick={handleClick}
+      
+                  />
+                </div>
+              </div>
+      
+           
             </div>
-          </div>
-        </div>
 
 
       </div>

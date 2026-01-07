@@ -16,10 +16,18 @@ import 'swiper/css/autoplay'; // autoplay module
 import { Autoplay } from 'swiper/modules';
 import GlobalPartners from '@/app/Reusable/GlobalPartners';
 import CountUp from 'react-countup';
+import { useRouter } from 'next/navigation';
+
 function Publishing() {
+      const router = useRouter();
+
   useEffect(() => {
     document.title = 'Publishing- Woxxin Solution';
   }, []);
+   const handleClick = () => {
+    router.push('/components/pages/contactus');
+  };
+  
   const logos = [
     '/HomePages/Gp1.png',
     '/HomePages/Gp2.png',
@@ -151,9 +159,9 @@ and foster lasting growth.'
           imageSrc="/HomePages/Publishing/PublisingFtr.png"
           text="Contact us for
 collaboration today"
-          textClassName='lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
+           textClassName='text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
           buttonText="Apply here"
-          onButtonClick={() => alert("Button clicked!")}
+            onButtonClick={() => handleClick()}
         />
 
       </div>

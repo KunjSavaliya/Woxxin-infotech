@@ -4,6 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { motion } from "framer-motion";
 // import Text from '../../../Reusable/Text';
 import Button from '@/app/Reusable/Button';
+import { useRouter } from 'next/navigation';
 
 import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -12,9 +13,14 @@ import HeroSection from '@/app/Reusable/HeroSection';
 import MobileAppSection from '@/app/Reusable/MobileSection';
 import Image from 'next/image';
 function MobileGame() {
+        const router = useRouter();
+
     useEffect(() => {
         document.title = 'Mobile Game- Woxxin Solution';
     }, []);
+     const handleClick = () => {
+    router.push('/components/pages/contactus');
+  };
     return (
         <>
             <div>
@@ -33,7 +39,7 @@ function MobileGame() {
                 <div className=" bg-[#110f27]  ">
                     <div className="relative bg-[#110f27]">
                         <Image
-                            src="/HomePages/MobileGame/MobGameMan.png"
+                            src="/HomePages/MobileGame/MobGameMan.webp"
                             alt="EcoDrive Background"
                             className="w-full mt-[-4px] h-[400px] xl:h-[650px]"
                             width={1920}
@@ -148,9 +154,10 @@ function MobileGame() {
                 <HeroSection
                     imageSrc="/HomePages/MobileGame/MobileGF.png"
                     text="Creating World-Class Products Together"
-                    textClassName='lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
+                    textClassName= ' text-[45px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
                     buttonText="Apply here"
-                    onButtonClick={() => alert("Button clicked!")}
+                           onButtonClick={() => handleClick()}
+
                 />
 
             </div>

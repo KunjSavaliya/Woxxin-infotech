@@ -9,14 +9,14 @@ import { useRouter } from 'next/navigation';
 import GlobalPartners from '@/app/Reusable/GlobalPartners';
 
 
-function MainPage() {
+function Aboutus() {
   const router = useRouter();
   useEffect(() => {
     document.title = 'About Us - Woxxin Solution';
   }, []);
 
   const handleClick = () => {
-    router.push('/components/pages/ecoSystem/eco');
+    router.push('/components/pages/ecosystem/eco');
   };
   return (
     <>
@@ -122,12 +122,12 @@ function MainPage() {
             <img
               src="/HomePages/Appimg.webp"
               alt="Advertisers Icon"
-              className="w-auto mx-auto "
+              className="w-auto mx-auto p-5"
             />
           </div>
           <div className='mt-5'>
             <Text size="text-center text-[75px] md:text-[65px] lg:text-[[65px] xl:text-[115px] font-bold text-white ActiveUser-gradient text-center text2-gradient">
-              <CountUp end={50} duration={6} suffix="M+" />
+              <CountUp end={50} duration={10} suffix="M+" />
 
             </Text>
             <Text size='text-xl md:text-2xl lg:text-3xl xl:text-[26px] text-white mt-5 '>
@@ -136,33 +136,7 @@ function MainPage() {
           </div>
         </div>
       </div>
-      {/* <div className="relative">
-        <div>
-          <img
-            src="/HomePages/HomeMobile.png"
-            alt="Main Background"
-            className="w-full mt-[-4px]  h-[500px] sm:h-[600px] md:h-[600px] lg:h-[600px] xl:h-[800px]"
-          />
-        </div>
-        <div className="absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full text-left ">
-          <div className='flex flex-col gap-5' >
-            <ScrollAnimation animateIn="animate__animated animate__zoomIn ">
-              <div className='mt-44'>
-                <Text className="text-center text-5xl mt-[-130px] font-bold leading-relaxed text-white text-[50px]  sm:text-[60px]  md:text-[50px] lg:text-[70px] xl:text-[90px] text-gradient-mobileApp">
-                  Mobile Apps
-                </Text>
-              </div>
-            </ScrollAnimation>
-            <div className='flex justify-center p-4'>
-              <img
-                src="/HomePages/Mobile.webp"
-                alt="Main Background"
-                className="w-auto mt-[-4px] h-auto  sm:h-[300px] md:h-[300px] lg:h-[600px]"
-              />
-            </div>
-          </div>
-        </div>
-      </div> */}
+      
       <div className='flex flex-col gap-5 bg-[#110f27]  mt-[-3px]' >
         <ScrollAnimation animateIn="animate__animated animate__zoomIn ">
           <div className='mt-44'>
@@ -280,8 +254,9 @@ function MainPage() {
             <Button
               text="Discover Ecosystem"
               iconColor="#6C63FF"
-              className="mt-2 sm:mt-5 text-white bg-transparent border border-[#5961F9] bg-[#110f24] "
-              onClick={handleClick}
+              className="mt-2 sm:mt-5 text-white font-bold border border-[#5961F9]  "
+       onButtonClick={handleClick}
+
             />
           </div>
         </div>
@@ -293,4 +268,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default Aboutus;

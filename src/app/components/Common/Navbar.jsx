@@ -13,11 +13,11 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const dropdownItems = [
-    { title: 'Mobile Apps', navigate: '/components/pages/ecoSystem/mobileApp' },
-    { title: 'Mobile Games', navigate: '/components/pages/ecoSystem/mobileGame' },
-    { title: 'H5 Games / Quiz', navigate: '/components/pages/ecoSystem/h5Game' },
-    { title: 'Video Ads', navigate: '/components/pages/ecoSystem/videoAds' },
-    { title: 'Google Ads', navigate: '/components/pages/ecoSystem/googleAds' },
+    { title: 'Mobile Apps', navigate: '/components/pages/ecosystem/mobileapp' },
+    { title: 'Mobile Games', navigate: '/components/pages/ecosystem/mobilegame' },
+    { title: 'H5 Games / Quiz', navigate: '/components/pages/ecosystem/h5game' },
+    { title: 'Video Ads', navigate: '/components/pages/ecosystem/videoads' },
+    { title: 'Google Ads', navigate: '/components/pages/ecosystem/googleads' },
   ];
 
   const handleNavigation = (path) => {
@@ -52,8 +52,8 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className="items-center hidden gap-8 text-xl font-light lg:flex">
           <p
-            onClick={() => handleNavigation('/components/pages/homePage')}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/homePage') ? 'text-white after:block' : 'after:hidden'}`}
+            onClick={() => handleNavigation('/components/pages/aboutus')}
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/aboutus') ? 'text-white after:block' : 'after:hidden'}`}
           >
             About Us
           </p>
@@ -61,10 +61,10 @@ const Navbar = () => {
           <div className="relative" ref={dropdownRef}>
             <div
               className="relative flex items-center cursor-pointer"
-              onClick={() => handleNavigation('/components/pages/ecoSystem/eco')}
+              onClick={() => handleNavigation('/components/pages/ecosystem/eco')}
             >
               <span
-                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${pathname.startsWith('/components/pages/ecoSystem') ? 'text-white after:block' : 'after:hidden'}`}
+                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${pathname.startsWith('/components/pages/ecosystem') ? 'text-white after:block' : 'after:hidden'}`}
               >
                 Ecosystem
               </span>
@@ -116,8 +116,8 @@ const Navbar = () => {
           </p>
 
           <p
-            onClick={() => handleNavigation('/components/pages/contactUs')}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/contactUs') ? 'text-white after:block' : 'after:hidden'}`}
+            onClick={() => handleNavigation('/components/pages/contactus')}
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive('/components/pages/contactus') ? 'text-white after:block' : 'after:hidden'}`}
           >
             Contact Us
           </p>
@@ -143,11 +143,11 @@ const Navbar = () => {
           </div>
 
           <div className="flex flex-col gap-5">
-            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/homePage')}>About us</p>
+            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/aboutus')}>About us</p>
 
             <div className="mb-2">
               <p className="flex items-center justify-between text-xl font-semibold cursor-pointer"
-                onClick={() => handleNavigation('/components/pages/ecoSystem/eco')}
+                onClick={() => handleNavigation('/components/pages/ecosystem/eco')}
               >
                 Ecosystem
                 <span onClick={(e) => {
@@ -155,7 +155,7 @@ const Navbar = () => {
                   setMobileDropdownOpen(!mobileDropdownOpen);
                 }}>
                   {mobileDropdownOpen ? <HiChevronUp /> : <HiChevronDown />}
-                </span>
+                </span> 
               </p>
 
               {mobileDropdownOpen && (
@@ -177,7 +177,7 @@ const Navbar = () => {
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/investment')}>Investment</p>
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/publishing')}>Publishing</p>
             <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/career')}>Career</p>
-            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/contactUs')}>Contact Us</p>
+            <p className="text-xl font-semibold cursor-pointer" onClick={() => handleNavigation('/components/pages/contactus')}>Contact Us</p>
           </div>
         </div>
       )}

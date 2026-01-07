@@ -5,21 +5,37 @@ export default function CustomCursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const [scale, setScale] = useState(1);
   const [visible, setVisible] = useState(true);
-    const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(true);
   const [ringPos, setRingPos] = useState({ x: 0, y: 0 });
 
+  // ✅ Disable cursor on mobile & tablet
+  useEffect(() => {
+    const checkDevice = () => {
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      const isSmallScreen = window.innerWidth <= 1024; // tablet & mobile
+      setEnabled(!(isTouch || isSmallScreen));
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
 
   useEffect(() => {
+    if (!enabled) return;
+
     const onMouseMove = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
+
       const tag = e.target.tagName?.toLowerCase();
-      const isInteractive = ['a', 'button', 'input', 'span', 'textarea', 'select'].includes(tag)
-        || e.target.getAttribute('role')?.match(/button|link/)
-        || e.target.classList.contains('cursor-pointer');
+      const isInteractive =
+        ['a', 'button', 'input', 'span', 'textarea', 'select'].includes(tag) ||
+        e.target.getAttribute('role')?.match(/button|link/) ||
+        e.target.classList.contains('cursor-pointer');
 
       if (isInteractive) {
-        setScale(2);                // Expand cursor
-        setVisible(false);          // Hide after expand
+        setScale(2);
+        setVisible(false);
       } else {
         setScale(1);
         setVisible(true);
@@ -28,9 +44,9 @@ export default function CustomCursor() {
 
     document.addEventListener('mousemove', onMouseMove);
     return () => document.removeEventListener('mousemove', onMouseMove);
-  }, []);
+  }, [enabled]);
 
-   useEffect(() => {
+  useEffect(() => {
     if (!enabled) return;
 
     let raf;
@@ -46,14 +62,14 @@ export default function CustomCursor() {
   }, [pos, enabled]);
 
   if (!enabled || !visible) return null;
+
   return (
-   
-     <>
+    <>
       {/* Inner Dot */}
       <div
         className="fixed top-0 left-0 z-[9999] pointer-events-none"
         style={{
-          transform: `translate3d(${pos.x - 4}px, ${pos.y - 4}px, 0)`,
+          transform: `translate3d(${pos.x - 4}px, ${pos.y - 4}px, 0) scale(${scale})`,
         }}
       >
         <div className="w-2 h-2 rounded-full bg-[#5961F9]" />

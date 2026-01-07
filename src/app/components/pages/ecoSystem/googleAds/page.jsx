@@ -10,8 +10,17 @@ import 'swiper/css'; // core styles
 import 'swiper/css/autoplay';
 import CountUp from 'react-countup';
 import { FaChartLine, FaChartBar, FaDollarSign, FaUsers } from 'react-icons/fa';
+import { useRouter } from 'next/navigation';
 
 function GoogleAds() {
+              const router = useRouter();
+
+
+const handleClick = () => {
+    router.push('/components/pages/contactus');
+  };
+   
+
     const services = [
         {
             icon: <FaChartLine className="text-[#7A7AFB] text-3xl" />,
@@ -74,6 +83,7 @@ results for your business growth"
 
                     iconClassNames=" md:w-auto lg:w-full h-[400px]"
                     buttonText='Contact Us'
+                  onButtonClick={() => handleClick()}
                 />
                 <div className='bg-[#110f27] pt-28  sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64'>
 
@@ -167,12 +177,14 @@ results for your business growth"
                 <HeroSection
                     imageSrc="/HomePages/GoogleAds/HandStack.png"
                     text="Ready to Improve Your Google Ads Performance?"
-                    textClassName='text-[28px]  2xl:text-[50px] mt-[-50px] sm:mt-0 text-gradient-Home'
+                     textClassName='text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
                     text1='Let`s discuss how we can help you achieve your marketing goals'
                     buttonText="Let`s Talk"
                     text1ClassName='text-white text-lg  sm:text-2xl mt-5'
-                    onButtonClick={() => alert("Button clicked!")}
+                      onButtonClick={() => handleClick()}
                 />
+
+             
             </div>
         </>
     );

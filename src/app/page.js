@@ -1,10 +1,10 @@
-import MainPage from "./components/pages/homePage/page";
+import Aboutus from "./components/pages/aboutus/page";
 
 
 export default function Home() {
   return (
     <>
-      <MainPage />
+      <Aboutus />
     </>
   );
 }

@@ -2,59 +2,59 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaArrowRight } from 'react-icons/fa';
 
-const hoverStyles = {
-  scale: 'hover:scale-105 hover:shadow-lg transition-transform duration-200',
-  underline: 'border-b-2 border-transparent hover:border-white transition-all duration-300',
-  glow: 'hover:shadow-[0_0_15px_3px_rgba(255,255,255,0.4)] transition duration-300',
-  gradient: 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 transition-all duration-300',
-  slide: 'relative overflow-hidden bg-blue-600 hover:bg-blue-700 transition-all duration-300',
-  fade: 'bg-indigo-600 hover:bg-indigo-500 transition-opacity duration-300',
-  rotate: 'hover:rotate-1 hover:scale-105 transition-transform duration-300',
-  zoomIcon: '', // Special handling in JSX
-  borderGlow: 'border border-transparent hover:border-white hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] transition-all duration-300',
-  glass: 'bg-white/10 backdrop-blur-md hover:bg-white/20 transition duration-300',
-
-  // NEW: Animated border on hover
-  borderAnimate: `
-    relative border border-white text-white
-    before:content-[''] before:absolute before:inset-0 before:rounded before:border-2
-    before:border-[#00FFA3] before:scale-0 before:transition-transform
-    before:duration-300 group-hover:before:scale-100 group-hover:before:opacity-100
-    overflow-hidden z-10
-  `,
-};
-
 const Button = ({
   text,
   onClick,
+  onButtonClick,
   className = '',
   type = 'button',
   disabled = false,
-  iconColor = 'white',
-  variant = 'scale',
 }) => {
   return (
     <button
       type={type}
-      onClick={onClick}
+      onClick={onButtonClick || onClick}
       disabled={disabled}
-      className={`group inline-flex items-center justify-center gap-2 px-4 py-2 rounded text-white ${hoverStyles[variant]} ${className}`}
+      className={`
+        group relative overflow-hidden
+        inline-flex items-center gap-3
+        px-5 py-3
+        rounded-xl
+        border border-[#5961F9]
+        text-white
+        font-light
+        shadow-md
+        disabled:opacity-50 disabled:cursor-not-allowed
+        ${className}
+      `}
     >
-      {typeof text === 'string' ? (
-        <>
-          {text}
-          <FaArrowRight
-            className={`transform transition-all duration-300 ${
-              variant === 'zoomIcon'
-                ? 'group-hover:scale-125 group-hover:translate-x-2'
-                : 'group-hover:translate-x-2 group-hover:rotate-12'
-            }`}
-            color={iconColor}
-          />
-        </>
-      ) : (
-        text
-      )}
+      {/* BG exit */}
+      <span className="absolute inset-0 bg-transparent transition-transform duration-500 group-hover:-translate-x-full" />
+
+      {/* BG enter */}
+      <span className="absolute inset-0 bg-[#5961F9] translate-x-full transition-transform duration-500 group-hover:translate-x-0" />
+
+      {/* Text */}
+      <span className="relative z-10">{text}</span>
+
+      {/* Arrow container */}
+      <span className="relative z-10 w-8 h-8 rounded-full bg-white/20 flex items-center justify-center overflow-hidden">
+        <FaArrowRight className="text-white transition-transform duration-300 group-hover:translate-x-[150%]" />
+      </span>
+
+      {/* Arrow re-enter */}
+      <FaArrowRight
+        className="
+          absolute right-[22px]
+          text-white
+          opacity-0
+          -translate-x-[150%]
+          transition-all duration-500
+          group-hover:opacity-100
+          group-hover:translate-x-0
+          z-10
+        "
+      />
     </button>
   );
 };
@@ -62,23 +62,10 @@ const Button = ({
 Button.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   onClick: PropTypes.func,
+  onButtonClick: PropTypes.func,
   className: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,
-  iconColor: PropTypes.string,
-  variant: PropTypes.oneOf([
-    'scale',
-    'underline',
-    'glow',
-    'gradient',
-    'slide',
-    'fade',
-    'rotate',
-    'zoomIcon',
-    'borderGlow',
-    'glass',
-    'borderAnimate',
-  ]),
 };
 
 export default Button;

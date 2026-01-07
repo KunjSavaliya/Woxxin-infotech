@@ -23,9 +23,11 @@ const MobileAppSection = ({
   MTitle = '',
   EcoText1 = '',
   EcoText = '',
-  buttonClick
+  onButtonClick ='',
+  onButtonClick2 =''
+
 }) => {
-  const router = useRouter();
+
   return (
     <div className="relative bg-[#110f27] w-full h-full">
       <img
@@ -84,7 +86,7 @@ const MobileAppSection = ({
                   <Button
                     text={buttonText}
                     iconColor="#6C63FF"
-                    onClick={() => router.push('/')}
+                  onClick={onButtonClick} 
                     className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
                   />
                 )}
@@ -94,6 +96,7 @@ const MobileAppSection = ({
                     text={buttonText1}
                     iconColor="#6C63FF"
                     className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
+                    onClick={onButtonClick2} 
                   />
                 )}
               </div>

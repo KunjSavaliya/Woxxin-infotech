@@ -9,11 +9,18 @@ import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import Text from '@/app/Reusable/Text';
 import HeroSection from '@/app/Reusable/HeroSection';
+import { useRouter } from 'next/navigation';
+
 function MobilePage() {
-  const [active, setActive] = useState('Advertisers');
+    const router = useRouter();
+
   useEffect(() => {
     document.title = 'Mobile App - Woxxin Solution';
   }, []);
+
+   const handleClick = () => {
+    router.push('/components/pages/contactus');
+  };
   return (
 
     <>
@@ -179,9 +186,9 @@ function MobilePage() {
       <HeroSection
         imageSrc="/HomePages/MobileApp/MobileHand2.png"
         text="Let’s Build Awesome Products Together!"
-        textClassName='lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
+        textClassName='text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
         buttonText="Apply here"
-        onButtonClick={() => alert("Button clicked!")}
+        onButtonClick={() => handleClick()}
       />
     </>
   );

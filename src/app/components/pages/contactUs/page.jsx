@@ -3,13 +3,20 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Swal from 'sweetalert2';
 import MobileAppSection from '@/app/Reusable/MobileSection';
+import { useRouter } from 'next/navigation';
+
 
 function ContactUs() {
     const [loading, setLoading] = useState(false);
+          const router = useRouter();
 
     useEffect(() => {
         document.title = 'Contact Us - Woxxin Solution';
     }, []);
+
+// const handleClick = () => {
+//     router.push('/components/pages/career');
+//   };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -74,7 +81,7 @@ function ContactUs() {
             />
 
             <div className="bg-[#110f27] p-2 md:p-10">
-                <div className="min-h-screen flex items-center justify-center p-4 mt-[-1px]">
+                <div className=" flex items-center justify-center p-4 mt-[-1px]">
                     <form
                         id="contact-form"
                         onSubmit={handleSubmit}
@@ -137,13 +144,13 @@ function ContactUs() {
                     width={1920}
                     height={700}
                 />
-                <div className="absolute top-0 left-0 flex justify-center w-full h-full items-top">
+                <div className="absolute top-0 left-0 flex justify-center w-full h-full items-top p-8">
                     <div className="w-full max-w-xl">
                         <button
                             type="submit"
                             form="contact-form"
                             disabled={loading}
-                            className="w-full py-3 text-white border border-[#5961F9] rounded-md hover:bg-[#5961F9]/10 transition duration-300"
+                            className="w-full py-3 text-white border border-[#5961F9] rounded-md hover:bg-[#5961F9]/10 transition duration-300 p-10"
                         >
                             {loading ? (
                                 <svg
