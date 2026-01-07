@@ -276,7 +276,7 @@ function MainPage() {
           />
         </div>
         <div className="absolute top-0 items-center w-full h-full ">
-          <div className="flex justify-center mt-0 sm:mt-12 lg:mt-10 xl:mt-28">
+          <div className="flex justify-center mt-20 sm:mt-12 lg:mt-10 xl:mt-28">
             <Button
               text="Discover Ecosystem"
               iconColor="#6C63FF"
