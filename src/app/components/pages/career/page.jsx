@@ -65,8 +65,8 @@ function MainPage() {
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
-            {/* <img src="/HomePages/Google.png" alt="Google" className="w-40 md:w-56" /> */}
-            <Text className="text-gradient-mobiletext text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[100px] font-bold text-white text-start">
+            <img src="/HomePages/Google.png" alt="Google" className="w-40 md:w-56" />
+            <Text className="text-gradient-mobiletext text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start">
               Career
             </Text>
             <Text className="text-[18px] md:text-2xl xl:text-4xl text-white font-medium text-start">

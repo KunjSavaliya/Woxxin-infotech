@@ -36,17 +36,17 @@ const MobileAppSection = ({
         className={`absolute w-full ${bgImageClassNames}`}
       />
       <div className="relative z-10 flex flex-col items-start w-full h-full text-left">
-        <div className="w-[100%] flex flex-col p-6 mt-32 text-white sm:mt-40 gap-[100px] lg:gap-[150px] sm:px-20 md:px-16 lg:px-20 lg:pl-20 xl:px-32 xl:pl-32 ">
+        <div className="w-[100%] flex flex-col p-6 mt-32 text-white sm:mt-40 gap-[80px] lg:gap-[150px] sm:px-20 md:px-16 lg:px-20 lg:pl-20 xl:px-32 xl:pl-32 ">
           {/* Top Section */}
           <div>
             <div className="flex items-center justify-between md:gap-10 lg:gap-32">
               <div className=" w-auto md:w-[70%] lg:w-2/3">
-                {/* <img
+                <img
                   src={logoSrc}
                   alt="Logo"
                   className="w-32 sm:w-40 md:w-64"
-                /> */}
-                <Text className="text-start leading-[1.2] md:leading-[1.2] text-gradient-mobiletext font-extralight text-5xl sm:text-7xl md:text-[65px] lg:text-[70px]  xl:text-[85px] mt-6 sm:mt-16">
+                />
+                <Text className="text-start leading-[1.2] md:leading-[1.2] text-gradient-mobiletext font-extralight text-5xl sm:text-7xl md:text-[65px] lg:text-[70px]  xl:text-[80px] mt-6 sm:mt-16">
                   {title}
                 </Text>
                 <Text className=" font-extralight text-2xl sm:text-3xl md:text-3xl lg:text-[30px] xl:text-3xl text-white text-start mt-10 sm:mt-16 ">
