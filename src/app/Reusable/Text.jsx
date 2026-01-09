@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Text = ({
   children,
-  size = '',
-  color = 'text-[#373435]',
-  className = '',
-  font = ''
+  size = "",
+  color = "text-[#373435]",
+  className = "",
+  font = "",
 }) => {
   return (
     <p className={`${className} ${size} ${color} text-center ${font} `}>

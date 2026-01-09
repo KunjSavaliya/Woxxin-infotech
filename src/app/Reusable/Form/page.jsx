@@ -1,22 +1,22 @@
-'use client';
-import React, { useState } from 'react';
-import Swal from 'sweetalert2';
+"use client";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
 const ApplicationForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    position: '',
+    fullName: "",
+    email: "",
+    position: "",
     resume: null,
-    additionalInfo: '',
+    additionalInfo: "",
   });
 
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false); // NEW
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === 'resume') {
+    if (name === "resume") {
       setFormData({ ...formData, resume: files[0] });
     } else {
       setFormData({ ...formData, [name]: value });
@@ -27,22 +27,26 @@ const ApplicationForm = ({ onClose }) => {
     e.preventDefault();
     setLoading(true); // Start loading
 
-    if (!formData.fullName || !formData.email || !formData.position || !formData.resume) {
-
+    if (
+      !formData.fullName ||
+      !formData.email ||
+      !formData.position ||
+      !formData.resume
+    ) {
       setLoading(false);
       return;
     }
 
     const body = new FormData();
-    body.append('fullName', formData.fullName);
-    body.append('email', formData.email);
-    body.append('position', formData.position);
-    body.append('resume', formData.resume);
-    body.append('additionalInfo', formData.additionalInfo);
+    body.append("fullName", formData.fullName);
+    body.append("email", formData.email);
+    body.append("position", formData.position);
+    body.append("resume", formData.resume);
+    body.append("additionalInfo", formData.additionalInfo);
 
     try {
-      const res = await fetch('/api/send-email', {
-        method: 'POST',
+      const res = await fetch("/api/send-email", {
+        method: "POST",
         body,
       });
 
@@ -51,28 +55,26 @@ const ApplicationForm = ({ onClose }) => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: 'Submitted!',
-          text: 'Your application has been submitted successfully.',
+          title: "Submitted!",
+          text: "Your application has been submitted successfully.",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
         setTimeout(() => {
-          
           onClose();
         }, 1500);
-     
       } else {
         Swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: result.message || 'Something went wrong!',
+          icon: "error",
+          title: "Oops...",
+          text: result.message || "Something went wrong!",
         });
       }
     } catch (err) {
       Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Something went wrong while submitting the form.',
+        icon: "error",
+        title: "Error",
+        text: "Something went wrong while submitting the form.",
       });
     } finally {
       setLoading(false); // Stop loading
@@ -81,9 +83,11 @@ const ApplicationForm = ({ onClose }) => {
 
   return (
     <div className="max-w-xl mx-auto rounded-2xl text-white mt-10 px-4 sm:px-6 md:px-8 lg:px-0">
-
-
-      <form onSubmit={handleSubmit} encType="multipart/form-data" className="mt-5 space-y-4">
+      <form
+        onSubmit={handleSubmit}
+        encType="multipart/form-data"
+        className="mt-5 space-y-4"
+      >
         <div>
           <label className="block mb-1 text-sm font-medium">Full Name</label>
           <input
@@ -97,7 +101,9 @@ const ApplicationForm = ({ onClose }) => {
         </div>
 
         <div>
-          <label className="block mb-1 text-sm font-medium">Email address</label>
+          <label className="block mb-1 text-sm font-medium">
+            Email address
+          </label>
           <input
             type="email"
             name="email"
@@ -109,7 +115,9 @@ const ApplicationForm = ({ onClose }) => {
         </div>
 
         <div>
-          <label className="block mb-1 text-sm font-medium">Position of interest</label>
+          <label className="block mb-1 text-sm font-medium">
+            Position of interest
+          </label>
           <select
             name="position"
             value={formData.position}
@@ -125,7 +133,9 @@ const ApplicationForm = ({ onClose }) => {
         </div>
 
         <div>
-          <label className="block mb-1 text-sm font-medium">Resume (PDF or DOC)</label>
+          <label className="block mb-1 text-sm font-medium">
+            Resume (PDF or DOC)
+          </label>
           <input
             type="file"
             name="resume"
@@ -136,7 +146,9 @@ const ApplicationForm = ({ onClose }) => {
         </div>
 
         <div>
-          <label className="block mb-1 text-sm font-medium">Additional Information</label>
+          <label className="block mb-1 text-sm font-medium">
+            Additional Information
+          </label>
           <textarea
             name="additionalInfo"
             value={formData.additionalInfo}
@@ -174,11 +186,11 @@ const ApplicationForm = ({ onClose }) => {
               />
             </svg>
           )}
-          {loading ? 'Submitting...' : 'Submit Application'}
+          {loading ? "Submitting..." : "Submit Application"}
         </button>
       </form>
     </div>
   );
-}
+};
 
 export default ApplicationForm;

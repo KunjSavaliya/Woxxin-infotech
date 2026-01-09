@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { FaArrowRight } from 'react-icons/fa';
+import React from "react";
+import PropTypes from "prop-types";
+import { FaArrowRight } from "react-icons/fa";
 
 const Button = ({
   text,
   onClick,
   onButtonClick,
-  className = '',
-  type = 'button',
+  className = "",
+  type = "button",
   disabled = false,
 }) => {
   return (

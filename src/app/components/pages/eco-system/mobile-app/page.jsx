@@ -1,28 +1,23 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
-import { motion } from "framer-motion";
-// import Text from '../../../Reusable/Text';
-import Button from '@/app/Reusable/Button';
+"use client";
+import React, { useEffect } from "react";
 
-import 'animate.css';
-import ScrollAnimation from 'react-animate-on-scroll';
-import Text from '@/app/Reusable/Text';
-import HeroSection from '@/app/Reusable/HeroSection';
-import { useRouter } from 'next/navigation';
+import "animate.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import Text from "@/app/Reusable/Text";
+import HeroSection from "@/app/Reusable/HeroSection";
+import { useRouter } from "next/navigation";
 
 function MobilePage() {
-    const router = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
-    document.title = 'Mobile App - Woxxin Solution';
+    document.title = "Mobile App - Woxxin Solution";
   }, []);
 
-   const handleClick = () => {
-    router.push('/components/pages/contact-us');
+  const handleClick = () => {
+    router.push("/components/pages/contact-us");
   };
   return (
-
     <>
       <div className="relative bg-[#110f27] w-full h-full  shadow-[0_8px_10px_-6px_rgba(255,255,255,0.3)]">
         <img
@@ -55,9 +50,9 @@ function MobilePage() {
                 </div>
               </div>
               <Text className="text-[18px] md:text-2xl xl:text-4xl text-white font-medium text-start mt-16 ">
-                Creating a comprehensive mobile platform that enhances
-                daily living and fosters sustainable growth for millions
-                of users around the globe.
+                Creating a comprehensive mobile platform that enhances daily
+                living and fosters sustainable growth for millions of users
+                around the globe.
               </Text>
             </div>
             <ScrollAnimation animateIn="animate__animated animate__zoomIn">
@@ -70,16 +65,15 @@ function MobilePage() {
                   alt="Line"
                   className="w-full mt-6"
                 />
-                <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16">
-                </div>
+                <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div>
                 <div className="flex flex-col text-white gap-7 ">
                   <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
-                    Create innovative mobile applications that enhance the daily experiences of millions of people around the globe.
+                    Create innovative mobile applications that enhance the daily
+                    experiences of millions of people around the globe.
                   </Text>
                 </div>
               </div>
             </ScrollAnimation>
-
           </div>
         </div>
 
@@ -94,15 +88,10 @@ function MobilePage() {
             <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
               VISION
             </Text>
-            <img
-              src="/HomePages/line.png"
-              alt="Line"
-              className="w-full mt-6"
-            />
+            <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
             <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
-              A vibrant network of cutting-edge apps designed
-              to enhance the lives of millions, paving the
-              way for a brighter future.
+              A vibrant network of cutting-edge apps designed to enhance the
+              lives of millions, paving the way for a brighter future.
             </Text>
           </div>
         </ScrollAnimation>
@@ -136,17 +125,15 @@ function MobilePage() {
             ))}
           </div>
         </ScrollAnimation>
-
       </div>
-      <div className=' bg-[#F4F4F4]'>
+      <div className=" bg-[#F4F4F4]">
         <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-          <Text className="p-10 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro" >
+          <Text className="p-10 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Featured Products
           </Text>
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-
-          <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 '>
+          <div className="p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 ">
             <img
               src="/HomePages/MobileApp/MobileBanner1.webp"
               alt="Main Background"
@@ -155,8 +142,7 @@ function MobilePage() {
           </div>
         </ScrollAnimation>
         <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-
-          <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 '>
+          <div className="p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 ">
             <img
               src="/HomePages/MobileApp/MobileBanner3.webp"
               alt="Main Background"
@@ -166,12 +152,11 @@ function MobilePage() {
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-
-          <Text className="mt-16 mb-12 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro" >
+          <Text className="mt-16 mb-12 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Explore our products
           </Text>
 
-          <div className='p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64'>
+          <div className="p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
             <img
               src="/HomePages/MobileApp/MobileBanner2.webp"
               alt="Main Background"
@@ -179,14 +164,12 @@ function MobilePage() {
             />
           </div>
         </ScrollAnimation>
-
       </div>
-
 
       <HeroSection
         imageSrc="/HomePages/MobileApp/MobileHand2.png"
         text="Let’s Build Awesome Products Together!"
-        textClassName='text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home'
+        textClassName="text-[37px] lg:text-[69px] xl:text-[70px] 2xl:text-[90px]  text-gradient-Home"
         buttonText="Apply here"
         onButtonClick={() => handleClick()}
       />

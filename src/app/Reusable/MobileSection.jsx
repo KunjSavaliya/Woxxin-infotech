@@ -1,8 +1,6 @@
 // components/MobileAppSection.js
-import Image from 'next/image';
-import Text from './Text';
-import Button from './Button';
-import { useRouter } from 'next/navigation';
+import Text from "./Text";
+import Button from "./Button";
 
 const MobileAppSection = ({
   bgImageSrc,
@@ -10,24 +8,19 @@ const MobileAppSection = ({
   logoSrc,
   title,
   title1,
-  title2,
   description,
-  mission,
-  img1,
-  iconClassNames = '',
-  bgImageClassNames = '',
-  descriptionClassName = '',
-  buttonText = '',
-  buttonText1 = '',
-  Mtext = '',
-  MTitle = '',
-  EcoText1 = '',
-  EcoText = '',
-  onButtonClick ='',
-  onButtonClick2 =''
-
+  iconClassNames = "",
+  bgImageClassNames = "",
+  descriptionClassName = "",
+  buttonText = "",
+  buttonText1 = "",
+  Mtext = "",
+  MTitle = "",
+  EcoText1 = "",
+  EcoText = "",
+  onButtonClick = "",
+  onButtonClick2 = "",
 }) => {
-
   return (
     <div className="relative bg-[#110f27] w-full h-full">
       <img
@@ -60,21 +53,26 @@ const MobileAppSection = ({
                   className={iconClassNames}
                 />
               </div>
-
             </div>
-            <Text className={` text-white font-medium text-start  ${descriptionClassName} `}>
+            <Text
+              className={` text-white font-medium text-start  ${descriptionClassName} `}
+            >
               {description}
             </Text>
             {(EcoText || EcoText1) && (
               <div className="mt-5 mb-12 xl:pl-56 xl:pr-56">
                 {EcoText && (
-                  <Text className={` text-white text-3xl xl:text-[40px] text-center  `}>
+                  <Text
+                    className={` text-white text-3xl xl:text-[40px] text-center  `}
+                  >
                     {EcoText}
                   </Text>
                 )}
 
                 {EcoText1 && (
-                  <Text className={` text-white text-3xl xl:text-[40px] text-center mt-12 `}>
+                  <Text
+                    className={` text-white text-3xl xl:text-[40px] text-center mt-12 `}
+                  >
                     {EcoText1}
                   </Text>
                 )}
@@ -86,7 +84,7 @@ const MobileAppSection = ({
                   <Button
                     text={buttonText}
                     iconColor="#6C63FF"
-                  onClick={onButtonClick} 
+                    onClick={onButtonClick}
                     className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
                   />
                 )}
@@ -96,14 +94,13 @@ const MobileAppSection = ({
                     text={buttonText1}
                     iconColor="#6C63FF"
                     className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
-                    onClick={onButtonClick2} 
+                    onClick={onButtonClick2}
                   />
                 )}
               </div>
             )}
-
           </div>
-          {(MTitle) && (
+          {MTitle && (
             <div>
               <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
                 {MTitle}
@@ -113,8 +110,7 @@ const MobileAppSection = ({
                 alt="Line"
                 className="w-full mt-6 rounded-[30%]"
               />
-              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16">
-              </div>
+              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div>
               <div className="flex flex-col text-white gap-7 ">
                 <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                   {Mtext}

@@ -1,9 +1,9 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import Text from '../../../Reusable/Text';
-import Button from '@/app/Reusable/Button';
-import 'animate.css';
-import ScrollAnimation from 'react-animate-on-scroll';
+"use client";
+import React, { useEffect, useState } from "react";
+import Text from "../../../Reusable/Text";
+import Button from "@/app/Reusable/Button";
+import "animate.css";
+import ScrollAnimation from "react-animate-on-scroll";
 import {
   FaAndroid,
   FaPaintBrush,
@@ -14,46 +14,63 @@ import {
   FaBookOpen,
   FaExchangeAlt,
   FaHandshake,
-} from 'react-icons/fa';
-import { MdCampaign } from 'react-icons/md';
-import Image from 'next/image';
-import Form from '../../../Reusable/Form/page';
-// import Form from '../Career/Form'
-import { useRouter } from 'next/navigation';
+} from "react-icons/fa";
+import { MdCampaign } from "react-icons/md";
+import Image from "next/image";
+import Form from "../../../Reusable/Form/page";
+import { useRouter } from "next/navigation";
 
 function MainPage() {
-      const router = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
-    document.title = 'Career - Woxxin Solution';
+    document.title = "Career - Woxxin Solution";
   }, []);
   const [showForm, setShowForm] = useState(false);
 
   const jobs = [
-    { title: 'Android Developer', experience: '2 to 5 year', Icon: FaAndroid },
-    { title: 'Digital Marketing', experience: '1 to 3 year', Icon: MdCampaign },
-    { title: 'Graphics Designer', experience: '2 to 5 year', Icon: FaPaintBrush },
-    { title: 'Unity Developer', experience: '1 to 3 year', Icon: FaGamepad },
+    { title: "Android Developer", experience: "2 to 5 year", Icon: FaAndroid },
+    { title: "Digital Marketing", experience: "1 to 3 year", Icon: MdCampaign },
+    {
+      title: "Graphics Designer",
+      experience: "2 to 5 year",
+      Icon: FaPaintBrush,
+    },
+    { title: "Unity Developer", experience: "1 to 3 year", Icon: FaGamepad },
   ];
 
   const traits = [
-    { text: 'You have a sense of purpose, a personal goal in life and always strive to reach that goal', Icon: FaBullseye },
-    { text: 'You always look for a way to improve and advance yourself forward', Icon: FaChartLine },
-    { text: 'You are responsible, always take the initiative, and enthusiastic about your jobs.', Icon: FaUserCheck },
-    { text: 'You are a fast learner who can research, persevere and communicate well', Icon: FaBookOpen },
-    { text: 'Ready to change your habit, mindset, and adapt fast to new things', Icon: FaExchangeAlt },
-    { text: 'If the company acknowledges your value, gives you a chance and is fair with you', Icon: FaHandshake },
+    {
+      text: "You have a sense of purpose, a personal goal in life and always strive to reach that goal",
+      Icon: FaBullseye,
+    },
+    {
+      text: "You always look for a way to improve and advance yourself forward",
+      Icon: FaChartLine,
+    },
+    {
+      text: "You are responsible, always take the initiative, and enthusiastic about your jobs.",
+      Icon: FaUserCheck,
+    },
+    {
+      text: "You are a fast learner who can research, persevere and communicate well",
+      Icon: FaBookOpen,
+    },
+    {
+      text: "Ready to change your habit, mindset, and adapt fast to new things",
+      Icon: FaExchangeAlt,
+    },
+    {
+      text: "If the company acknowledges your value, gives you a chance and is fair with you",
+      Icon: FaHandshake,
+    },
   ];
 
   const handleClick = () => setShowForm(true);
   const closeForm = () => setShowForm(false);
 
-//  const handleClickjob = () => {
-//     router.push('/components/pages/contactus');
-//   };
-
- const handleClickbtn = () => {
-    router.push('/components/pages/contact-us');
+  const handleClickbtn = () => {
+    router.push("/components/pages/contact-us");
   };
   return (
     <>
@@ -65,7 +82,11 @@ function MainPage() {
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
-            <img src="/HomePages/Google.png" alt="Google" className="w-40 md:w-56" />
+            <img
+              src="/HomePages/Google.png"
+              alt="Google"
+              className="w-40 md:w-56"
+            />
             <Text className="text-gradient-mobiletext text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start">
               Career
             </Text>
@@ -103,7 +124,9 @@ function MainPage() {
                 <div className="text-3xl mb-4 text-[#5961F9]">
                   <Icon size={36} />
                 </div>
-                <h3 className="mb-4 text-lg text-white font-extralight">{title}</h3>
+                <h3 className="mb-4 text-lg text-white font-extralight">
+                  {title}
+                </h3>
                 <p className="mb-6 text-sm text-gray-400">
                   Experience:
                   <br />
@@ -133,14 +156,17 @@ function MainPage() {
 
           <div className="flex flex-col gap-10 mt-16">
             {[
-              'Inspiring culture where ambition & creativity lead the way',
-              'Chance to collaborate with exceptional individuals on globally recognised projects',
-              'Continuous learning: we sponsor tuition fees up to 100 %',
-              'Regular salary reviews & performance bonuses twice annually',
-              'Monthly lunch allowance with generous benefits',
-              'Regular team fun days, company events & holiday celebrations',
+              "Inspiring culture where ambition & creativity lead the way",
+              "Chance to collaborate with exceptional individuals on globally recognised projects",
+              "Continuous learning: we sponsor tuition fees up to 100 %",
+              "Regular salary reviews & performance bonuses twice annually",
+              "Monthly lunch allowance with generous benefits",
+              "Regular team fun days, company events & holiday celebrations",
             ].map((line, i) => (
-              <ScrollAnimation key={i} animateIn="animate__animated animate__fadeInUp">
+              <ScrollAnimation
+                key={i}
+                animateIn="animate__animated animate__fadeInUp"
+              >
                 <Text className="text-xl text-white text-start font-extralight md:text-4xl lg:text-4xl xl:text-3xl">
                   {line}
                 </Text>
@@ -163,7 +189,9 @@ function MainPage() {
                     className="bg-[#141229] border border-[#2a2742] p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl"
                   >
                     <Icon size={28} className="mb-4 text-orange-400" />
-                    <p className="text-sm leading-relaxed text-gray-300 text-start">{text}</p>
+                    <p className="text-sm leading-relaxed text-gray-300 text-start">
+                      {text}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -187,7 +215,7 @@ function MainPage() {
                 text="Contact us"
                 iconColor="#6C63FF"
                 className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
-                 onButtonClick={() => handleClickbtn()}
+                onButtonClick={() => handleClickbtn()}
               />
             </div>
           </div>
@@ -204,7 +232,7 @@ function MainPage() {
             >
               &times;
             </button>
-          <Form onClose={closeForm} />
+            <Form onClose={closeForm} />
           </div>
         </div>
       )}

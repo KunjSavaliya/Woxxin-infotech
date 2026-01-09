@@ -2,7 +2,6 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req) {
     try {
-        console.log("📥 API Route Triggered");
         const formData = await req.formData();
 
         const data = {
@@ -19,7 +18,6 @@ export async function POST(req) {
             policyAgreed: formData.get('policyAgreed') === 'on',
         };
 
-        console.log("✅ Parsed Data:", data);
 
         if (!data.email || !data.firstName || !data.lastName) {
             return new Response(JSON.stringify({
@@ -58,11 +56,9 @@ export async function POST(req) {
             `,
         });
 
-        console.log("✅ Email sent:", info.messageId);
         return new Response(JSON.stringify({ success: true }), { status: 200 });
 
     } catch (error) {
-        console.error("❌ Email sending error:", error);
         return new Response(JSON.stringify({ success: false, message: error.message }), { status: 500 });
     }
 }
