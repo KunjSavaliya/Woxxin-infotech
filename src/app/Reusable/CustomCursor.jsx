@@ -1,5 +1,5 @@
-"use client";
-import React, { useEffect, useState } from "react";
+'use client';
+import React, { useEffect, useState } from 'react';
 
 export default function CustomCursor() {
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -11,14 +11,14 @@ export default function CustomCursor() {
   // ✅ Disable cursor on mobile & tablet
   useEffect(() => {
     const checkDevice = () => {
-      const isTouch = window.matchMedia("(pointer: coarse)").matches;
-      const isSmallScreen = window.innerWidth <= 1024;
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      const isSmallScreen = window.innerWidth <= 1024; // tablet & mobile
       setEnabled(!(isTouch || isSmallScreen));
     };
 
     checkDevice();
-    window.addEventListener("resize", checkDevice);
-    return () => window.removeEventListener("resize", checkDevice);
+    window.addEventListener('resize', checkDevice);
+    return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
   useEffect(() => {
@@ -26,22 +26,18 @@ export default function CustomCursor() {
 
     const onMouseMove = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
-
-      const target = e.target;
-      const tag = target.tagName?.toLowerCase();
-
-      const isReactIcon =
+const target = e.target;
+      const tag = e.target.tagName?.toLowerCase();
+       const isReactIcon =
         tag === "svg" ||
         tag === "path" ||
         target.closest("svg") ||
-        target.classList?.toString().includes("react-icons") ||
         target.getAttribute("data-icon");
-
       const isInteractive =
-        ["a", "button", "input", "textarea", "select"].includes(tag) ||
-        target.getAttribute("role")?.match(/button|link/) ||
-        target.classList.contains("cursor-pointer") ||
-        isReactIcon;
+        ['a', 'button', 'input', 'span', 'textarea', 'select'].includes(tag) ||
+        e.target.getAttribute('role')?.match(/button|link/) ||
+        e.target.classList.contains('cursor-pointer') ||
+          isReactIcon;
 
       if (isInteractive) {
         setScale(2);
@@ -52,8 +48,8 @@ export default function CustomCursor() {
       }
     };
 
-    document.addEventListener("mousemove", onMouseMove);
-    return () => document.removeEventListener("mousemove", onMouseMove);
+    document.addEventListener('mousemove', onMouseMove);
+    return () => document.removeEventListener('mousemove', onMouseMove);
   }, [enabled]);
 
   useEffect(() => {
@@ -79,9 +75,7 @@ export default function CustomCursor() {
       <div
         className="fixed top-0 left-0 z-[9999] pointer-events-none"
         style={{
-          transform: `translate3d(${pos.x - 4}px, ${
-            pos.y - 4
-          }px, 0) scale(${scale})`,
+          transform: `translate3d(${pos.x - 4}px, ${pos.y - 4}px, 0) scale(${scale})`,
         }}
       >
         <div className="w-2 h-2 rounded-full bg-[#5961F9]" />
@@ -97,11 +91,13 @@ export default function CustomCursor() {
         <div
           className="w-10 h-10 rounded-full border border-[#5961F9]/50"
           style={{
-            backdropFilter: "blur(6px)",
-            background: "rgba(89,97,249,0.08)",
+            backdropFilter: 'blur(6px)',
+            background: 'rgba(89,97,249,0.08)',
           }}
         />
       </div>
     </>
   );
 }
+
+
