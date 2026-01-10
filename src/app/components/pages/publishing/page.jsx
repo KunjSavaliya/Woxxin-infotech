@@ -79,7 +79,7 @@ marketplace."
 and foster lasting growth."
         />
 
-        <div className="bg-[#110f27] flex flex-col p-6  text-white sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64 pt-10">
+        <div className="bg-[#110f27] flex flex-col p-6  text-white sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64 pt-16">
                           <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
               VISION
