@@ -61,7 +61,8 @@ function MobileGame() {
           </div>
 
           <div className=" sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
-              <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
+                            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+
                 MISSION
               </Text>
                 <img
@@ -79,9 +80,9 @@ function MobileGame() {
                 </Text>
               </div>
             </ScrollAnimation>
-              <Text className="text-xl md:text-2xl  lg:text-3xl xl:text-[35px] text-white mt-12 ">
-                VISION
-              </Text>
+              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+                                VISION
+                              </Text>
                <img
                   src="/HomePages/line.png"
                   alt="Line"

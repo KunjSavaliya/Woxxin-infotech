@@ -42,7 +42,7 @@ of expertise in ad tech, our V-Stream player delivers outstanding
 CPMs and fill rates, making it the best choice in the market!"
           bgImageClassNames="h-full"
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
-          descriptionClassName="text-2xl "
+          descriptionClassName="text-2xl font-extralight "
           buttonText="Quiz Demo"
           onButtonClick={() => handleQuiz()}
         />

@@ -58,7 +58,7 @@ const MobileAppSection = ({
               </div>
             </div>
             <Text
-              className={` text-white font-medium text-start  ${descriptionClassName} `}
+              className={` text-white mt-5 text-start  ${descriptionClassName} `}
             >
               {description}
             </Text>
@@ -105,7 +105,8 @@ const MobileAppSection = ({
           </div>
           {MTitle && (
             <div>
-              <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
+                            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+
                 {MTitle}
               </Text>
                 <img
@@ -113,9 +114,9 @@ const MobileAppSection = ({
                   alt="Line"
                   className="mx-auto mt-5 mb-5 "
                 />
-              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div>
+              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] "></div>
 
-              <div className="flex flex-col text-white gap-7 ">
+              <div className="flex flex-col text-white  ">
                         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                   {Mtext}

@@ -108,7 +108,8 @@ function MainPage() {
 
       <div className="bg-[#110f27] pt-0 md:pt-28 sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-          <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
+          <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
+
             TOP POSITIONS
           </Text>
            <img

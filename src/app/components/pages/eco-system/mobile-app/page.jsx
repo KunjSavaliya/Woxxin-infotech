@@ -58,7 +58,7 @@ function MobilePage() {
               </Text>
             </div>
               <div>
-                <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
+                <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
                   MISSION
                 </Text>
                 
@@ -88,11 +88,15 @@ function MobilePage() {
           className="w-auto w-full h-auto"
         />
 
-          <div className="flex flex-col p-6 mt-10 text-white gap-7 sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
-            <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
-              VISION
-            </Text>
-            <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
+          <div className="flex flex-col p-6 mt-5 text-white  sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
+             <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+                  VISION
+                </Text>
+              <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
 
             <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
@@ -101,7 +105,8 @@ function MobilePage() {
             </Text>
         </ScrollAnimation>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap gap-4 mt-10 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pl-20 px-20 ">
+            
+          <div className="flex flex-wrap md:flex-nowrap gap-4 mt-16 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pl-20 px-20 ">
             {[
               {
                 title: "Top 03",
