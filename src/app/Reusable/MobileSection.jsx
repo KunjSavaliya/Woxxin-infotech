@@ -1,6 +1,7 @@
 // components/MobileAppSection.js
 import Text from "./Text";
 import Button from "./Button";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const MobileAppSection = ({
   bgImageSrc,
@@ -34,11 +35,13 @@ const MobileAppSection = ({
           <div>
             <div className="flex items-center justify-between md:gap-10 lg:gap-32">
               <div className=" w-auto md:w-[70%] lg:w-2/3">
-                <img
-                  src={logoSrc}
-                  alt="Logo"
-                  className="w-32 sm:w-40 md:w-64"
-                />
+                 <div>
+              <img
+                src="/HomePages/Google.png"
+                alt="Google"
+                className="w-40 md:w-56"
+              />
+            </div>
                 <Text className="text-start leading-[1.2] md:leading-[1.2] text-gradient-mobiletext font-extralight text-5xl sm:text-7xl md:text-[65px] lg:text-[70px]  xl:text-[80px] mt-6 sm:mt-16">
                   {title}
                 </Text>
@@ -105,16 +108,19 @@ const MobileAppSection = ({
               <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
                 {MTitle}
               </Text>
-              <img
-                src="/HomePages/line.png"
-                alt="Line"
-                className="w-full mt-6 rounded-[30%]"
-              />
+                <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />
               <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div>
+
               <div className="flex flex-col text-white gap-7 ">
+                        <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                   {Mtext}
                 </Text>
+                </ScrollAnimation>
               </div>
             </div>
           )}

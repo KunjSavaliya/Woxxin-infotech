@@ -26,7 +26,7 @@ const HeroSection = ({
         <div className="flex flex-col justify-around ">
           <div className="  flex flex-col gap-16 md:gap-24 xl:gap-32 ">
             <div>
-              <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+              <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text
                   className={` md:leading-[1.2] mt-1   sm:text-5xl md:text-6xl  lg:leading-[1.2]  xl:leading-[1.2]  sm:px-12 md:px-20 lg:px-20 xl:px-80 xl:pl-80 ${textClassName}`}
                 >

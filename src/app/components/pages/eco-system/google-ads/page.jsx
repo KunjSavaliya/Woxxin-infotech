@@ -86,7 +86,11 @@ results for your business growth"
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               OUR SERVICES
             </Text>
-            <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
+               <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />s
           </ScrollAnimation>
 
           <section className="px-4 py-12 mt-5 text-white md:px-12">
@@ -115,7 +119,11 @@ results for your business growth"
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               Proven Results
             </Text>
-            <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
+               <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />
           </ScrollAnimation>
           <div className=" p-4 mt-5 flex pt-12 flex-wrap md:flex-nowrap gap-4 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pb-16">
             {[

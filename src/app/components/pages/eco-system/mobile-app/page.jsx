@@ -31,11 +31,13 @@ function MobilePage() {
               <div className="flex justify-between md:gap-10 lg:gap-5">
                 {/* Left Content */}
                 <div className=" w-auto md:w-[70%] lg:w-1/2">
-                  <img
-                    src="/HomePages/Google.png"
-                    alt="Google"
-                    className="w-32 sm:w-40 md:w-64"
-                  />
+                 <div>
+              <img
+                src="/HomePages/Google.png"
+                alt="Google"
+                className="w-40 md:w-56"
+              />
+            </div>
                   <Text className="text-gradient-mobiletext font-extralight text-6xl sm:text-5xl md:text-[75px]  lg:text-[70px] xl:text-[95px]  text-white text-start mt-6 sm:mt-10">
                     Woxxin Intelligent Mobile Apps
                   </Text>
@@ -55,25 +57,28 @@ function MobilePage() {
                 around the globe.
               </Text>
             </div>
-            <ScrollAnimation animateIn="animate__animated animate__zoomIn">
               <div>
                 <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
                   MISSION
                 </Text>
-                <img
+                
+                  <img
                   src="/HomePages/line.png"
                   alt="Line"
-                  className="w-full mt-6"
+                  className="mx-auto mt-5 mb-5 "
                 />
-                <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div>
+                {/* <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div> */}
+            <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+
                 <div className="flex flex-col text-white gap-7 ">
                   <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                     Create innovative mobile applications that enhance the daily
                     experiences of millions of people around the globe.
                   </Text>
                 </div>
-              </div>
             </ScrollAnimation>
+
+              </div>
           </div>
         </div>
 
@@ -83,19 +88,19 @@ function MobilePage() {
           className="w-auto w-full h-auto"
         />
 
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
           <div className="flex flex-col p-6 mt-10 text-white gap-7 sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
             <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
               VISION
             </Text>
             <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+
             <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
               A vibrant network of cutting-edge apps designed to enhance the
               lives of millions, paving the way for a brighter future.
             </Text>
-          </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+          </div>
           <div className="flex flex-wrap md:flex-nowrap gap-4 mt-10 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pl-20 px-20 ">
             {[
               {
@@ -124,15 +129,14 @@ function MobilePage() {
               </div>
             ))}
           </div>
-        </ScrollAnimation>
       </div>
       <div className=" bg-[#F4F4F4]">
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <Text className="p-10 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Featured Products
           </Text>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 ">
             <img
               src="/HomePages/MobileApp/MobileBanner1.webp"
@@ -141,7 +145,7 @@ function MobilePage() {
             />
           </div>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="p-4 md:px-20 lg:px-20 xl:px-36 xl:pl-64 ">
             <img
               src="/HomePages/MobileApp/MobileBanner3.webp"
@@ -151,7 +155,7 @@ function MobilePage() {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <Text className="mt-16 mb-12 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Explore our products
           </Text>

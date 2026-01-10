@@ -111,7 +111,11 @@ function MainPage() {
           <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
             TOP POSITIONS
           </Text>
-          <img src="/HomePages/line.png" alt="Line" className="w-full mt-6" />
+           <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />
         </ScrollAnimation>
 
         <div className="min-h-screen px-4 py-10 sm:px-6 lg:px-20">

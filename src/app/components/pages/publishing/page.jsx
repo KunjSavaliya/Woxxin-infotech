@@ -80,15 +80,15 @@ and foster lasting growth."
         />
 
         <div className="bg-[#110f27] flex flex-col p-6  text-white gap-7 sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64 pt-32">
-          <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text className="text-xl md:text-2xl mt-1 lg:text-3xl xl:text-[35px] text-white">
               VISION
             </Text>
-            <img
-              src="/HomePages/line.png"
-              alt="Line"
-              className="w-full mt-6 rounded-[20%]"
-            />
+             <img
+                  src="/HomePages/line.png"
+                  alt="Line"
+                  className="mx-auto mt-5 mb-5 "
+                />
+          <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 pt-12 ">
               Collaborating with over 200 international partners, we create a
               vibrant technology ecosystem that serves hundreds of millions of

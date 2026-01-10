@@ -23,7 +23,7 @@ function Aboutus() {
         <img
           src="/HomePages/Homedesign.png"
           alt="Main Background"
-          className="absolute inset-0 z-0 object-fill w-full h-[70%] "
+          className="absolute inset-0 z-0 object-fill w-full h-[70%] "  
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 xl:gap-12 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
@@ -91,7 +91,7 @@ function Aboutus() {
         <div className="absolute top-0 left-0 flex flex-col items-center justify-start w-full h-full mt-32 text-left ">
           <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 lg:px-12 xl:px-48">
             <div className="flex flex-col text-white gap-7 ">
-              <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+              <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text size="text-2xl mt-[-50px] font-bold text-white p-8 text-center md:text-4xl lg:text-4xl xl:text-5xl  md:mt-[-100px] xl:mt-0 lg:mt-0 ">
                   Woxxin’s ecosystem of quality products has helped more than
                   half a billion people work and play effectively, aiming to
@@ -130,13 +130,14 @@ function Aboutus() {
       </div>
 
       <div className="flex flex-col gap-5 bg-[#110f27]  mt-[-3px]">
-        <ScrollAnimation animateIn="animate__animated animate__zoomIn ">
+        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="mt-44">
             <Text className="text-center text-5xl mt-[-130px] font-bold leading-relaxed text-white text-[50px]  sm:text-[60px]  md:text-[50px] lg:text-[70px] xl:text-[90px] text-gradient-mobileApp">
               Mobile Apps
             </Text>
           </div>
         </ScrollAnimation>
+        
         <div className="flex justify-center p-4">
           <img
             src="/HomePages/Mobile.webp"
@@ -147,7 +148,7 @@ function Aboutus() {
       </div>
       <div className="lg:px-28 xl:px-32 bg-[#110f27] mt-[-3px]">
         <div className="flex flex-col text-white ">
-          <ScrollAnimation animateIn="animate__animated animate__zoomIn">
+          <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
             <Text className="text-center  font-lighter leading-relaxed text-white text-5xl md:text-[65px] lg:text-[65px] xl:text-[90px] text-gradient-mobileGames">
               Mobile Games
             </Text>
