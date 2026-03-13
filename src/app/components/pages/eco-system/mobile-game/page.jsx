@@ -61,16 +61,16 @@ function MobileGame() {
           </div>
 
           <div className=" sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
-                            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
-                MISSION
-              </Text>
-                <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
-              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
+              MISSION
+            </Text>
+            <img
+              src="/HomePages/line.png"
+              alt="Line"
+              className="mx-auto mt-5 mb-5 "
+            />
+            <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
                 <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 text-gradient-mobiletext ">
@@ -80,15 +80,15 @@ function MobileGame() {
                 </Text>
               </div>
             </ScrollAnimation>
-              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
-                                VISION
-                              </Text>
-               <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
-              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
+            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+              VISION
+            </Text>
+            <img
+              src="/HomePages/line.png"
+              alt="Line"
+              className="mx-auto mt-5 mb-5 "
+            />
+            <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
                 <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl   mb-12 text-gradient-mobiletext">
@@ -110,21 +110,21 @@ function MobileGame() {
               <img
                 src="/HomePages/MobileGame/MobApp1.webp"
                 alt="Line"
-                className="w-auto"
+                className="w-auto  hover:scale-105 transition-transform duration-300"
               />
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <img
                 src="/HomePages/MobileGame/MobApp2.webp"
                 alt="Line"
-                className="w-auto"
+                className="w-auto  hover:scale-105 transition-transform duration-300"
               />
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <img
                 src="/HomePages/MobileGame/MobApp3.webp"
                 alt="Line"
-                className="w-auto"
+                className="w-auto  hover:scale-105 transition-transform duration-300"
               />
             </ScrollAnimation>
           </div>
@@ -133,7 +133,7 @@ function MobileGame() {
               <img
                 src="/HomePages/MobileGame/MobApp4.webp"
                 alt="Line"
-                className="w-auto h-[500px]"
+                className="w-auto h-[500px]  hover:scale-105 transition-transform duration-300"
               />
             </ScrollAnimation>
           </div>

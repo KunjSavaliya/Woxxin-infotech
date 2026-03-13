@@ -174,7 +174,7 @@ function Eco() {
               className="w-full h-[25vh] "
             />
           </div>
-          <div className="absolute top-0 items-center w-full h-full ">
+          <div className="absolute top-0 items-center w-full h-full mt-5 ">
             <div className="flex justify-center ">
               <Button
                 text="Apply here"

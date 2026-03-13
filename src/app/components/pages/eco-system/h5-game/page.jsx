@@ -64,7 +64,7 @@ performance."
             <img
               src="/HomePages/Home6.png"
               alt="Main Background"
-              className="w-full h-[30vh] "
+              className="w-full h-[35vh] "
             />
           </div>
           <div className="absolute top-0 items-center w-full h-full ">

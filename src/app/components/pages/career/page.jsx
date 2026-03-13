@@ -81,7 +81,7 @@ function MainPage() {
           className="absolute inset-0 z-0 object-fill w-full h-auto"
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
-          <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
+          <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-7xl mx-auto">
             <img
               src="/HomePages/Google.png"
               alt="Google"
@@ -99,24 +99,24 @@ function MainPage() {
                 text="See jobs & apply"
                 iconColor="#6C63FF"
                 className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
-                //  onButtonClick={() => handleClick()}
+              //  onButtonClick={() => handleClick()}
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#110f27] pt-0 md:pt-28 sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64">
+      <div className="bg-[#110f27] pt-0 md:pt-28 max-w-7xl mx-auto">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
 
             TOP POSITIONS
           </Text>
-           <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
+          <img
+            src="/HomePages/line.png"
+            alt="Line"
+            className="mx-auto mt-5 mb-5 "
+          />
         </ScrollAnimation>
 
         <div className="min-h-screen px-4 py-10 sm:px-6 lg:px-20">
@@ -149,7 +149,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="bg-[#110f27] relative z-10 px-4 sm:px-12 md:px-20 lg:px-20 xl:px-0">
+      <div className="bg-[#110f27] relative z-10 max-w-7xl mx-auto">
         <div className="flex flex-col w-full max-w-screen-xl mx-auto xl:px-20">
           <div className="">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">

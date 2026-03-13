@@ -68,11 +68,10 @@ const Navbar = () => {
         <div className="items-center hidden gap-8 text-xl font-light lg:flex">
           <p
             onClick={() => handleNavigation("/components/pages/aboutus")}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-              isActive("/components/pages/aboutus") || isActive("/")
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive("/components/pages/aboutus") || isActive("/")
                 ? "text-white after:block"
                 : "after:hidden"
-            }`}
+              }`}
           >
             About Us
           </p>
@@ -85,9 +84,8 @@ const Navbar = () => {
               }
             >
               <span
-                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-                  isEcosystemActive ? "text-white after:block" : "after:hidden"
-                }`}
+                className={`relative after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isEcosystemActive ? "text-white after:block" : "after:hidden"
+                  }`}
               >
                 Ecosystem
               </span>
@@ -103,15 +101,14 @@ const Navbar = () => {
             </div>
 
             {isDropdownOpen && (
-              <div className="absolute mt-4 bg-white text-black border border-[#6C63FF] shadow-xl rounded-2xl p-4 w-56 z-50">
+              <div data-cursor="hide" className="absolute mt-4 bg-white text-black border border-[#6C63FF] shadow-xl rounded-2xl p-4 w-56 z-50">
                 {dropdownItems.map((item, index) => (
                   <div key={index}>
                     <div
                       className={`cursor-pointer transition-colors
-                        ${
-                          isActive(item.navigate)
-                            ? "text-[#6C63FF] font-semibold"
-                            : "text-black hover:text-[#6C63FF]"
+                        ${isActive(item.navigate)
+                          ? "text-[#6C63FF] font-semibold"
+                          : "text-black hover:text-[#6C63FF]"
                         }`}
                       onClick={() => handleNavigation(item.navigate)}
                     >
@@ -128,42 +125,38 @@ const Navbar = () => {
 
           <p
             onClick={() => handleNavigation("/components/pages/investment")}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-              isActive("/components/pages/investment")
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive("/components/pages/investment")
                 ? "text-white after:block"
                 : "after:hidden"
-            }`}
+              }`}
           >
             Investment
           </p>
           <p
             onClick={() => handleNavigation("/components/pages/publishing")}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-              isActive("/components/pages/publishing")
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive("/components/pages/publishing")
                 ? "text-white after:block"
                 : "after:hidden"
-            }`}
+              }`}
           >
             Publishing
           </p>
           <p
             onClick={() => handleNavigation("/components/pages/career")}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-              isActive("/components/pages/career")
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive("/components/pages/career")
                 ? "text-white after:block"
                 : "after:hidden"
-            }`}
+              }`}
           >
             Career
           </p>
 
           <p
             onClick={() => handleNavigation("/components/pages/contact-us")}
-            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${
-              isActive("/components/pages/contact-us")
+            className={`relative cursor-pointer after:content-[''] after:absolute after:left-1/2 after:translate-x-[-50%] after:bottom-[-6px] after:h-[3px] after:w-[70%] after:rounded-full after:bg-[#6960EB] ${isActive("/components/pages/contact-us")
                 ? "text-white after:block"
                 : "after:hidden"
-            }`}
+              }`}
           >
             Contact Us
           </p>
@@ -197,11 +190,10 @@ const Navbar = () => {
             <p
               onClick={() => handleNavigation("/components/pages/aboutus")}
               className={`text-xl font-semibold cursor-pointer
-      ${
-        isActive("/components/pages/aboutus") || isActive("/")
-          ? "text-[#6C63FF]"
-          : "text-white"
-      }`}
+      ${isActive("/components/pages/aboutus") || isActive("/")
+                  ? "text-[#6C63FF]"
+                  : "text-white"
+                }`}
             >
               About Us
             </p>
@@ -234,11 +226,10 @@ const Navbar = () => {
                       key={index}
                       onClick={() => handleNavigation(item.navigate)}
                       className={`cursor-pointer
-              ${
-                isActive(item.navigate)
-                  ? "text-[#6C63FF] font-semibold"
-                  : "text-white"
-              }`}
+              ${isActive(item.navigate)
+                          ? "text-[#6C63FF] font-semibold"
+                          : "text-white"
+                        }`}
                     >
                       {item.title}
                     </p>
@@ -251,11 +242,10 @@ const Navbar = () => {
             <p
               onClick={() => handleNavigation("/components/pages/investment")}
               className={`text-xl font-semibold cursor-pointer
-      ${
-        isActive("/components/pages/investment")
-          ? "text-[#6C63FF]"
-          : "text-white"
-      }`}
+      ${isActive("/components/pages/investment")
+                  ? "text-[#6C63FF]"
+                  : "text-white"
+                }`}
             >
               Investment
             </p>
@@ -264,11 +254,10 @@ const Navbar = () => {
             <p
               onClick={() => handleNavigation("/components/pages/publishing")}
               className={`text-xl font-semibold cursor-pointer
-      ${
-        isActive("/components/pages/publishing")
-          ? "text-[#6C63FF]"
-          : "text-white"
-      }`}
+      ${isActive("/components/pages/publishing")
+                  ? "text-[#6C63FF]"
+                  : "text-white"
+                }`}
             >
               Publishing
             </p>
@@ -277,9 +266,8 @@ const Navbar = () => {
             <p
               onClick={() => handleNavigation("/components/pages/career")}
               className={`text-xl font-semibold cursor-pointer
-      ${
-        isActive("/components/pages/career") ? "text-[#6C63FF]" : "text-white"
-      }`}
+      ${isActive("/components/pages/career") ? "text-[#6C63FF]" : "text-white"
+                }`}
             >
               Career
             </p>
@@ -288,11 +276,10 @@ const Navbar = () => {
             <p
               onClick={() => handleNavigation("/components/pages/contact-us")}
               className={`text-xl font-semibold cursor-pointer
-      ${
-        isActive("/components/pages/contact-us")
-          ? "text-[#6C63FF]"
-          : "text-white"
-      }`}
+      ${isActive("/components/pages/contact-us")
+                  ? "text-[#6C63FF]"
+                  : "text-white"
+                }`}
             >
               Contact Us
             </p>

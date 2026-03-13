@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -11,9 +11,12 @@ import "swiper/css/autoplay";
 import CountUp from "react-countup";
 import { FaChartLine, FaChartBar, FaDollarSign, FaUsers } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
 
 function GoogleAds() {
   const router = useRouter();
+  const cardRef = useRef(null);
 
   const handleClick = () => {
     router.push("/components/pages/contact-us");
@@ -65,6 +68,23 @@ function GoogleAds() {
       ],
     },
   ];
+  const handleMouseMove = (e, card) => {
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+
+    const rotateX = y / 10;
+    const rotateY = -x / 10;
+
+    card.style.transition = "transform 0.1s ease";
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
+  const handleMouseLeave = (card) => {
+    card.style.transition = "transform 0.3s ease";
+    card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+  };
   return (
     <>
       <div>
@@ -86,23 +106,29 @@ results for your business growth"
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               OUR SERVICES
             </Text>
-               <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
+            <img
+              src="/HomePages/line.png"
+              alt="Line"
+              className="mx-auto mt-5 mb-5 "
+            />
           </ScrollAnimation>
+
+
 
           <section className="px-4 py-12 mt-5 text-white md:px-12">
             <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 max-w-7xl">
               {services.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
                   className="bg-[#12112B] p-6 rounded-lg shadow-lg border border-[#1C1B33]"
+                  onMouseMove={(e) => handleMouseMove(e, e.currentTarget)}
+                  onMouseLeave={(e) => handleMouseLeave(e.currentTarget)}
+                  whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-3 mb-4">
                     {service.icon}
                   </div>
+
                   <h3 className="text-lg font-semibold">{service.title}</h3>
 
                   <ul className="mt-5 space-y-2 text-sm text-gray-300 list-disc list-inside">
@@ -110,22 +136,24 @@ results for your business growth"
                       <li key={i}>{item}</li>
                     ))}
                   </ul>
-                </div>
+                </motion.div>
               ))}
             </div>
           </section>
+
+
 
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
               Proven Results
             </Text>
-                          
 
-               <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
+
+            <img
+              src="/HomePages/line.png"
+              alt="Line"
+              className="mx-auto mt-5 mb-5 "
+            />
           </ScrollAnimation>
           <div className=" p-4 mt-5 flex pt-12 flex-wrap md:flex-nowrap gap-4 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pb-16">
             {[
@@ -154,8 +182,8 @@ results for your business growth"
                       item.title.includes("%")
                         ? "%"
                         : item.title.includes("M")
-                        ? "M+"
-                        : ""
+                          ? "M+"
+                          : ""
                     }
                     decimals={item.title.includes(".") ? 1 : 0}
                   />
@@ -177,7 +205,7 @@ results for your business growth"
           text1ClassName="text-white text-lg  sm:text-2xl mt-5"
           onButtonClick={() => handleClick()}
         />
-      </div>
+      </div >
     </>
   );
 }

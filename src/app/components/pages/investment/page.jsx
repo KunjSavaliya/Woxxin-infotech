@@ -80,7 +80,7 @@ achievements."
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
           descriptionClassName="text-2xl "
         />
-        <div className="bg-[#110f27] mt-[-4px]">
+        <div className=" bg-[#110f27] mt-[-4px]">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <div className="flex flex-col justify-between gap-10 px-5 pt-24 md:flex-row sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
               <div className="flex justify-center w-full md:justify-end md:w-1/2">

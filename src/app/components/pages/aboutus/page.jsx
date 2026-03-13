@@ -19,11 +19,11 @@ function Aboutus() {
   };
   return (
     <>
-      <div className="relative bg-[#110f27] ] w-full h-full overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         <img
           src="/HomePages/Homedesign.png"
           alt="Main Background"
-          className="absolute inset-0 z-0 object-fill w-full h-[70%] "  
+          className="absolute inset-0 z-0 object-fill w-full h-[70%] "
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 xl:gap-12 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
@@ -137,7 +137,7 @@ function Aboutus() {
             </Text>
           </div>
         </ScrollAnimation>
-        
+
         <div className="flex justify-center p-4">
           <img
             src="/HomePages/Mobile.webp"
@@ -160,42 +160,42 @@ function Aboutus() {
           <img
             src="/HomePages/G1.webp"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72 hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G2.webp"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G3.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G4.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G5.webp"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G6.webp"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
@@ -237,7 +237,7 @@ function Aboutus() {
           <img
             src="/HomePages/Home6.png"
             alt="Main Background"
-            className="w-full h-[30vh] "
+            className="w-full h-[35vh] "
           />
         </div>
         <div className="absolute top-0 items-center w-full h-full ">

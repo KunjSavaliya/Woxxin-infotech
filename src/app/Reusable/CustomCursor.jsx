@@ -26,9 +26,9 @@ export default function CustomCursor() {
 
     const onMouseMove = (e) => {
       setPos({ x: e.clientX, y: e.clientY });
-const target = e.target;
+      const target = e.target;
       const tag = e.target.tagName?.toLowerCase();
-       const isReactIcon =
+      const isReactIcon =
         tag === "svg" ||
         tag === "path" ||
         target.closest("svg") ||
@@ -37,7 +37,8 @@ const target = e.target;
         ['a', 'button', 'input', 'span', 'textarea', 'select'].includes(tag) ||
         e.target.getAttribute('role')?.match(/button|link/) ||
         e.target.classList.contains('cursor-pointer') ||
-          isReactIcon;
+        isReactIcon ||
+        target.closest('[data-cursor="hide"]');
 
       if (isInteractive) {
         setScale(2);
