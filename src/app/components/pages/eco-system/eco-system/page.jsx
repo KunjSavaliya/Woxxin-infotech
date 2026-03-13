@@ -97,7 +97,7 @@ function Eco() {
           </div>
         </div>
 
-        <div className="relative bg-[#110f27]">
+        <div className="relative">
           <Image
             src="/HomePages/Eco/EcoDrive.webp"
             alt="EcoDrive Background"
@@ -106,7 +106,7 @@ function Eco() {
             height={700}
           />
           <div className="absolute top-0 left-0 flex items-end justify-center w-full h-full">
-            <div className="w-full lg:px-72 lg:pl-72">
+            <div className="w-full max-w-7xl mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text className="p-4 text-5xl font-bold leading-tight text-center text-white sm:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-EcoDrive">
                   Innovation Drives Our Success
@@ -147,7 +147,7 @@ function Eco() {
           </div>
         </div>
 
-        <div className="relative bg-[#110f27]">
+        <div className="relative">
           <Image
             src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
@@ -156,7 +156,7 @@ function Eco() {
             height={700}
           />
           <div className="absolute top-0 left-0 flex items-start justify-center w-full h-full pt-16 md:pt-32">
-            <div className="w-full  xl:pl-40 xl:pr-40">
+            <div className="w-full  max-w-7xl mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text className="p-4 text-[40px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
                   Join Woxxin to open new pathways in the digital future

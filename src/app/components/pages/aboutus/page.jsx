@@ -89,7 +89,7 @@ function Aboutus() {
           />
         </div>
         <div className="absolute top-0 left-0 flex flex-col items-center justify-start w-full h-full mt-32 text-left ">
-          <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 lg:px-12 xl:px-48">
+          <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 max-w-7xl mx-auto">
             <div className="flex flex-col text-white gap-7 ">
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text size="text-2xl mt-[-50px] font-bold text-white p-8 text-center md:text-4xl lg:text-4xl xl:text-5xl  md:mt-[-100px] xl:mt-0 lg:mt-0 ">
@@ -119,7 +119,7 @@ function Aboutus() {
             />
           </div>
           <div className="mt-5">
-            <Text size="text-center text-[75px] md:text-[65px] lg:text-[[65px] xl:text-[115px] font-bold text-white ActiveUser-gradient text-center text2-gradient">
+            <Text size="text-center text-[75px] md:text-[65px] lg:text-[65px] xl:text-[115px] font-bold text-white ActiveUser-gradient text-center text2-gradient">
               <CountUp end={50} duration={10} suffix="M+" />
             </Text>
             <Text size="text-xl md:text-2xl lg:text-3xl xl:text-[26px] text-white mt-5 ">
@@ -155,7 +155,7 @@ function Aboutus() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center xl:gap-24 lg:px-12 xl:px-48 p-4 sm:p-16 mt-[-2px]">
+      <div className="flex flex-wrap justify-center xl:gap-24 max-w-7xl mx-auto p-4 sm:p-16 mt-[-2px]">
         <div>
           <img
             src="/HomePages/G1.webp"
@@ -203,7 +203,7 @@ function Aboutus() {
         <GlobalPartners />
       </div>
       <div className="mt-[-3px] ">
-        <div className="flex flex-col justify-between gap-8 px-4 py-8 text-white md:flex-row max-w-7xl mx-auto">
+        <div className="flex flex-col justify-between gap-28 text-white md:flex-row max-w-7xl mx-auto">
           <div className="flex items-center w-full md:w-3/5 ">
             <ScrollAnimation animateIn="animate__animated animate__zoomIn">
               <Text className="text-4xl md:text-4xl lg:text-5xl xl:text-[55px] text-white font-light text-start break-words">

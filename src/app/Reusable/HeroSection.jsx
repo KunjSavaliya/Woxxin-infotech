@@ -19,7 +19,7 @@ const HeroSection = ({
         <img
           src={imageSrc}
           alt="Main Background"
-          className="w-full h-[75vh] xl:h-[110vh] opacity-70 "
+          className="w-full h-[75vh] xl:h-[80vh] opacity-70 "
         />
       </div>
       <div className="absolute top-0 left-0 flex flex-col items-center w-full h-full text-left  justify-center">

@@ -97,7 +97,7 @@ and foster lasting growth."
             </Text>
           </ScrollAnimation>
         </div>
-        <div className="p-5 flex flex-wrap md:flex-nowrap justify-center gap-6 pt-12 pb-16 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64 ">
+        <div className="p-5 flex flex-wrap md:flex-nowrap justify-center gap-6 pt-12 pb-16 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-7xl mx-auto">
           {[
             {
               title: "100M+",

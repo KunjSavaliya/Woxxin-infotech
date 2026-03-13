@@ -57,7 +57,7 @@ function MobilePage() {
                 around the globe.
               </Text>
             </div>
-            <div>
+            <div className="max-w-7xl mx-auto">
               <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
                 MISSION
               </Text>
@@ -88,7 +88,7 @@ function MobilePage() {
           className="w-auto w-full h-auto"
         />
 
-        <div className="flex flex-col p-6 mt-5 text-white  sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
+        <div className=" max-w-7xl mx-auto">
           <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
             VISION
           </Text>

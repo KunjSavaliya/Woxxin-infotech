@@ -101,7 +101,7 @@ function MobileGame() {
             </ScrollAnimation>
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 max-w-7xl mx-auto">
           <Text className="p-4 mb-6 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Outstanding products
           </Text>
