@@ -40,7 +40,7 @@ function MobileGame() {
               height={700}
             />
             <div className="absolute top-0 left-0 flex items-end justify-center w-full h-full">
-              <div className="w-full max-w-7xl mx-auto">
+              <div className="w-full max-w-7xl mx-auto p-16">
                 <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                   <Text className="p-4 text-5xl font-bold leading-tight text-center text-white sm:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-mobiletext ">
                     Immerse yourself in the world of true
@@ -60,7 +60,7 @@ function MobileGame() {
             </div>
           </div>
 
-          <div className=" max-w-7xl mx-auto">
+          <div className=" max-w-7xl mx-auto p-16">
             <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
               MISSION

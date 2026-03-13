@@ -117,7 +117,7 @@ function Eco() {
         </div>
 
         {/* 🔥 Updated Feature Cards with Effects */}
-        <div className="py-12 px-4 pt-24 mt-[-3px]">
+        <div className="p-16 pt-24 mt-[-3px]">
           <div className="grid grid-cols-1 gap-6 mx-auto text-white max-w-7xl sm:grid-cols-2 md:grid-cols-4">
             {features.map((feature, index) => {
               // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -151,7 +151,7 @@ function Eco() {
           <Image
             src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
-            className="w-full mt-[-4px] h-[50vh] xl:h-[65vh]"
+            className="w-full mt-[-4px] h-[40vh] xl:h-[65vh]"
             width={1920}
             height={700}
           />

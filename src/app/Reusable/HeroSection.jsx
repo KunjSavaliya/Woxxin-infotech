@@ -19,12 +19,12 @@ const HeroSection = ({
         <img
           src={imageSrc}
           alt="Main Background"
-          className="w-full h-[75vh] xl:h-[80vh] opacity-70 "
+          className="w-full h-[60vh] xl:h-[80vh] opacity-70 "
         />
       </div>
       <div className="absolute top-0 left-0 flex flex-col items-center w-full h-full text-left  justify-center">
         <div className="flex flex-col justify-around ">
-          <div className="  flex flex-col gap-16 md:gap-24 xl:gap-32 ">
+          <div className=" p-16 flex flex-col gap-16 md:gap-24 xl:gap-32 ">
             <div>
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text

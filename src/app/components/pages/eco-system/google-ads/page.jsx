@@ -101,7 +101,7 @@ results for your business growth"
           buttonText="Contact Us"
           onButtonClick={() => handleClick()}
         />
-        <div className="pt-28  sm:px-12 max-w-7xl mx-auto">
+        <div className="pt-28  sm:px-12 max-w-7xl mx-auto p-16">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               OUR SERVICES
@@ -115,7 +115,7 @@ results for your business growth"
 
 
 
-          <section className="px-4 py-12 mt-5 text-white md:px-12">
+          <section className="p-16 text-white max-w-7xl mx-auto">
             <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 max-w-7xl">
               {services.map((service, index) => (
                 <motion.div

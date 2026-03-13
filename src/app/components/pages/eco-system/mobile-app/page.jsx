@@ -26,7 +26,7 @@ function MobilePage() {
           className="absolute w-full h-[800px] md:h-[1000px] "
         />
         <div className="relative z-10 flex flex-col items-start w-full h-full text-left">
-          <div className="flex flex-col  p-6 mt-32 text-white sm:mt-40 gap-[200px] lg:gap-[200px]  max-w-7xl mx-auto ">
+          <div className="flex flex-col  p-16 mt-32 text-white sm:mt-40 gap-[200px] lg:gap-[200px]  max-w-7xl mx-auto ">
             <div>
               <div className="flex justify-between md:gap-10 lg:gap-5">
                 {/* Left Content */}
@@ -57,7 +57,7 @@ function MobilePage() {
                 around the globe.
               </Text>
             </div>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto p-16">
               <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
                 MISSION
               </Text>
@@ -88,7 +88,7 @@ function MobilePage() {
           className="w-auto w-full h-auto"
         />
 
-        <div className=" max-w-7xl mx-auto">
+        <div className=" max-w-7xl mx-auto p-16">
           <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
             VISION
           </Text>

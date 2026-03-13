@@ -81,7 +81,7 @@ function MainPage() {
           className="absolute inset-0 z-0 object-fill w-full h-auto"
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
-          <div className="flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-7xl mx-auto">
+          <div className=" p-16 flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-7xl mx-auto">
             <img
               src="/HomePages/Google.png"
               alt="Google"
@@ -106,7 +106,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="pt-0 md:pt-28 max-w-7xl mx-auto">
+      <div className="p-16 pt-0 md:pt-28 max-w-7xl mx-auto">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
 
@@ -149,7 +149,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto p-16">
         <div className="flex flex-col w-full max-w-screen-xl mx-auto xl:px-20">
           <div className="">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">

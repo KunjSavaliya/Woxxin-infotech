@@ -33,7 +33,7 @@ const MobileAppSection = ({
         <div className="w-[100%] flex flex-col p-6 mt-32 text-white sm:mt-40 gap-[80px] lg:gap-[150px] max-w-7xl mx-auto ">
           {/* Top Section */}
           <div>
-            <div className="flex items-center justify-between md:gap-10 lg:gap-32">
+            <div className="flex items-center justify-between p-16 md:gap-10 lg:gap-32">
               <div className=" w-auto md:w-[70%] lg:w-2/3">
                 <div>
                   <img
