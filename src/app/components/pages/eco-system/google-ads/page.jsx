@@ -101,7 +101,7 @@ results for your business growth"
           buttonText="Contact Us"
           onButtonClick={() => handleClick()}
         />
-        <div className="bg-[#110f27] pt-28  sm:px-12 md:px-20 lg:px-20 xl:px-64 xl:pl-64">
+        <div className="pt-28  sm:px-12 max-w-7xl mx-auto">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               OUR SERVICES

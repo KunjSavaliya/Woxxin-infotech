@@ -74,7 +74,7 @@ function MainPage() {
   };
   return (
     <>
-      <div className="relative bg-[#110f27] w-full h-full overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         <img
           src="/HomePages/Career.webp"
           alt="Main Background"
@@ -98,7 +98,7 @@ function MainPage() {
               <Button
                 text="See jobs & apply"
                 iconColor="#6C63FF"
-                className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
+                className="mt-2 sm:mt-5 text-white border border-[#5961F9] rounded-md"
               //  onButtonClick={() => handleClick()}
               />
             </div>
@@ -106,7 +106,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="bg-[#110f27] pt-0 md:pt-28 max-w-7xl mx-auto">
+      <div className="pt-0 md:pt-28 max-w-7xl mx-auto">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
 
@@ -149,7 +149,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="bg-[#110f27] relative z-10 max-w-7xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="flex flex-col w-full max-w-screen-xl mx-auto xl:px-20">
           <div className="">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
@@ -205,7 +205,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="relative bg-[#110f27]">
+      <div className="relative ">
         <Image
           src="/HomePages/Contfooter.png"
           alt="Footer background"
@@ -219,7 +219,7 @@ function MainPage() {
               <Button
                 text="Contact us"
                 iconColor="#6C63FF"
-                className="mt-2 sm:mt-5 text-white border border-[#5961F9] bg-[#110F27] rounded-md"
+                className="mt-2 sm:mt-5 text-white border border-[#5961F9] rounded-md"
                 onButtonClick={() => handleClickbtn()}
               />
             </div>

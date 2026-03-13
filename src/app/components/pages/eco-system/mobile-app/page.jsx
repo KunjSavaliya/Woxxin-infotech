@@ -19,25 +19,25 @@ function MobilePage() {
   };
   return (
     <>
-      <div className="relative bg-[#110f27] w-full h-full  shadow-[0_8px_10px_-6px_rgba(255,255,255,0.3)]">
+      <div className="relative w-full h-full  shadow-[0_8px_10px_-6px_rgba(255,255,255,0.3)]">
         <img
           src="/HomePages/MobileApp/MobileApps.png"
           alt="Main Background"
           className="absolute w-full h-[800px] md:h-[1000px] "
         />
         <div className="relative z-10 flex flex-col items-start w-full h-full text-left">
-          <div className="flex flex-col  p-6 mt-32 text-white sm:mt-40 gap-[200px] lg:gap-[200px]  sm:px-20 md:px-16 lg:px-20 lg:pl-20 xl:px-28 xl:pl-28">
+          <div className="flex flex-col  p-6 mt-32 text-white sm:mt-40 gap-[200px] lg:gap-[200px]  max-w-7xl mx-auto ">
             <div>
               <div className="flex justify-between md:gap-10 lg:gap-5">
                 {/* Left Content */}
                 <div className=" w-auto md:w-[70%] lg:w-1/2">
-                 <div>
-              <img
-                src="/HomePages/Google.png"
-                alt="Google"
-                className="w-40 md:w-56"
-              />
-            </div>
+                  <div>
+                    <img
+                      src="/HomePages/Google.png"
+                      alt="Google"
+                      className="w-40 md:w-56"
+                    />
+                  </div>
                   <Text className="text-gradient-mobiletext font-extralight text-6xl sm:text-5xl md:text-[75px]  lg:text-[70px] xl:text-[95px]  text-white text-start mt-6 sm:mt-10">
                     Woxxin Intelligent Mobile Apps
                   </Text>
@@ -57,18 +57,18 @@ function MobilePage() {
                 around the globe.
               </Text>
             </div>
-              <div>
-                <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
-                  MISSION
-                </Text>
-                
-                  <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
-                {/* <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div> */}
-            <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+            <div>
+              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+                MISSION
+              </Text>
+
+              <img
+                src="/HomePages/line.png"
+                alt="Line"
+                className="mx-auto mt-5 mb-5 "
+              />
+              {/* <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div> */}
+              <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
 
                 <div className="flex flex-col text-white gap-7 ">
                   <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
@@ -76,9 +76,9 @@ function MobilePage() {
                     experiences of millions of people around the globe.
                   </Text>
                 </div>
-            </ScrollAnimation>
+              </ScrollAnimation>
 
-              </div>
+            </div>
           </div>
         </div>
 
@@ -88,52 +88,52 @@ function MobilePage() {
           className="w-auto w-full h-auto"
         />
 
-          <div className="flex flex-col p-6 mt-5 text-white  sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
-             <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
-                  VISION
-                </Text>
-              <img
-                  src="/HomePages/line.png"
-                  alt="Line"
-                  className="mx-auto mt-5 mb-5 "
-                />
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+        <div className="flex flex-col p-6 mt-5 text-white  sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
+          <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+            VISION
+          </Text>
+          <img
+            src="/HomePages/line.png"
+            alt="Line"
+            className="mx-auto mt-5 mb-5 "
+          />
+          <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
 
             <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
               A vibrant network of cutting-edge apps designed to enhance the
               lives of millions, paving the way for a brighter future.
             </Text>
-        </ScrollAnimation>
-          </div>
-            
-          <div className="flex flex-wrap md:flex-nowrap gap-4 mt-16 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pl-20 px-20 ">
-            {[
-              {
-                title: "Top 03",
-                description: "Software Publisher ASIA Ranking",
-              },
-              {
-                title: "Top 20",
-                description: "In Southeast Asia Non-Game segment",
-              },
-              {
-                title: "50M+",
-                description: "Downloads",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-full max-w-full gap-2 px-4 py-4 mb-12 space-y-2 sm:w-1/2 md:w-1/3 text-start"
-              >
-                <Text className="text-3xl md:text-3xl xl:text-[35px] text-white font-bold">
-                  {item.title}
-                </Text>
-                <Text className="text-md sm:text-lg md:text-xl xl:text-[20px] text-white font-medium break-words font-extralight">
-                  {item.description}
-                </Text>
-              </div>
-            ))}
-          </div>
+          </ScrollAnimation>
+        </div>
+
+        <div className="flex flex-wrap md:flex-nowrap gap-4 mt-16 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pl-20 px-20 ">
+          {[
+            {
+              title: "Top 03",
+              description: "Software Publisher ASIA Ranking",
+            },
+            {
+              title: "Top 20",
+              description: "In Southeast Asia Non-Game segment",
+            },
+            {
+              title: "50M+",
+              description: "Downloads",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col w-full max-w-full gap-2 px-4 py-4 mb-12 space-y-2 sm:w-1/2 md:w-1/3 text-start"
+            >
+              <Text className="text-3xl md:text-3xl xl:text-[35px] text-white font-bold">
+                {item.title}
+              </Text>
+              <Text className="text-md sm:text-lg md:text-xl xl:text-[20px] text-white font-medium break-words font-extralight">
+                {item.description}
+              </Text>
+            </div>
+          ))}
+        </div>
       </div>
       <div className=" bg-[#F4F4F4]">
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">

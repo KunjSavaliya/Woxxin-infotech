@@ -30,8 +30,8 @@ function MobileGame() {
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
           descriptionClassName=" text-2xl md:text-4xl mt-5 text-center lg :p-7"
         />
-        <div className=" bg-[#110f27]  ">
-          <div className="relative bg-[#110f27]">
+        <div className="  ">
+          <div className="relative ">
             <Image
               src="/HomePages/MobileGame/MobGameMan.webp"
               alt="EcoDrive Background"
@@ -40,7 +40,7 @@ function MobileGame() {
               height={700}
             />
             <div className="absolute top-0 left-0 flex items-end justify-center w-full h-full">
-              <div className="w-full lg:px-72 lg:pl-72">
+              <div className="w-full max-w-7xl mx-auto">
                 <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                   <Text className="p-4 text-5xl font-bold leading-tight text-center text-white sm:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-mobiletext ">
                     Immerse yourself in the world of true
@@ -60,7 +60,7 @@ function MobileGame() {
             </div>
           </div>
 
-          <div className=" sm:px-12 md:px-20 lg:px-20 xl:px-36 xl:pl-64">
+          <div className=" max-w-7xl mx-auto">
             <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
               MISSION

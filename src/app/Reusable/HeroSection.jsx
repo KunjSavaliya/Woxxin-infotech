@@ -14,7 +14,7 @@ const HeroSection = ({
   onButtonClick,
 }) => {
   return (
-    <div className="relative  bg-[#110f27]">
+    <div className="relative bg-[#110f27]">
       <div>
         <img
           src={imageSrc}
@@ -28,7 +28,7 @@ const HeroSection = ({
             <div>
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text
-                  className={` md:leading-[1.2] mt-1   sm:text-5xl md:text-6xl  lg:leading-[1.2]  xl:leading-[1.2]  sm:px-12 md:px-20 lg:px-20 xl:px-80 xl:pl-80 ${textClassName}`}
+                  className={` md:leading-[1.2] mt-1   sm:text-5xl md:text-6xl  lg:leading-[1.2]  xl:leading-[1.2]  max-w-7xl mx-auto ${textClassName}`}
                 >
                   {text}
                 </Text>

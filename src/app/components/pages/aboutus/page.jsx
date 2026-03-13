@@ -26,7 +26,7 @@ function Aboutus() {
           className="absolute inset-0 z-0 object-fill w-full h-[70%] "
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
-          <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 xl:gap-12 sm:px-12 md:px-24 lg:px-20 xl:px-52 xl:pl-52">
+          <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 max-w-7xl mx-auto">
             <div>
               <img
                 src="/HomePages/Google.png"
@@ -80,7 +80,7 @@ function Aboutus() {
           </div>
         </div>
       </div>
-      <div className="relative bg-[#110f27] mt-[-2px]">
+      <div className="relative mt-[-2px]">
         <div>
           <img
             src="/HomePages/Home2.png"
@@ -129,7 +129,7 @@ function Aboutus() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5 bg-[#110f27]  mt-[-3px]">
+      <div className="flex flex-col gap-5  mt-[-3px]">
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="mt-44">
             <Text className="text-center text-5xl mt-[-130px] font-bold leading-relaxed text-white text-[50px]  sm:text-[60px]  md:text-[50px] lg:text-[70px] xl:text-[90px] text-gradient-mobileApp">
@@ -146,7 +146,7 @@ function Aboutus() {
           />
         </div>
       </div>
-      <div className="lg:px-28 xl:px-32 bg-[#110f27] mt-[-3px]">
+      <div className="lg:px-28 xl:px-32 mt-[-3px]">
         <div className="flex flex-col text-white ">
           <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
             <Text className="text-center  font-lighter leading-relaxed text-white text-5xl md:text-[65px] lg:text-[65px] xl:text-[90px] text-gradient-mobileGames">
@@ -155,7 +155,7 @@ function Aboutus() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center bg-[#110f27] xl:gap-24 lg:px-12 xl:px-48 p-4 sm:p-16 mt-[-2px]">
+      <div className="flex flex-wrap justify-center xl:gap-24 lg:px-12 xl:px-48 p-4 sm:p-16 mt-[-2px]">
         <div>
           <img
             src="/HomePages/G1.webp"
@@ -202,8 +202,8 @@ function Aboutus() {
       <div>
         <GlobalPartners />
       </div>
-      <div className="bg-[#110f27] mt-[-3px] ">
-        <div className="flex flex-col justify-between gap-8 px-4 py-8 text-white md:flex-row sm:px-6 md:px-12 lg:px-20 xl:px-48">
+      <div className="mt-[-3px] ">
+        <div className="flex flex-col justify-between gap-8 px-4 py-8 text-white md:flex-row max-w-7xl mx-auto">
           <div className="flex items-center w-full md:w-3/5 ">
             <ScrollAnimation animateIn="animate__animated animate__zoomIn">
               <Text className="text-4xl md:text-4xl lg:text-5xl xl:text-[55px] text-white font-light text-start break-words">
@@ -232,7 +232,7 @@ function Aboutus() {
           </div>
         </div>
       </div>
-      <div className="relative bg-[#110f27]  mt-[-3px]">
+      <div className="relative  mt-[-3px]">
         <div>
           <img
             src="/HomePages/Home6.png"
