@@ -145,7 +145,7 @@ achievements."
             alt="Main Background"
             className="absolute w-full h-[800px] md:h-[1000px] "
           />
-          <div className="relative z-10 flex flex-col gap-16 max-w-[90rem] mx-auto xl:p-0  p-9 mt-[-1px]">
+          <div className="relative z-10 flex flex-col gap-16 max-w-[90rem] mx-auto xl:p-0  p-6 mt-[-1px]">
             <div className="flex justify-center mt-32 ">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 {/* Left Content */}

@@ -79,7 +79,7 @@ function ContactUs() {
         iconClassNames="md:w-auto lg:w-full h-[400px]"
       />
 
-      <div className=" md:p-10 mt-[-3px] max-w-[90rem] mx-auto xl:p-0  p-9">
+      <div className=" md:p-10 mt-[-3px] max-w-[90rem] mx-auto ">
         <div className=" flex items-center justify-center p-4 mt-[-1px]">
           <form
             id="contact-form"

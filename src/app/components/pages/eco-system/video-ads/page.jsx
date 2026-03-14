@@ -48,7 +48,7 @@ CPMs and fill rates, making it the best choice in the market!"
         />
 
         <GlobalPartners />
-        <div className="max-w-[90rem] mx-auto xl:p-0  p-9">
+        <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
           <ScrollAnimation animateIn="animate__animated animate__zoomIn">
             <Text className="pt-12 text-4xl text-white sm:pt-24 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl">
               Your Future Career Opportunities

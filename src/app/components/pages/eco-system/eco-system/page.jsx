@@ -117,7 +117,7 @@ function Eco() {
         </div>
 
         {/* 🔥 Updated Feature Cards with Effects */}
-        <div className=" pt-24 mt-[-3px]  p-16">
+        <div className=" pt-24 mt-[-3px] p-6">
           <div className="grid grid-cols-1 gap-6 mx-auto text-white max-w-[90rem] sm:grid-cols-2 md:grid-cols-4">
             {features.map((feature, index) => {
               // eslint-disable-next-line react-hooks/rules-of-hooks
