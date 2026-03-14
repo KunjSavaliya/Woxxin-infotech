@@ -6,8 +6,8 @@ import RouterLoader from "./Reusable/RouteLoader";
 import { DM_Sans } from "next/font/google";
 
 export const metadata = {
-  title: "Woxxin Solution",
-  description: "Woxxin Solution",
+  title: "Woxxin Solution Pvt. Ltd. | End-to-End Digital Excellence",
+  description: "Crafting cutting-edge apps, immersive games, and impactful marketing solutions to accelerate growth and engagement.",
 };
 
 const dmSans = DM_Sans({
