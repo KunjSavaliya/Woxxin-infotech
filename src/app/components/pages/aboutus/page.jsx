@@ -25,8 +25,8 @@ function Aboutus() {
           alt="Main Background"
           className="absolute inset-0 z-0 object-fill w-full h-[70%] "
         />
-        <div className="relative z-10 flex flex-col items-center w-full h-full text-left p-16">
-          <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 max-w-7xl mx-auto">
+        <div className="relative z-10 flex flex-col items-center w-full h-full text-left xl:p-0  p-16">
+          <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 max-w-[90rem] mx-auto">
             <div>
               <img
                 src="/HomePages/Google.png"
