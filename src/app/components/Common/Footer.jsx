@@ -56,7 +56,7 @@ function Footer() {
                 </li>
                 <li className="flex items-center gap-3">
                   <FaEnvelope className="text-gray-400 shrink-0" />
-                  <a href="mailto:woxxin@gmail.com">woxxin@gmail.com</a>
+                  <a href="mailto:contact@woxxin.com">contact@woxxin.com</a>
                 </li>
 
                 <li className="flex items-center gap-3">

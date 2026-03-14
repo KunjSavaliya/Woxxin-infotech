@@ -37,7 +37,7 @@ function Aboutus() {
             <Text className="text-gradient-Home text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start ActiveUser-homePage">
               Accelerate Your App / H5 Game Growth
             </Text>
-            <Text className="text-[18px] md:text-2xl xl:text-4xl text-white font-medium text-start">
+            <Text className="text-[18px] md:text-2xl xl:text-4xl text-white  text-start ">
               Woxxin Solutions is a dynamic company focused on creating
               innovative Mobile Applications and engaging Mobile games, boasting
               over 650 million downloads globally.
