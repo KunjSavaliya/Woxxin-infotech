@@ -115,7 +115,7 @@ results for your business growth"
 
 
 
-          <section className=" text-white max-w-[90rem] mx-auto xl:p-0  p-6">
+          <section className=" text-white max-w-[90rem] mx-auto p-6 mt-15 ">
             <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 max-w-7xl">
               {services.map((service, index) => (
                 <motion.div

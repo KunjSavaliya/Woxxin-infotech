@@ -51,7 +51,7 @@ function MobileGame() {
           </div>
           <div className="flex flex-col ">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp"></ScrollAnimation>
-            <div className="flex justify-center">
+            <div className="flex justify-center p-2">
               <img
                 src="/HomePages/MobileGame/MobImg.webp"
                 alt="Main Background"
