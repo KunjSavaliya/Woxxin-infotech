@@ -82,7 +82,7 @@ achievements."
         />
         <div className=" mt-[-4px]">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <div className="flex flex-col justify-between gap-10 px-5 pt-24 md:flex-row max-w-[90rem] mx-auto xl:p-0  p-16">
+            <div className="flex flex-col justify-between gap-10 px-5 pt-32 md:flex-row max-w-[90rem] mx-auto ">
               <div className="flex justify-center w-full md:justify-end md:w-1/2">
                 <img
                   src="/HomePages/Investment/InvestMission.webp"
@@ -111,7 +111,7 @@ achievements."
             </div>
           </ScrollAnimation>
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <div className="flex flex-col gap-5 pt-5 sm:pt-24 md:flex-row justify-betweensm:px-12 max-w-[90rem] mx-auto xl:p-0  p-16">
+            <div className="flex flex-col gap-5 pt-5 sm:pt-24 md:flex-row justify-between sm:px-12 max-w-[90rem] mx-auto ">
               <div className="p-5 text-white ">
                 <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[25px]  text-center lg:text-start">
                   <span className="text-[#5961F9]">OUR</span> VISION
@@ -146,7 +146,7 @@ achievements."
             className="absolute w-full h-[800px] md:h-[1000px] "
           />
           <div className="relative z-10 flex flex-col gap-16 max-w-[90rem] mx-auto xl:p-0  p-16 mt-[-1px]">
-            <div className="flex justify-center mt-12 ">
+            <div className="flex justify-center mt-32 ">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 {/* Left Content */}
                 <Text className="text-gradient-mobiletext font-extralight text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px]  text-white  mt-6 sm:mt-10">
