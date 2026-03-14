@@ -99,7 +99,7 @@ function MainPage() {
                 text="See jobs & apply"
                 iconColor="#6C63FF"
                 className="mt-2 sm:mt-5 text-white border border-[#5961F9] rounded-md"
-              //  onButtonClick={() => handleClick()}
+                onClick={handleClick}
               />
             </div>
           </div>
