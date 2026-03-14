@@ -162,7 +162,7 @@ function MobilePage() {
 
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <Text className="mt-16 mb-12 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
-            Explore our products
+            Explore Our Products
           </Text>
 
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">

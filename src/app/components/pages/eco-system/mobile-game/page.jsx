@@ -103,7 +103,7 @@ function MobileGame() {
         </div>
         <div className="mt-10 max-w-[90rem] mx-auto   xl:p-0  p-6">
           <Text className="p-4 mb-6 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
-            Outstanding products
+            Outstanding Products
           </Text>
           <div className="flex flex-wrap justify-center gap-5">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">

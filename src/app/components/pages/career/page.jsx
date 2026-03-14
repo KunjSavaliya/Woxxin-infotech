@@ -108,7 +108,7 @@ function MainPage() {
 
       <div className="pt-0 md:pt-28 max-w-[90rem] mx-auto ">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-          <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
+          <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[45px] text-[#FFFFFF80]">
 
             TOP POSITIONS
           </Text>

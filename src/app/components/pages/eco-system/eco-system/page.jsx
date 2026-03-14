@@ -159,7 +159,7 @@ function Eco() {
             <div className="w-full  max-w-[90rem] mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text className="p-4 text-[40px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
-                  Join Woxxin to open new pathways in the digital future
+                  Join Woxxin to Open New Pathways in The Digital Future
                 </Text>
               </ScrollAnimation>
             </div>

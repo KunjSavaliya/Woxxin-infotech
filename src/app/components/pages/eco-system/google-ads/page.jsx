@@ -103,7 +103,7 @@ results for your business growth"
         />
         <div className="pt-28 max-w-[90rem] mx-auto">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
+            <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[45px] text-[#FFFFFF80]">
               OUR SERVICES
             </Text>
             <img
@@ -144,7 +144,7 @@ results for your business growth"
 
 
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <Text className="mt-16 text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
+            <Text className="mt-16 text-2xl md:text-3xl lg:text-4xl xl:text-[45px] text-[#FFFFFF80]">
               Proven Results
             </Text>
 
