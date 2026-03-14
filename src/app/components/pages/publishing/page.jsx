@@ -79,7 +79,7 @@ marketplace."
 and foster lasting growth."
         />
 
-        <div className="flex flex-col p-6  text-white max-w-7xl mx-auto pt-16">
+        <div className="flex flex-col  p-16  text-white max-w-[90rem] mx-auto pt-36">
           <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
             VISION
@@ -97,7 +97,7 @@ and foster lasting growth."
             </Text>
           </ScrollAnimation>
         </div>
-        <div className="p-16 flex flex-wrap md:flex-nowrap justify-center gap-6 pt-12 pb-16 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-7xl mx-auto">
+        <div className=" flex flex-wrap md:flex-nowrap justify-center gap-6 pt-12 pb-16 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto">
           {[
             {
               title: "100M+",

@@ -106,7 +106,7 @@ function Eco() {
             height={700}
           />
           <div className="absolute top-0 left-0 flex items-end justify-center w-full h-full">
-            <div className="w-full max-w-7xl mx-auto">
+            <div className="w-full max-w-[90rem] mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text className="p-4 text-5xl font-bold leading-tight text-center text-white sm:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-EcoDrive">
                   Innovation Drives Our Success
@@ -117,8 +117,8 @@ function Eco() {
         </div>
 
         {/* 🔥 Updated Feature Cards with Effects */}
-        <div className="p-16 pt-24 mt-[-3px]">
-          <div className="grid grid-cols-1 gap-6 mx-auto text-white max-w-7xl sm:grid-cols-2 md:grid-cols-4">
+        <div className=" pt-24 mt-[-3px]   p-16">
+          <div className="grid grid-cols-1 gap-6 mx-auto text-white max-w-[90rem] sm:grid-cols-2 md:grid-cols-4">
             {features.map((feature, index) => {
               // eslint-disable-next-line react-hooks/rules-of-hooks
               const cardRef = useRef(null);
@@ -156,7 +156,7 @@ function Eco() {
             height={700}
           />
           <div className="absolute top-0 left-0 flex items-start justify-center w-full h-full pt-16 md:pt-32">
-            <div className="w-full  max-w-7xl mx-auto">
+            <div className="w-full  max-w-[90rem] mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 <Text className="p-4 text-[40px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
                   Join Woxxin to open new pathways in the digital future

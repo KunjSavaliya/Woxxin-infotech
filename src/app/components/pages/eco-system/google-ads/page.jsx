@@ -101,7 +101,7 @@ results for your business growth"
           buttonText="Contact Us"
           onButtonClick={() => handleClick()}
         />
-        <div className="pt-28  sm:px-12 max-w-7xl mx-auto p-16">
+        <div className="pt-28 max-w-[90rem] mx-auto xl:p-0  p-16">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <Text className="text-xl md:text-2xl lg:text-3xl xl:text-[35px] text-[#FFFFFF80]">
               OUR SERVICES
@@ -115,7 +115,7 @@ results for your business growth"
 
 
 
-          <section className="p-16 text-white max-w-7xl mx-auto">
+          <section className=" text-white max-w-[90rem] mx-auto xl:p-0  p-16">
             <div className="grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 max-w-7xl">
               {services.map((service, index) => (
                 <motion.div
@@ -144,7 +144,7 @@ results for your business growth"
 
 
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
+            <Text className="mt-16 text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
               Proven Results
             </Text>
 
@@ -155,7 +155,7 @@ results for your business growth"
               className="mx-auto mt-5 mb-5 "
             />
           </ScrollAnimation>
-          <div className=" p-4 mt-5 flex pt-12 flex-wrap md:flex-nowrap gap-4 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pb-16">
+          <div className="max-w-[90rem] mx-auto   p-4  mt-5 flex pt-12 flex-wrap md:flex-nowrap gap-4 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] pb-16">
             {[
               {
                 title: "250%",

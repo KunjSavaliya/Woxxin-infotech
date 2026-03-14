@@ -81,7 +81,7 @@ function MainPage() {
           className="absolute inset-0 z-0 object-fill w-full h-auto"
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
-          <div className=" p-16 flex flex-col gap-12 p-6 mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-7xl mx-auto">
+          <div className=" flex flex-col gap-12  mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-[90rem] mx-auto xl:p-5  p-16">
             <img
               src="/HomePages/Google.png"
               alt="Google"
@@ -106,7 +106,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="p-16 pt-0 md:pt-28 max-w-7xl mx-auto">
+      <div className="pt-0 md:pt-28 max-w-[90rem] mx-auto ">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[35px] text-[#FFFFFF80]">
 
@@ -119,7 +119,7 @@ function MainPage() {
           />
         </ScrollAnimation>
 
-        <div className="min-h-screen px-4 py-10 sm:px-6 lg:px-20">
+        <div className=" px-4 py-10 sm:px-6 lg:px-20">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-2">
             {jobs.map(({ title, experience, Icon }, idx) => (
               <div
@@ -149,7 +149,7 @@ function MainPage() {
         </div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto p-16">
+      <div className="relative z-10 max-w-[90rem] mx-auto xl:p-0  p-16">
         <div className="flex flex-col w-full max-w-screen-xl mx-auto xl:px-20">
           <div className="">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
@@ -194,7 +194,7 @@ function MainPage() {
                     className="bg-[#141229] border border-[#2a2742] p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-xl"
                   >
                     <Icon size={28} className="mb-4 text-orange-400" />
-                    <p className="text-sm leading-relaxed text-gray-300 text-start">
+                    <p className="text-md leading-relaxed text-gray-300 text-start">
                       {text}
                     </p>
                   </div>

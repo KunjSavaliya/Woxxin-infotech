@@ -17,7 +17,7 @@ function Aboutus() {
   const handleClick = () => {
     router.push("/components/pages/eco-system/eco-system");
   };
-  return (
+  return (  
     <>
       <div className="relative w-full h-full overflow-hidden">
         <img
@@ -89,7 +89,7 @@ function Aboutus() {
           />
         </div>
         <div className="absolute top-0 left-0 flex flex-col items-center justify-start w-full h-full mt-32 text-left ">
-          <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 max-w-7xl mx-auto">
+          <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 max-w-[90rem] mx-auto">
             <div className="flex flex-col text-white gap-7 ">
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text size="text-2xl mt-[-50px] font-bold text-white p-8 text-center md:text-4xl lg:text-4xl xl:text-5xl  md:mt-[-100px] xl:mt-0 lg:mt-0 ">
@@ -155,7 +155,7 @@ function Aboutus() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center xl:gap-24 max-w-7xl mx-auto p-4 sm:p-16 mt-[-2px]">
+      <div className="flex flex-wrap justify-center xl:gap-24 max-w-[90rem] mx-auto p-4 sm:p-16 mt-[-2px]">
         <div>
           <img
             src="/HomePages/G1.webp"
@@ -202,8 +202,8 @@ function Aboutus() {
       <div>
         <GlobalPartners />
       </div>
-      <div className="mt-[-3px] p-16">
-        <div className="flex flex-col justify-between gap-28 text-white md:flex-row max-w-7xl mx-auto">
+      <div className="mt-[-3px] xl:p-0  p-16">
+        <div className="flex flex-col justify-between gap-28 text-white md:flex-row max-w-[90rem] mx-auto">
           <div className="flex items-center w-full md:w-3/5 ">
             <ScrollAnimation animateIn="animate__animated animate__zoomIn">
               <Text className="text-4xl md:text-4xl lg:text-5xl xl:text-[55px] text-white font-light text-start break-words">
