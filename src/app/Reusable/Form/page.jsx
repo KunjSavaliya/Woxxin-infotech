@@ -97,6 +97,8 @@ const ApplicationForm = ({ onClose }) => {
             onChange={handleChange}
             className="w-full p-3 rounded-md bg-[#1c1b2f] border border-gray-600 focus:outline-none"
             placeholder="Enter your full name"
+            required
+
           />
         </div>
 
@@ -111,6 +113,7 @@ const ApplicationForm = ({ onClose }) => {
             onChange={handleChange}
             className="w-full p-3 rounded-md bg-[#1c1b2f] border border-gray-600 focus:outline-none"
             placeholder="Enter your email"
+            required
           />
         </div>
 
@@ -120,6 +123,7 @@ const ApplicationForm = ({ onClose }) => {
           </label>
           <select
             name="position"
+            required
             value={formData.position}
             onChange={handleChange}
             className="w-full p-3 rounded-md bg-[#1c1b2f] border border-gray-600 focus:outline-none"
@@ -138,6 +142,7 @@ const ApplicationForm = ({ onClose }) => {
           </label>
           <input
             type="file"
+            required
             name="resume"
             accept=".pdf,.doc,.docx"
             onChange={handleChange}
@@ -151,6 +156,7 @@ const ApplicationForm = ({ onClose }) => {
           </label>
           <textarea
             name="additionalInfo"
+            required
             value={formData.additionalInfo}
             onChange={handleChange}
             className="w-full p-3 rounded-md bg-[#1c1b2f] border border-gray-600 focus:outline-none"

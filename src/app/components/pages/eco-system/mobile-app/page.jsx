@@ -23,7 +23,7 @@ function MobilePage() {
         <img
           src="/HomePages/MobileApp/MobileApps.png"
           alt="Main Background"
-          className="absolute w-full h-[800px] md:h-[1000px] "
+          className="absolute w-full h-[850px] md:h-[1000px] "
         />
         <div className="relative z-10 flex flex-col items-start w-full h-full text-left">
           <div className="flex flex-col xl:p-0  p-6 mt-32 text-white sm:mt-40 gap-[200px] lg:gap-[200px]  max-w-[90rem] mx-auto ">
@@ -106,7 +106,7 @@ function MobilePage() {
           </ScrollAnimation>
         </div>
 
-        <div className="flex flex-wrap md:flex-nowrap gap-4 mt-16 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto xl:p-0  p-6 ">
+        <div className="flex flex-wrap md:flex-nowrap gap-4 p-16  justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto  ">
           {[
             {
               title: "Top 03",
@@ -123,12 +123,12 @@ function MobilePage() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col w-full max-w-full gap-2 px-4 py-4 mb-12 space-y-2 sm:w-1/2 md:w-1/3 text-start"
+              className="flex flex-col w-full max-w-full gap-2 p-6 space-y-2 sm:w-1/2 md:w-1/3 text-start"
             >
               <Text className="text-3xl md:text-3xl xl:text-[35px] text-white font-bold">
                 {item.title}
               </Text>
-              <Text className="text-md sm:text-lg md:text-xl xl:text-[20px] text-white font-medium break-words font-extralight">
+              <Text className="text-md sm:text-lg md:text-xl xl:text-[20px] text-white font-medium break-words ">
                 {item.description}
               </Text>
             </div>
