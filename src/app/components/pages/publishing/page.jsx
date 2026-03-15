@@ -97,7 +97,8 @@ and foster lasting growth."
             </Text>
           </ScrollAnimation>
         </div>
-        <div className=" flex flex-wrap md:flex-nowrap justify-center gap-6 pt-16 pb-20 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto">
+        <div className=" p-16 flex flex-wrap md:flex-nowrap justify-center gap-6 divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto">
+
           {[
             {
               title: "100M+",
@@ -125,7 +126,7 @@ and foster lasting growth."
             return (
               <div
                 key={index}
-                className="flex flex-col w-full max-w-full px-4 py-4 space-y-2 sm:w-1/2 md:w-1/3 text-start"
+                className="flex flex-col w-full max-w-full p-4 space-y-2 sm:w-1/2 md:w-1/3 text-start"
               >
                 <Text className="text-3xl md:text-4xl xl:text-[90px] text-white text2-gradient font-bold xl:leading-[1]">
                   {isCountable ? (

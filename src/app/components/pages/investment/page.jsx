@@ -121,7 +121,7 @@ achievements."
                   alt="Line"
                   className="mt-5 mb-5"
                 />
-                <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[30px] text-center lg:text-start">
+                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[30px] text-center md:text-start leading-relaxed">
                   Aspire to be the leading tech company in India, aiming to make
                   a global impact.
                 </p>
