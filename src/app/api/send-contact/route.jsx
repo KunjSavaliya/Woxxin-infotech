@@ -67,30 +67,30 @@ export async function POST(req) {
           style="border-collapse:collapse;font-size:15px;">
 
             <tr style="border-bottom:1px solid #eee;">
-              <td style="font-weight:bold;color:#555;">Contact Person</td>
+              <td style="font-weight:bold;color:#555;">Contact Person :</td>
               <td>${data.firstName} ${data.lastName}</td>
             </tr>
 
             <tr style="border-bottom:1px solid #eee;">
-              <td style="font-weight:bold;color:#555;">Email Address</td>
+              <td style="font-weight:bold;color:#555;">Email Address :</td>
               <td>${data.email}</td>
             </tr>
 
             <tr style="border-bottom:1px solid #eee;">
               <td style="font-weight:bold;color:#555;">
-              Company / Developer Name
+              Company / Developer Name :
               </td>
               <td>${data.teamSize}</td>
             </tr>
 
             <tr style="border-bottom:1px solid #eee;">
-              <td style="font-weight:bold;color:#555;">Country</td>
+              <td style="font-weight:bold;color:#555;">Country :</td>
               <td>${data.country}</td>
             </tr>
 
             <tr style="border-bottom:1px solid #eee;">
               <td style="font-weight:bold;color:#555;">
-              Portfolio / Gameplay Link
+              Portfolio / Gameplay Link :
               </td>
               <td>
                 ${data.portfolioAnswer} <br/>
@@ -102,7 +102,7 @@ export async function POST(req) {
 
             <tr style="border-bottom:1px solid #eee;">
               <td style="font-weight:bold;color:#555;">
-              Worked with other publishers
+              Worked with other publishers :
               </td>
               <td>
                 ${data.publisherAnswer} <br/>
@@ -113,12 +113,12 @@ export async function POST(req) {
             </tr>
 
             <tr style="border-bottom:1px solid #eee;">
-              <td style="font-weight:bold;color:#555;">Message</td>
+              <td style="font-weight:bold;color:#555;">Message :</td>
               <td>${data.message || "N/A"}</td>
             </tr>
 
             <tr>
-              <td style="font-weight:bold;color:#555;">Policy Agreement</td>
+              <td style="font-weight:bold;color:#555;">Policy Agreement :</td>
               <td>${data.policyAgreed ? "Yes" : "No"}</td>
             </tr>
 
