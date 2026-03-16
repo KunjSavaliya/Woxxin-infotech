@@ -86,7 +86,7 @@ body {
   }
 
   .text-gradient-mobilePro {
-    background: linear-gradient(to right, #ffd6a8 20%, #6c63ff);
+    background: linear-gradient(to right, #ff9b28 20%, #4035ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

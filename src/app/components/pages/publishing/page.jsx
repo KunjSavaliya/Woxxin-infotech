@@ -79,8 +79,8 @@ marketplace."
 and foster lasting growth."
         />
 
-        <div className="flex flex-col  p-6  text-white max-w-[90rem] mx-auto pt-36">
-          <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+        <div className="flex flex-col  p-6  text-white max-w-[90rem] mx-auto pt-24">
+          <Text className="font-bold text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
 
             VISION
           </Text>
@@ -90,7 +90,7 @@ and foster lasting growth."
             className="mx-auto mt-5 mb-5 "
           />
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 pt-6 ">
+            <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 pt-6 ">
               Collaborating with over 200 international partners, we create a
               vibrant technology ecosystem that serves hundreds of millions of
               users each month.

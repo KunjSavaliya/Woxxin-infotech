@@ -61,7 +61,7 @@ function MobileGame() {
           </div>
 
           <div className=" max-w-[90rem] mx-auto xl:p-0 p-6">
-            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+            <Text className="text-2xl md:text-3xl font-semibold mt-1 lg:text-4xl xl:text-[35px] text-white">
 
               MISSION
             </Text>
@@ -73,14 +73,14 @@ function MobileGame() {
             <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
-                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 text-gradient-mobiletext ">
+                <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 text-gradient-mobiletext ">
                   Our vision is to become a top-tier Game Studio,celebrated for
                   crafting engaging, inventive,and beloved games that unite
                   players globally.
                 </Text>
               </div>
             </ScrollAnimation>
-            <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+            <Text className="text-2xl md:text-3xl font-semibold mt-5 lg:text-4xl xl:text-[35px] text-white">
               VISION
             </Text>
             <img
@@ -91,7 +91,7 @@ function MobileGame() {
             <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-10"></div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
-                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl   mb-12 text-gradient-mobiletext">
+                <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl   mb-12 text-gradient-mobiletext">
                   Our mission is to craft games that resonate with players
                   around the world, sparking joy, creativity, and a sense of
                   community. We aim to transform the mobile gaming landscape by
@@ -101,8 +101,8 @@ function MobileGame() {
             </ScrollAnimation>
           </div>
         </div>
-        <div className="mt-10 max-w-[90rem] mx-auto   xl:p-0  p-6">
-          <Text className="p-4 mb-6 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
+        <div className="mt-14 max-w-[90rem] mx-auto   xl:p-0  p-6">
+          <Text className="p-4 mb-6 text-5xl font-semibold text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Outstanding Products
           </Text>
           <div className="flex flex-wrap justify-center gap-5">
@@ -128,7 +128,7 @@ function MobileGame() {
               />
             </ScrollAnimation>
           </div>
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12 mt-10">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <img
                 src="/HomePages/MobileGame/MobApp4.webp"

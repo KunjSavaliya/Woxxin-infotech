@@ -42,7 +42,7 @@ const MobileAppSection = ({
                     className="w-40 md:w-56"
                   />
                 </div>
-                <Text className="text-start leading-[1.2] md:leading-[1.2] text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-semibold mt-6 sm:mt-16">
+                <Text className="text-start leading-normal md:leading-[1.2] text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-semibold mt-6 sm:mt-16">
                   {title}
                 </Text>
                 <Text className=" font-extralight text-2xl sm:text-3xl md:text-3xl lg:text-[30px] xl:text-3xl text-white text-start mt-10 sm:mt-16 ">
@@ -58,7 +58,7 @@ const MobileAppSection = ({
               </div>
             </div>
             <Text
-              className={` text-white mt-5 text-start  ${descriptionClassName} `}
+              className={` text-white mt-5 font-light text-start  ${descriptionClassName} `}
             >
               {description}
             </Text>
@@ -66,7 +66,7 @@ const MobileAppSection = ({
               <div className="mt-5 mb-12 xl:pl-56 xl:pr-56">
                 {EcoText && (
                   <Text
-                    className={` text-white text-3xl xl:text-[40px] text-center  `}
+                    className={` text-white text-3xl xl:text-[40px] text-center leading-normal `}
                   >
                     {EcoText}
                   </Text>
@@ -74,7 +74,7 @@ const MobileAppSection = ({
 
                 {EcoText1 && (
                   <Text
-                    className={` text-white text-3xl xl:text-[40px] text-center mt-12 `}
+                    className={` text-white text-3xl xl:text-[40px] text-center mt-12 leading-normal `}
                   >
                     {EcoText1}
                   </Text>
@@ -105,7 +105,7 @@ const MobileAppSection = ({
           </div>
           {MTitle && (
             <div>
-              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white font-bold">
 
                 {MTitle}
               </Text>
@@ -114,11 +114,11 @@ const MobileAppSection = ({
                 alt="Line"
                 className="mx-auto mt-5 mb-5 "
               />
-              <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] "></div>
+              <div className="flex flex-wrap md:flex-nowrap mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] "></div>
 
-              <div className="flex flex-col text-white  ">
+              <div className="flex flex-col text-white ">
                 <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-                  <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
+                  <Text size="text-center text-xl font-light text-white md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                     {Mtext}
                   </Text>
                 </ScrollAnimation>

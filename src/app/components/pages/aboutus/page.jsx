@@ -37,12 +37,12 @@ function Aboutus() {
             <Text className="text-gradient-Home text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start ActiveUser-homePage">
               Accelerate Your App / H5 Game Growth
             </Text>
-            <Text className="text-[18px] md:text-2xl xl:text-4xl text-white  text-start ">
+            <Text className="text-[18px] md:text-2xl xl:text-4xl text-white text-start">
               Woxxin Solutions is a dynamic company focused on creating
               innovative Mobile Applications and engaging Mobile games, boasting
               over 650 million downloads globally.
             </Text>
-            <Text className="text-3xl md:text-2xl mt-10 lg:text-3xl xl:text-[35px] text-[#FFFFFF80] font-extralight">
+            <Text className="text-3xl md:text-2xl mt-10 lg:text-3xl xl:text-[40px] text-[#FFFFFF80] font-semibold">
               PUBLISHER
             </Text>
 
@@ -140,7 +140,7 @@ function Aboutus() {
 
         <div className="flex justify-center p-4">
           <img
-            src="/HomePages/Mobile.webp"
+            src="/HomePages/Mobile.png"
             alt="Main Background"
             className="w-auto mt-[-4px] h-auto  sm:h-[300px] md:h-[300px] lg:h-[600px]"
           />
@@ -149,7 +149,7 @@ function Aboutus() {
       <div className="lg:px-28 xl:px-32 mt-[-3px]">
         <div className="flex flex-col text-white ">
           <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-            <Text className="text-center  font-lighter leading-relaxed text-white text-5xl md:text-[65px] lg:text-[65px] xl:text-[90px] text-gradient-mobileGames">
+            <Text className="text-center  font-bold leading-relaxed text-white text-5xl md:text-[65px] lg:text-[65px] xl:text-[90px] text-gradient-mobileGames">
               Mobile Games
             </Text>
           </ScrollAnimation>
@@ -158,44 +158,44 @@ function Aboutus() {
       <div className="flex flex-wrap justify-center xl:gap-24 max-w-[90rem] mx-auto p-4 sm:p-16 mt-[-2px]">
         <div>
           <img
-            src="/HomePages/G1.webp"
+            src="/HomePages/G1.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72 hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72 hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
-            src="/HomePages/G2.webp"
+            src="/HomePages/G2.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G3.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40  sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
             src="/HomePages/G4.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
-            src="/HomePages/G5.webp"
+            src="/HomePages/G5.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
         <div>
           <img
-            src="/HomePages/G6.webp"
+            src="/HomePages/G6.png"
             alt="Main Background"
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40  sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>

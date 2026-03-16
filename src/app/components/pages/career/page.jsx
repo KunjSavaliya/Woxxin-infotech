@@ -108,7 +108,7 @@ function MainPage() {
 
       <div className="pt-0 md:pt-28 max-w-[90rem] mx-auto ">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-          <Text className="text-2xl md:text-3xl lg:text-4xl xl:text-[45px] text-[#FFFFFF80]">
+          <Text className="text-3xl md:text-4xl lg:text-4xl xl:text-[45px] text-[#FFFFFF80] font-bold">
 
             TOP POSITIONS
           </Text>
@@ -153,7 +153,7 @@ function MainPage() {
         <div className="flex flex-col w-full max-w-screen-xl mx-auto xl:px-20">
           <div className="">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-              <Text className="text-start text-gradient-mobiletext font-extralight text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px] text-white mt-6">
+              <Text className="text-start text-gradient-mobiletext font-bold text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[70px] text-white mt-6">
                 Our Perks Create a Difference
               </Text>
             </ScrollAnimation>
@@ -172,18 +172,22 @@ function MainPage() {
                 key={i}
                 animateIn="animate__animated animate__fadeInUp"
               >
-                <Text className="text-xl text-white text-start font-extralight md:text-4xl lg:text-4xl xl:text-3xl">
-                  {line}
-                </Text>
+                <div className="flex items-start gap-4">
+                  <span className="text-white text-2xl">•</span>
+
+                  <Text className="text-xl text-white text-start font-extralight md:text-4xl lg:text-4xl xl:text-3xl">
+                    {line}
+                  </Text>
+                </div>
               </ScrollAnimation>
             ))}
           </div>
 
           <div className="pt-[150px] sm:mt-10">
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-              <Text className=" text-gradient-mobiletext font-extralight text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px] text-white">
+              <p className=" text-gradient-mobiletext text-center font-semibold  text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px] leading-[1.2]">
                 Are you a perfect part of Woxxin Solution
-              </Text>
+              </p>
             </ScrollAnimation>
 
             <div className="px-4 py-10 pt-20 sm:px-6 lg:px-0">

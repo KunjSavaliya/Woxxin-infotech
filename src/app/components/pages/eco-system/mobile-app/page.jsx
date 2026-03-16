@@ -38,7 +38,7 @@ function MobilePage() {
                       className="w-40 md:w-56"
                     />
                   </div>
-                  <Text className="text-gradient-mobiletext font-extralight text-6xl sm:text-5xl md:text-[75px]  lg:text-[70px] xl:text-[95px]  text-white text-start mt-6 sm:mt-10">
+                  <Text className="text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[85px] font-bold  text-white text-start mt-6 sm:mt-10">
                     Woxxin Intelligent Mobile Apps
                   </Text>
                 </div>
@@ -58,7 +58,7 @@ function MobilePage() {
               </Text>
             </div>
             <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
-              <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+              <Text className="text-2xl font-semibold md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
                 MISSION
               </Text>
 
@@ -71,7 +71,7 @@ function MobilePage() {
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
 
                 <div className="flex flex-col text-white gap-7 ">
-                  <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
+                  <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
                     Create innovative mobile applications that enhance the daily
                     experiences of millions of people around the globe.
                   </Text>
@@ -89,7 +89,7 @@ function MobilePage() {
         />
 
         <div className=" max-w-[90rem] mx-auto xl:p-0  p-6">
-          <Text className="text-2xl md:text-3xl mt-1 lg:text-4xl xl:text-[35px] text-white">
+          <Text className="text-2xl md:text-3xl font-semibold mt-1 lg:text-4xl xl:text-[35px] text-white">
             VISION
           </Text>
           <img
@@ -99,7 +99,7 @@ function MobilePage() {
           />
           <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
 
-            <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
+            <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
               A vibrant network of cutting-edge apps designed to enhance the
               lives of millions, paving the way for a brighter future.
             </Text>
@@ -137,7 +137,7 @@ function MobilePage() {
       </div>
       <div className=" bg-[#F4F4F4]">
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-          <Text className="p-10 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
+          <Text className="p-10 text-5xl font-semibold md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Featured Products
           </Text>
         </ScrollAnimation>
@@ -161,7 +161,7 @@ function MobilePage() {
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-          <Text className="mt-16 mb-12 text-5xl text-white md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
+          <Text className="mt-16 mb-12 text-5xl text-white font-semibold md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Explore Our Products
           </Text>
 

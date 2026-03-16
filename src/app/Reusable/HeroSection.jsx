@@ -24,11 +24,11 @@ const HeroSection = ({
       </div>
       <div className="absolute top-0 left-0 flex flex-col items-center w-full h-full text-left  justify-center">
         <div className="flex flex-col justify-around ">
-          <div className=" xl:p-0  p-6 flex flex-col gap-16 md:gap-24 xl:gap-32 ">
+          <div className=" xl:p-0  p-6 flex flex-col gap-14 md:gap-24 xl:gap-32 ">
             <div>
               <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
                 <Text
-                  className={` md:leading-[1.2] mt-1   sm:text-5xl md:text-6xl  lg:leading-[1.2]  xl:leading-[1.2]  max-w-7xl mx-auto ${textClassName}`}
+                  className={` md:leading-[1.2] mt-1  font-semibold sm:text-5xl md:text-6xl  lg:leading-[1.2]  xl:leading-[1.2]  max-w-7xl mx-auto ${textClassName}`}
                 >
                   {text}
                 </Text>

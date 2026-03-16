@@ -92,7 +92,7 @@ achievements."
               </div>
               {/* Text Section */}
               <div className="w-full p-5 text-white">
-                <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[25px] text-center md:text-start">
+                <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[25px] font-semibold text-center md:text-start">
                   <span className="text-[#5961F9]">OUR</span> MISSION
                 </p>
                 <img
@@ -100,7 +100,7 @@ achievements."
                   alt="Line"
                   className="mx-auto mt-5 mb-5 md:mx-0"
                 />
-                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[30px] text-center md:text-start leading-relaxed">
+                <p className="text-xl font-light sm:text-2xl lg:text-3xl xl:text-[30px] text-center md:text-start leading-relaxed">
                   Transform the lives of millions globally by crafting
                   innovative technology solutions that seamlessly integrate into
                   every facet of daily living.
@@ -113,7 +113,7 @@ achievements."
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
             <div className="flex flex-col gap-5 pt-5 sm:pt-24 md:flex-row justify-between sm:px-12 max-w-[90rem] mx-auto ">
               <div className="p-5 text-white ">
-                <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[25px]  text-center lg:text-start">
+                <p className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-[25px] font-semibold  text-center lg:text-start">
                   <span className="text-[#5961F9]">OUR</span> VISION
                 </p>
                 <img
@@ -121,7 +121,7 @@ achievements."
                   alt="Line"
                   className="mt-5 mb-5"
                 />
-                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[30px] text-center md:text-start leading-relaxed">
+                <p className="text-xl sm:text-2xl lg:text-3xl xl:text-[30px] text-center md:text-start leading-relaxed font-light">
                   Aspire to be the leading tech company in India, aiming to make
                   a global impact.
                 </p>
@@ -149,14 +149,14 @@ achievements."
             <div className="flex justify-center mt-32 ">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
                 {/* Left Content */}
-                <Text className="text-gradient-mobiletext font-extralight text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px]  text-white  mt-6 sm:mt-10">
+                <Text className="text-gradient-mobiletext font-semibold text-4xl sm:text-5xl md:text-5xl lg:text-[70px] xl:text-[80px]  text-white  mt-6 sm:mt-10">
                   LOOKING TO SELL YOUR APP?
                 </Text>
               </ScrollAnimation>
             </div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
-                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-2 ">
+                <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-2 ">
                   Simply fill out the form below and one of our team members
                   will get back to you within 12 hours.
                 </Text>
@@ -164,7 +164,7 @@ achievements."
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
-                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 ">
+                <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 ">
                   Our promise: We will get you a definite answer within 72
                   hours.
                 </Text>

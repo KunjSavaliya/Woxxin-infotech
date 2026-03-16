@@ -84,7 +84,7 @@ function Eco() {
 
         <div className="bg-[#F4F4F4] pt-10">
           <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-            <Text className="p-4 text-5xl text-white sm:text-7xl text-gradient-mobilePro">
+            <Text className="p-4 text-5xl text-white sm:text-7xl text-gradient-mobilePro font-semibold">
               Discover Our Top Picks
             </Text>
           </ScrollAnimation>
