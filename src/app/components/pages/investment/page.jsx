@@ -156,7 +156,7 @@ achievements."
             </div>
             <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
               <div className="flex flex-col text-white ">
-                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-12 ">
+                <Text size="text-center text-xl font-bold text-white   md:text-4xl lg:text-4xl xl:text-4xl  mb-2 ">
                   Simply fill out the form below and one of our team members
                   will get back to you within 12 hours.
                 </Text>
