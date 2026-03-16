@@ -302,15 +302,15 @@ function ContactUs() {
           height={700}
         />
 
-        <div className="absolute top-0 left-0 flex justify-center w-full h-full items-top p-8">
+        <div className="absolute top-0 left-0 flex justify-center w-full h-full items-start p-4 md:p-8">
           <div className="w-full max-w-xl">
             <button
               type="submit"
-              className="w-full py-3 text-white border border-[#5961F9] rounded-md hover:bg-[#5961F9]/10 transition duration-300 p-10"
-
               disabled={loading}
               form="contact-form"
-
+              className="w-full py-3 text-white border border-[#5961F9] rounded-md 
+      hover:bg-[#5961F9]/10 transition duration-300 
+      flex items-center justify-center gap-2"
             >
               {loading && (
                 <svg
@@ -334,12 +334,11 @@ function ContactUs() {
                   />
                 </svg>
               )}
+
               {loading ? "Submitting..." : "Submit"}
             </button>
           </div>
-
         </div>
-
       </div>
 
     </>
