@@ -144,7 +144,7 @@ function MobilePage() {
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
             <img
-              src="/HomePages/MobileApp/MobileBanner1.webp"
+              src="/HomePages/MobileApp/MobileBanner1.png"
               alt="Main Background"
               className="w-[90%] mx-auto "
             />
@@ -153,7 +153,7 @@ function MobilePage() {
         <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
             <img
-              src="/HomePages/MobileApp/MobileBanner3.webp"
+              src="/HomePages/MobileApp/MobileBanner3.png"
               alt="Main Background"
               className="w-[80%] mx-auto "
             />
@@ -167,7 +167,7 @@ function MobilePage() {
 
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
             <img
-              src="/HomePages/MobileApp/MobileBanner2.webp"
+              src="/HomePages/MobileApp/MobileBanner2.png"
               alt="Main Background"
               className="w-auto mx-auto "
             />

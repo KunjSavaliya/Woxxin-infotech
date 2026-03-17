@@ -151,14 +151,14 @@ function Eco() {
           <Image
             src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
-            className="w-full mt-[-4px] h-[40vh] xl:h-[65vh]"
+            className="w-full mt-[-4px] h-[50vh] sm:h-auto"
             width={1920}
             height={700}
           />
           <div className="absolute top-0 left-0 flex items-start justify-center w-full h-full pt-16 md:pt-32">
             <div className="w-full  max-w-[90rem] mx-auto">
               <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
-                <Text className="p-4 text-[40px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
+                <Text className="p-4 text-[35px] font-bold leading-tight text-center text-white  sm:text-6xl md:text-6xl xl:text-7xl 2xl:text-8xl text-gradient-Home">
                   Join Woxxin to Open New Pathways in The Digital Future
                 </Text>
               </ScrollAnimation>

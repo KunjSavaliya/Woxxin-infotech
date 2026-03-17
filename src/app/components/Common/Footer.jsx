@@ -1,39 +1,72 @@
 import React from "react";
 import Link from "next/link";
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 import Text from "@/app/Reusable/Text";
+
 
 function Footer() {
   const AdFormats = [
-    "Mobile Apps",
-    "Mobile Games",
-    "H5 Games / Quiz",
-    "Video Ads",
-    "Google Ads",
-    "Investment",
-    "App Acquire",
+    { name: "Mobile Apps", link: "/components/pages/eco-system/mobile-app" },
+    { name: "Mobile Games", link: "/components/pages/eco-system/mobile-game" },
+    { name: "H5 Games / Quiz", link: "/components/pages/eco-system/h5-game" },
+    { name: "Video Ads", link: "/components/pages/eco-system/video-ads" },
+    { name: "Google Ads", link: "/components/pages/eco-system/google-ads" },
+    { name: "Investment", link: "/components/pages/investment" },
+    { name: "Publishing", link: "/components/pages/publishing" },
   ];
 
   return (
     <footer className="bg-[#110f27] text-gray-300 mt-[-3px]">
       <div className="max-w-[99rem] mx-auto pl-16 pr-16 pt-20">
-        {/* MAIN GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* LEFT COLUMN */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 ">
-            {/* Head Office */}
-            <div className="space-y-4">
-              <Text size="text-xl font-semibold text-white text-start">
+            <div className="space-y-5">
+              <Text className=" text-xl font-semibold text-white text-start">
                 Register Office
               </Text>
-
               <div className="flex items-start gap-3">
-                <FaMapMarkerAlt className="text-gray-400 mt-1 shrink-0" />
-                <p className="text-[16px] md:text-[18px] leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300">
                   128, Royal Plaza, Ved Road,
                   <br />
                   Surat, Gujarat, India – 395004
                 </p>
+              </div>
+              <div className="flex items-center gap-4 sm:gap-5 mt-2">
+                {/* <Link
+                  href="#"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-blue-500 transition duration-300 transform hover:scale-110"
+                >
+                  <FaFacebookF size={18} className="text-white" />
+                </Link> */}
+
+                <Link
+                  href="https://www.linkedin.com/company/woxxinsolution/"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-110"
+                >
+                  <FaLinkedinIn size={18} className="text-white" />
+                </Link>
+
+                <Link
+                  href="https://www.instagram.com/woxxinsolution?utm_source=qr&igsh=MWl0d2p4ZGhsdDE0ag%3D%3D"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-pink-500 transition duration-300 transform hover:scale-110"
+                >
+                  <FaInstagram size={18} className="text-white" />
+                </Link>
+
+                {/* <Link
+                  href="#"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-sky-400 transition duration-300 transform hover:scale-110"
+                >
+                  <FaTwitter size={18} className="text-white" />
+                </Link> */}
+
+                {/* <Link
+                  href="https://www.youtube.com/channel/UCJJOqSmgPQuQiGoCVGdAWZQ"
+                  target="_blank"
+                  className="bg-white/10 p-2.5 rounded-full hover:bg-red-500 transition duration-300 transform hover:scale-110"
+                >
+                  <FaYoutube size={18} className="text-white" />
+                </Link> */}
               </div>
             </div>
 
@@ -74,11 +107,19 @@ function Footer() {
               <Text size="text-xl font-semibold text-white text-start">
                 Our Solutions
               </Text>
-
-              <ul className="space-y-2 text-[16px] md:text-[18px]">
+              <ul className="space-y-3 text-[16px] md:text-[18px]">
                 {AdFormats.map((item, index) => (
-                  <li key={index} className="hover:text-white transition">
-                    {item}
+                  <li key={index}>
+                    <Link
+                      href={item.link}
+                      className="relative inline-block group pb-1"
+                    >
+                      <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#5961F9] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"></span>
+
+                      <span className="text-gray-300 group-hover:text-white transition">
+                        {item.name}
+                      </span>
+                    </Link>
                   </li>
                 ))}
               </ul>
