@@ -151,7 +151,7 @@ function Eco() {
           <Image
             src="/HomePages/Eco/EcoTouch.webp"
             alt="EcoTouch Background"
-            className="w-full mt-[-4px] h-[50vh] sm:h-auto"
+            className="w-full mt-[-4px] h-[50vh] sm:h-auto lg:h-[87vh]"
             width={1920}
             height={700}
           />

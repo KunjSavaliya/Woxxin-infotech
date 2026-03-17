@@ -85,7 +85,7 @@ function MobilePage() {
         <img
           src="/HomePages/MobileApp/MobileMan.webp"
           alt="Main Background"
-          className="h-full w-full h-auto"
+          className="w-full h-[50vh] sm:h-auto "
         />
 
         <div className=" max-w-[90rem] mx-auto xl:p-0  p-6">
