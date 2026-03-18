@@ -49,11 +49,15 @@ const MobileAppSection = ({
                   {title1}
                 </Text>
               </div>
-              <div className="items-center justify-center hidden md:flex">
+              <div className="relative items-center justify-center hidden md:flex w-[30%]">
+
+                {/* Glow background */}
+                <div className="absolute w-[300px] h-[300px] bg-gradient-to-tr from-purple-500 via-blue-500 to-pink-500 blur-[120px] opacity-40 rounded-full"></div>
+
                 <img
                   src={iconSrc}
-                  alt="Mobile Icon"
-                  className={iconClassNames}
+                  alt="Diamond"
+                  className={`relative z-10 w-[220px] animate-float ${iconClassNames}`}
                 />
               </div>
             </div>

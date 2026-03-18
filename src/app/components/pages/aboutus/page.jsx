@@ -10,6 +10,7 @@ import GlobalPartners from "@/app/Reusable/GlobalPartners";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
 import { useState } from "react";
 import Globe from "./earth/earth";
+import MobileAppSection from "@/app/Reusable/MobileSection";
 
 
 function Aboutus() {
@@ -111,151 +112,96 @@ function Aboutus() {
   };
   return (
     <>
-      <div className="relative w-full h-full overflow-hidden">
-        <img
-          src="/HomePages/Homedesign.png"
-          alt="Main Background"
-          className="absolute inset-0 z-0 object-fill w-full h-[70%] "
-        />
-        <div className="relative z-10 flex flex-col items-center w-full h-full text-left   ">
-          <div className="flex flex-col p-6 mt-32 text-white gap-7 sm:mt-40 sm:gap-7 max-w-[90rem] mx-auto">
-            <div>
-              <img
-                src="/HomePages/Google.png"
-                alt="Google"
-                className="w-40 md:w-56"
-              />
-            </div>
-            <Text className="text-gradient-Home text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start ActiveUser-homePage">
-              Accelerate Your App / H5 Game Growth
-            </Text>
-            <Text className="text-[18px] md:text-2xl xl:text-4xl text-white text-start">
-              Woxxin Solutions is a dynamic company focused on creating
+      <MobileAppSection
+        bgImageSrc="/HomePages/Homedesign.png"
+        logoSrc="/HomePages/Google.png"
+        iconSrc="/HomePages/AboutUs/AboutUSD.png"
+        title="Accelerate Your App / H5 Game Growth"
+        title1="Woxxin Solutions is a dynamic company focused on creating
               innovative Mobile Applications and engaging Mobile games, boasting
-              over 650 million downloads globally.
-            </Text>
-            <Text className="text-3xl md:text-2xl mt-10 lg:text-3xl xl:text-[40px] text-[#FFFFFF80] font-semibold">
-              PUBLISHER
-            </Text>
+              over 650 million downloads globally."
+        bgImageClassNames="h-full"
+        iconClassNames=" md:w-auto lg:w-full h-[400px]"
 
-            <img src="/HomePages/line.png" alt="Line" className="w-full"></img>
+      />
+      <div className="flex flex-wrap justify-center gap-28 mt-10">
 
-            <div className="flex flex-wrap md:flex-nowrap gap-4 mt-0 xl:mt-10 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16">
-              {[
-                {
-                  title: "Top 20",
-                  description: "Global Google Play Publisher in Non-Game",
-                },
-                {
-                  title: "Top 03",
-                  description: "In Southeast Asia Non-Game segment",
-                },
-                {
-                  title: "2022",
-                  description:
-                    "Outstanding Company in Business Development and Expansion by Google",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col w-full max-w-full px-4 py-4 space-y-2 sm:w-1/2 md:w-1/3 text-start"
-                >
-                  <Text className="text-2xl md:text-3xl xl:text-[35px] text-white text-bold font-bold">
-                    {item.title}
-                  </Text>
-                  <Text className="text-lg sm:text-lg md:text-xl xl:text-[20px] text-white break-words font-extralight">
-                    {item.description}
-                  </Text>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative mt-[-2px]">
         <div>
-          <img
-            src="/HomePages/Home2.png"
-            alt="Main Background"
-            className="w-full h-[350px]"
-          />
-        </div>
-        <div className="absolute top-0 left-0 flex flex-col items-center justify-start w-full h-full mt-32 text-left ">
-          <div className="flex flex-col gap-5 lg:gap-5 xl:gap-24 max-w-[90rem] mx-auto">
-            <div className="flex flex-col text-white gap-7 ">
-              <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-                <Text size="text-2xl mt-[-50px] font-bold text-white p-8 text-center md:text-4xl lg:text-4xl xl:text-5xl  md:mt-[-100px] xl:mt-0 lg:mt-0 ">
-                  Woxxin’s ecosystem of quality products has helped more than
-                  half a billion people work and play effectively, aiming to
-                  serve 1 billion users by 2025
-                </Text>
-              </ScrollAnimation>
-            </div>
+          <div className="relative flex items-center justify-center h-[180px]">
+            <h1 className="absolute text-[120px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
+              100M+
+            </h1>
+            <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-blue-gradient glow-blue">
+              <CountUp end={100} duration={10} suffix="M+" />
+            </h1>
+          </div>
+          <div>
+            <Text className="text-white text-3xl font-bold">Global Downloads</Text>
           </div>
         </div>
 
-        <div className="mt-5 contents">
-          <div className="contents">
-            <div className="">
-              <div className="relative flex items-center justify-center h-[180px]">
-
-                {/* BIG OUTLINE BACK */}
-                <h1 className="absolute text-[120px] md:text-[160px] font-extrabold text-transparent outline-green opacity-50 select-none">
-                  100+
-                </h1>
-
-                {/* FRONT NUMBER (BOTTOM ALIGNED) */}
-                <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-extrabold text-green-gradient glow-green">
-                  <CountUp end={100} duration={10} suffix="+" />
-                </h1>
-
-              </div>
-              <Text size="text-xl md:text-2xl lg:text-3xl xl:text-[45px] mt-10 text-white">
-                Global Downloads
-              </Text>
-            </div>
-            <img
-              src="/HomePages/Appimg.webp"
-              alt="Advertisers Icon"
-              className="w-auto mx-auto p-5"
-            />
-          </div>
-          <div className="mt-5">
-            <Text size="text-center text-[75px] md:text-[65px] lg:text-[65px] xl:text-[115px] font-bold text-white ActiveUser-gradient text-center text2-gradient">
+        <div>
+          <div className="relative flex items-center justify-center h-[180px]">
+            <h1 className="absolute text-[120px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
+              50M+
+            </h1>
+            <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-green-gradient glow-green">
               <CountUp end={50} duration={10} suffix="M+" />
-            </Text>
-            <Text size="text-xl md:text-2xl lg:text-3xl xl:text-[26px] text-white mt-5 ">
-              Monthly Active Users
-            </Text>
+            </h1>
           </div>
+          <div>
+            <Text className="text-white text-3xl font-bold">Monthly Active Users</Text>
+          </div>
+        </div>
+
+      </div>
+      <div className="">
+        <div className="mt-10 w-full h-[1px] bg-gradient-to-r from-transparent via-[#434343] to-transparent opacity-50"></div>
+      </div>
+
+      <Globe />
+
+      <div>
+        <div className="relative flex items-center justify-center h-[180px]">
+          <h1 className="absolute text-[90px] md:text-[80px] font-bold outline-soft select-none">
+            Mobile Games
+          </h1>
+          <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-soft-gradient">
+            Mobile Games
+          </h1>
+
         </div>
       </div>
 
-      <div className="flex flex-col gap-5  mt-[-3px]">
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-          <div className="mt-44">
-            <Text className="text-center text-5xl mt-[-130px] font-bold leading-relaxed text-white text-[50px]  sm:text-[60px]  md:text-[50px] lg:text-[70px] xl:text-[90px] text-gradient-mobileApp">
-              Mobile Apps
-            </Text>
-          </div>
-        </ScrollAnimation>
+      <div>
+        <div className="relative flex items-center justify-center h-[180px]">
+          <h1 className="absolute text-[90px] md:text-[50px] font-bold outline-softWS select-none">
+            Why Choose Woxxin Solution
+          </h1>
+          <h1 className="absolute bottom-10 text-[50px] md:text-[45px] font-semibold text-soft-gradientWS">
+            Why Choose Woxxin Solution
+          </h1>
 
-        <div className="flex justify-center p-4">
+        </div>
+      </div>
+      <div className="relative w-full h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden">
+
+        {/* 🌌 BACKGROUND IMAGE */}
+        <img
+          src="/HomePages/AboutUs/WhyCBg.png"
+          alt="background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* 📦 OVERLAY CONTENT IMAGE */}
+        <div className="relative z-10 flex items-center justify-center h-full px-4">
           <img
-            src="/HomePages/Mobile.png"
-            alt="Main Background"
-            className="w-auto mt-[-4px] h-auto  sm:h-[300px] md:h-[300px] lg:h-[600px]"
+            src="/HomePages/AboutUs/WhyC.png"
+            alt="content"
+            className="w-full max-w-[900px] md:max-w-[1100px] lg:max-w-[1300px] object-contain"
           />
         </div>
-      </div>
-      <div className="lg:px-28 xl:px-32 mt-[-3px]">
-        <div className="flex flex-col text-white ">
-          <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
-            <Text className="text-center  font-bold leading-relaxed text-white text-5xl md:text-[65px] lg:text-[65px] xl:text-[90px] text-gradient-mobileGames">
-              Mobile Games
-            </Text>
-          </ScrollAnimation>
-        </div>
+
       </div>
 
       <div className="flex flex-wrap justify-center gap-8 bg-gray-50 p-6 md:p-12">
@@ -412,7 +358,6 @@ function Aboutus() {
           </div>
         </div>
       </div>
-      <Globe />
     </>
   );
 }

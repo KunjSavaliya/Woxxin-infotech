@@ -27,25 +27,144 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-/* Thin green outline */
-.outline-green {
-  -webkit-text-stroke: 1.5px rgba(0, 255, 150, 0.25);
+/* --------------------------------------------------------------------------- */
+/* Outline with cyan + opacity */
+.outline-blue {
+  -webkit-text-stroke: 1.5px #00d9f566;
 }
 
-/* Clean green gradient */
-.text-green-gradient {
-  background: linear-gradient(180deg, #00ff9c, #00cc7a);
+/* Cyan gradient (clean + modern) */
+.text-blue-gradient {
+  background: linear-gradient(180deg, #00efff, #00b8d9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Glow (matching cyan tone) */
+.glow-blue {
+  text-shadow:
+    0 0 3px rgba(0, 217, 245, 0.9),
+    0 0 8px rgba(0, 217, 245, 0.5),
+    0 0 16px rgba(0, 217, 245, 0.3);
+}
+
 /* Neon glow (controlled, not messy) */
+@keyframes glowPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 2px rgba(0, 217, 245, 1),
+      /* sharp core (important) */ 0 0 10px rgba(0, 217, 245, 0.6),
+      0 0 12px rgba(0, 217, 245, 0.35);
+  }
+
+  50% {
+    text-shadow:
+      0 0 3px rgba(0, 217, 245, 1),
+      /* keep sharp */ 0 0 8px rgba(0, 217, 245, 0.7),
+      0 0 16px rgba(0, 217, 245, 0.4);
+  }
+}
+
+.glow-blue {
+  animation: glowPulse 2.5s infinite ease-in-out;
+}
+/* ---------------------------- */
+/* 🔲 SOFT OUTLINE (very light, not glowing) */
+/* 🔲 CLEAN OUTLINE TEXT (NO FILL) */
+.outline-soft {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(248, 123, 255, 0.25); /* base pink tone */
+}
+
+/* 🌈 SOFT PREMIUM GRADIENT (no harsh glow) */
+.text-soft-gradient {
+  background: linear-gradient(
+    90deg,
+    #f87bff,
+    #fb92cf,
+    #ffdd9b,
+    #c2f0b1,
+    #2fd8fe
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* -------------------- */
+
+/* 🔲 OUTLINE TEXT (blue-green tone) */
+.outline-softWS {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(78, 155, 255, 0.25); /* #4E9BFF */
+}
+
+/* 🌈 2-COLOR GRADIENT */
+.text-soft-gradientWS {
+  background: linear-gradient(90deg, #4e9bff, #00f5a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* -------------------- */
+/* Outline (cyan-green mix with opacity) */
+.outline-green {
+  -webkit-text-stroke: 1.5px rgba(0, 245, 160, 0.6);
+}
+
+/* Gradient (cyan → green premium blend) */
+.text-green-gradient {
+  background: linear-gradient(180deg, #00efff, #00f5a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow (balanced cyan + green tone) */
 .glow-green {
   text-shadow:
-    0 0 6px rgba(0, 255, 150, 0.8),
-    0 0 12px rgba(0, 255, 150, 0.5),
-    0 0 24px rgba(0, 255, 150, 0.3);
+    0 0 4px rgba(0, 245, 160, 0.9),
+    /* blue core */ 0 0 10px rgba(0, 245, 160, 0.6),
+    /* green glow */ 0 0 18px rgba(0, 245, 160, 0.35);
 }
+
+/* Neon pulse animation (clean + sharp core) */
+@keyframes glowPulsegreen {
+  0%,
+  100% {
+    text-shadow:
+      0 0 3px rgba(0, 245, 160, 1),
+      0 0 8px rgba(0, 245, 160, 0.7),
+      0 0 14px rgba(0, 245, 160, 0.4);
+  }
+
+  50% {
+    text-shadow:
+      0 0 4px rgba(0, 245, 160, 1),
+      0 0 12px rgba(0, 245, 160, 0.8),
+      0 0 20px rgba(0, 245, 160, 0.5);
+  }
+}
+
+/* Apply animation */
+.glow-green {
+  animation: glowPulsegreen 2.5s infinite ease-in-out;
+}
+/* -------------------------------------------------------------------------- */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+/* ----------------------------------------------------------------------------------- */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -55,6 +174,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .text2-gradient {
     background: linear-gradient(
       #b9b8b8 13%,

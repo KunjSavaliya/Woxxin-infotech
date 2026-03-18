@@ -5,7 +5,7 @@ import { Points, PointMaterial } from "@react-three/drei";
 import { useRef, useEffect, useState, useMemo } from "react";
 
 /* =========================
-   🌍 GLOBE DOTS (FRONT + BACK)
+   🌍 GLOBE DOTS
 ========================= */
 function GlobePoints() {
     const ref = useRef();
@@ -33,7 +33,7 @@ function GlobePoints() {
 
             const dots = [];
             const radius = 2.5;
-            const step = 12; // 🔥 spacing (clean look)
+            const step = 12;
 
             for (let y = 0; y < canvas.height; y += step) {
                 for (let x = 0; x < canvas.width; x += step) {
@@ -72,13 +72,12 @@ function GlobePoints() {
         <Points ref={ref} positions={positions} stride={3}>
             <PointMaterial
                 size={0.025}
-                color="#3b0a45"      // 🔥 dark purple
+                color="#FFFFFF"
                 transparent
                 opacity={0.9}
                 sizeAttenuation
-
-                depthWrite={false}   // ✅ IMPORTANT
-                depthTest={false}    // ✅ SHOW BACK DOTS
+                depthWrite={false}
+                depthTest={false}
             />
         </Points>
     );
@@ -115,17 +114,17 @@ function SpaceDots() {
 }
 
 /* =========================
-   🌍 EARTH BASE (TRANSPARENT GLASS)
+   🌍 EARTH BASE
 ========================= */
 function EarthBase() {
     return (
         <mesh>
             <sphereGeometry args={[2.45, 64, 64]} />
             <meshPhysicalMaterial
-                color="#ececec"
+                color="#ffffff"
                 transparent
-                opacity={0.1}       // 🔥 almost invisible
-                transmission={1}    // glass feel
+                opacity={0.08}
+                transmission={1}
                 roughness={0.3}
                 metalness={0}
             />
@@ -138,24 +137,30 @@ function EarthBase() {
 ========================= */
 export default function Globe() {
     return (
-        <div className="w-full h-[1000px] relative overflow-hidden bg-white">
+        <div className="w-full h-[500px] md:h-[800px] relative overflow-hidden ">
 
-            {/* 🌑 Soft background glow */}
+            {/* 🌑 Glow Background */}
             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-[500px] h-[500px] rounded-full bg-gray-300 blur-3xl opacity-30"></div>
+                <div className="w-[500px] h-[500px] rounded-fullblur-3xl opacity-20"></div>
             </div>
 
-            {/* 🎥 Canvas */}
-            <Canvas camera={{ position: [0, 0, 6] }}>
+            {/* ✨ CENTER TEXT */}
+            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+                <p className="text-center text-white text-[18px] md:text-[22px] lg:text-[26px] leading-relaxed max-w-[600px] font-medium text-glow">
+                    Empowering millions to live, work,<br />
+                    and play better on a journey<br />
+                    to reach a billion.
+                </p>
+            </div>
 
-                {/* ✅ Soft lighting */}
+            {/* 🎥 CANVAS */}
+            <Canvas camera={{ position: [0, 0, 6] }}>
                 <ambientLight intensity={0.6} />
                 <directionalLight position={[2, 2, 2]} intensity={0.4} />
 
                 <SpaceDots />
                 <EarthBase />
                 <GlobePoints />
-
             </Canvas>
         </div>
     );
