@@ -4,6 +4,7 @@ import "./globals.css";
 import CustomCursor from "./Reusable/CustomCursor";
 import RouterLoader from "./Reusable/RouteLoader";
 import { DM_Sans } from "next/font/google";
+import SmoothScrollProvider from "./Reusable/SmoothScrollProvider";
 
 export const metadata = {
   title: "Woxxin Solution Pvt. Ltd. | End-to-End Digital Excellence",
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
         <RouterLoader>
           <CustomCursor />
           <Navbar />
-          {children}
+          <SmoothScrollProvider>
+            {children}
+          </SmoothScrollProvider>
           <Footer />
         </RouterLoader>
       </body>

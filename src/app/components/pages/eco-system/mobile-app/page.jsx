@@ -6,6 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import Text from "@/app/Reusable/Text";
 import HeroSection from "@/app/Reusable/HeroSection";
 import { useRouter } from "next/navigation";
+import FadeUp from "@/app/Reusable/FadeUp";
 
 function MobilePage() {
   const router = useRouter();
@@ -38,18 +39,23 @@ function MobilePage() {
                       className="w-40 md:w-56"
                     />
                   </div>
-                  <Text className="text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[85px] font-bold  text-white text-start mt-6 sm:mt-10">
-                    Woxxin Intelligent Mobile Apps
-                  </Text>
+                  <FadeUp>
+                    <Text className="text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[85px] font-bold  text-white text-start mt-6 sm:mt-10">
+                      Woxxin Intelligent Mobile Apps
+                    </Text>
+                  </FadeUp>
                 </div>
-                <div className="items-center justify-center hidden md:flex">
-                  <img
-                    src="/HomePages/MobileApp/MobileIcon.webp"
-                    alt="Mobile Icon"
-                    // className="w-32 xl:w-auto"
-                    className=" md:w-auto md:h-[250px] lg:w-full lg:h-[300px] xl:h-[400px]"
-                  />
-                </div>
+                <FadeUp>
+
+                  <div className="items-center justify-center hidden md:flex">
+                    <img
+                      src="/HomePages/MobileApp/MobileIcon.webp"
+                      alt="Mobile Icon"
+                      // className="w-32 xl:w-auto"
+                      className=" md:w-auto md:h-[250px] lg:w-full lg:h-[300px] xl:h-[400px]"
+                    />
+                  </div>
+                </FadeUp>
               </div>
               <Text className="text-[18px] md:text-2xl xl:text-4xl text-white font-medium text-start mt-16 ">
                 Creating a comprehensive mobile platform that enhances daily
@@ -68,7 +74,7 @@ function MobilePage() {
                 className="mx-auto mt-5 mb-5 "
               />
               {/* <div className="flex flex-wrap md:flex-nowrap  mt-2 justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] mb-16"></div> */}
-              <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+              <FadeUp>
 
                 <div className="flex flex-col text-white gap-7 ">
                   <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
@@ -76,7 +82,7 @@ function MobilePage() {
                     experiences of millions of people around the globe.
                   </Text>
                 </div>
-              </ScrollAnimation>
+              </FadeUp>
 
             </div>
           </div>
@@ -97,13 +103,13 @@ function MobilePage() {
             alt="Line"
             className="mx-auto mt-5 mb-5 "
           />
-          <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+          <FadeUp>
 
             <Text size="text-center text-xl font-light text-white   md:text-4xl lg:text-4xl xl:text-4xl  xl:mt-0 lg:mt-0 ">
               A vibrant network of cutting-edge apps designed to enhance the
               lives of millions, paving the way for a brighter future.
             </Text>
-          </ScrollAnimation>
+          </FadeUp>
         </div>
 
         <div className="flex flex-wrap md:flex-nowrap gap-4 p-16  justify-center divide-y md:divide-y-0 md:divide-x divide-[#9387FF] max-w-[90rem] mx-auto  ">
@@ -136,12 +142,12 @@ function MobilePage() {
         </div>
       </div>
       <div className=" bg-[#F4F4F4]">
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+        <FadeUp>
           <Text className="p-10 text-5xl font-semibold md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Featured Products
           </Text>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+        </FadeUp>
+        <FadeUp>
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
             <img
               src="/HomePages/MobileApp/MobileBanner1.png"
@@ -149,8 +155,8 @@ function MobilePage() {
               className="w-[90%] mx-auto "
             />
           </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+        </FadeUp>
+        <FadeUp>
           <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
             <img
               src="/HomePages/MobileApp/MobileBanner3.png"
@@ -158,9 +164,9 @@ function MobilePage() {
               className="w-[80%] mx-auto "
             />
           </div>
-        </ScrollAnimation>
+        </FadeUp>
 
-        <ScrollAnimation animateIn="animate__animated  animate__fadeInUp">
+        <FadeUp>
           <Text className="mt-16 mb-12 text-5xl text-white font-semibold md:text-2xl lg:text-5xl xl:text-7xl text-gradient-mobilePro">
             Explore Our Products
           </Text>
@@ -172,7 +178,7 @@ function MobilePage() {
               className="w-auto mx-auto "
             />
           </div>
-        </ScrollAnimation>
+        </FadeUp>
       </div>
 
       <HeroSection
