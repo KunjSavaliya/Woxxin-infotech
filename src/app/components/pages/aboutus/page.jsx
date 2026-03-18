@@ -8,48 +8,97 @@ import CountUp from "react-countup";
 import { useRouter } from "next/navigation";
 import GlobalPartners from "@/app/Reusable/GlobalPartners";
 import { FaGooglePlay, FaApple } from "react-icons/fa";
+import { useState } from "react";
 
 
 function Aboutus() {
   const router = useRouter();
+  const [selectedGame, setSelectedGame] = useState(null);
+  const handleMouseEnter = (game) => {
+    clearTimeout(hoverTimeout);
+    hoverTimeout = setTimeout(() => {
+      setSelectedGame(game);
+    }, 200); // small delay for smooth UX
+  };
 
+  const handleMouseLeave = () => {
+    hoverTimeout = setTimeout(() => {
+      setSelectedGame(null);
+    }, 200);
+  };
   const games = [
     {
       title: "Arrow Puzzle",
       img: "/HomePages/G1.png",
+      logo: "/HomePages/logo1.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/G1-1.png",
+        "/HomePages/G1-2.png",
+        "/HomePages/G1-3.png"
+      ]
     },
     {
-      title: "Arrow Block Puzzle",
+      title: "Screw Puzzle",
       img: "/HomePages/G2.png",
+      logo: "/HomePages/AboutUs/ScrewLogo.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/AboutUs/Screw1.png",
+        "/HomePages/AboutUs/Screw2.png",
+        "/HomePages/AboutUs/Screw3.png"
+      ]
     },
     {
       title: "Screw Puzzle",
       img: "/HomePages/G3.png",
+      logo: "/HomePages/logo3.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/G3-1.png",
+        "/HomePages/G3-2.png",
+        "/HomePages/G3-3.png"
+      ]
     },
     {
       title: "Snake Arrow Puzzle",
       img: "/HomePages/G4.png",
+      logo: "/HomePages/logo4.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/G4-1.png",
+        "/HomePages/G4-2.png",
+        "/HomePages/G4-3.png"
+      ]
     },
     {
       title: "Wool 3D Puzzle",
       img: "/HomePages/G5.png",
+      logo: "/HomePages/logo5.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/G5-1.png",
+        "/HomePages/G5-2.png",
+        "/HomePages/G5-3.png"
+      ]
     },
     {
       title: "Arrow Puzzle",
       img: "/HomePages/G6.png",
+      logo: "/HomePages/logo6.png",
       playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store"
-    },
+      appstore: "https://apple.com/app-store",
+      screenshots: [
+        "/HomePages/G6-1.png",
+        "/HomePages/G6-2.png",
+        "/HomePages/G6-3.png"
+      ]
+    }
   ];
 
   useEffect(() => {
@@ -198,45 +247,108 @@ function Aboutus() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 ">
+      <div className="flex flex-wrap justify-center gap-8 bg-gray-50 p-6 md:p-12">
         {games.map((game, index) => (
           <div
             key={index}
-            className="group border border-[#6C63FF] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
+            onClick={() => setSelectedGame(game)}
+            className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 w-full sm:w-[320px] md:w-[360px] cursor-pointer"
           >
-            <div className="relative w-[320px] h-[260px] md:h-[280px] lg:h-[320px] overflow-hidden">
+            {/* IMAGE */}
+            <div className="relative  overflow-hidden">
               <img
                 src={game.img}
                 alt={game.title}
-                className="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-translate-y-2"
+                className="w-full h-full object-fill transition duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
-                <a
-                  href={game.playstore}
-                  target="_blank"
-                  className="flex items-center gap-2 bg-white text-black p-4 rounded-md hover:scale-105 transition"
-                >
-                  <FaGooglePlay className="text-[#3BCCFF] text-xl" />
-                  <span className="text-sm font-medium">Play Store</span>
-                </a>
 
-                <a
-                  href={game.appstore}
-                  target="_blank"
-                  className="flex items-center gap-2 bg-white text-black p-4 rounded-md hover:scale-105 transition"
-                >
-                  <FaApple className="text-black text-xl" />
-                  <span className="text-sm font-medium">App Store</span>
-                </a>
+              {/* HOVER OVERLAY */}
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+                <p className="text-white text-lg font-semibold">
+                  View Details
+                </p>
               </div>
             </div>
 
-            <div className="p-3 flex items-center justify-center bg-[#6510d5]  transition">
-              <p className="text-xl text-white">{game.title}</p>
+            {/* FOOTER */}
+            <div className="p-4 flex items-center justify-center bg-[#6510d5]">
+              <p className="text-lg md:text-xl text-white font-medium">
+                {game.title}
+              </p>
             </div>
           </div>
         ))}
       </div>
+
+      {selectedGame && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-6">
+
+          {/* CLOSE BUTTON */}
+          <button
+            onClick={() => setSelectedGame(null)}
+            className="fixed top-4 right-4 z-50 text-white text-3xl hover:scale-110 transition"
+          >
+            ✕
+          </button>
+
+          {/* MODAL BOX */}
+          <div className="w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
+
+            {/* LEFT SIDE */}
+            <div className="w-full md:w-[20%] flex flex-row sm:flex-row md:flex-col  items-center justify-center p-5 sm:p-6 gap-4 text-center bg-gray-100">
+
+              <img
+                src={selectedGame.logo || selectedGame.img}
+                alt="logo"
+                className="w-16 h-16 sm:w-32 sm:h-32 object-contain"
+              />
+
+              <h2 className="text-xl sm:text-3xl font-bold text-black">
+                {selectedGame.title}
+              </h2>
+
+              {/* BUTTONS */}
+              <div className="flex flex-col gap-3 w-full sm:w-auto">
+                <a
+                  href={selectedGame.playstore}
+                  target="_blank"
+                  className="flex justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-md hover:scale-105 transition w-full sm:w-auto"
+                >
+                  <FaGooglePlay />
+                  Play Store
+                </a>
+
+                <a
+                  href={selectedGame.appstore}
+                  target="_blank"
+                  className="flex justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-md hover:scale-105 transition w-full sm:w-auto"
+                >
+                  <FaApple />
+                  App Store
+                </a>
+              </div>
+            </div>
+
+            {/* RIGHT SIDE */}
+            <div className="w-full md:w-[80%] overflow-y-auto p-4">
+
+              <div className="flex gap-4">
+                {(selectedGame.screenshots || [selectedGame.img]).map(
+                  (img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                      alt="screenshot"
+                      className="w-full h-[350px] sm:h-[350px] md:h-[400px] xl:h-[500px] object-fill rounded-lg"
+                    />
+                  )
+                )}
+              </div>
+
+            </div>
+          </div>
+        </div>
+      )}
       <div>
         <GlobalPartners />
       </div>
