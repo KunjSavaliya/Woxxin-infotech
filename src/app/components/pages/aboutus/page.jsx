@@ -7,9 +7,51 @@ import ScrollAnimation from "react-animate-on-scroll";
 import CountUp from "react-countup";
 import { useRouter } from "next/navigation";
 import GlobalPartners from "@/app/Reusable/GlobalPartners";
+import { FaGooglePlay, FaApple } from "react-icons/fa";
+
 
 function Aboutus() {
   const router = useRouter();
+
+  const games = [
+    {
+      title: "Arrow Puzzle",
+      img: "/HomePages/G1.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+    {
+      title: "Arrow Block Puzzle",
+      img: "/HomePages/G2.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+    {
+      title: "Screw Puzzle",
+      img: "/HomePages/G3.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+    {
+      title: "Snake Arrow Puzzle",
+      img: "/HomePages/G4.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+    {
+      title: "Wool 3D Puzzle",
+      img: "/HomePages/G5.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+    {
+      title: "Arrow Puzzle",
+      img: "/HomePages/G6.png",
+      playstore: "https://play.google.com",
+      appstore: "https://apple.com/app-store"
+    },
+  ];
+
   useEffect(() => {
     document.title = "About Us - Woxxin Solution";
   }, []);
@@ -155,49 +197,45 @@ function Aboutus() {
           </ScrollAnimation>
         </div>
       </div>
-      <div className="flex flex-wrap justify-center xl:gap-24 max-w-[90rem] mx-auto p-4 sm:p-16 mt-[-2px]">
-        <div>
-          <img
-            src="/HomePages/G1.png"
-            alt="Main Background"
-            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72 hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div>
-          <img
-            src="/HomePages/G2.png"
-            alt="Main Background"
-            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div>
-          <img
-            src="/HomePages/G3.png"
-            alt="Main Background"
-            className="w-40 h-40  sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div>
-          <img
-            src="/HomePages/G4.png"
-            alt="Main Background"
-            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div>
-          <img
-            src="/HomePages/G5.png"
-            alt="Main Background"
-            className="w-40 h-40 sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-        <div>
-          <img
-            src="/HomePages/G6.png"
-            alt="Main Background"
-            className="w-40 h-40  sm:w-40 sm:h-40 md:w-72 md:h-72  hover:scale-105 transition-transform duration-300"
-          />
-        </div>
+
+      <div className="flex flex-wrap justify-center gap-6 ">
+        {games.map((game, index) => (
+          <div
+            key={index}
+            className="group border border-[#6C63FF] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
+          >
+            <div className="relative w-[320px] h-[260px] md:h-[280px] lg:h-[320px] overflow-hidden">
+              <img
+                src={game.img}
+                alt={game.title}
+                className="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-translate-y-2"
+              />
+              <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition duration-300">
+                <a
+                  href={game.playstore}
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-black p-4 rounded-md hover:scale-105 transition"
+                >
+                  <FaGooglePlay className="text-[#3BCCFF] text-xl" />
+                  <span className="text-sm font-medium">Play Store</span>
+                </a>
+
+                <a
+                  href={game.appstore}
+                  target="_blank"
+                  className="flex items-center gap-2 bg-white text-black p-4 rounded-md hover:scale-105 transition"
+                >
+                  <FaApple className="text-black text-xl" />
+                  <span className="text-sm font-medium">App Store</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="p-3 flex items-center justify-center bg-[#6510d5]  transition">
+              <p className="text-xl text-white">{game.title}</p>
+            </div>
+          </div>
+        ))}
       </div>
       <div>
         <GlobalPartners />
