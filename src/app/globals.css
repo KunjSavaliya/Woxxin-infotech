@@ -27,7 +27,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Thin green outline */
+.outline-green {
+  -webkit-text-stroke: 1.5px rgba(0, 255, 150, 0.25);
+}
 
+/* Clean green gradient */
+.text-green-gradient {
+  background: linear-gradient(180deg, #00ff9c, #00cc7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Neon glow (controlled, not messy) */
+.glow-green {
+  text-shadow:
+    0 0 6px rgba(0, 255, 150, 0.8),
+    0 0 12px rgba(0, 255, 150, 0.5),
+    0 0 24px rgba(0, 255, 150, 0.3);
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
