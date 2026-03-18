@@ -1,89 +1,161 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Sphere, Points, PointMaterial } from "@react-three/drei";
-import * as THREE from "three";
-import { useRef, useMemo } from "react";
+import { Points, PointMaterial } from "@react-three/drei";
+import { useRef, useEffect, useState, useMemo } from "react";
 
-// Convert lat/lng to 3D position
-function latLngToVector3(lat, lng, radius = 2) {
-    const phi = (90 - lat) * (Math.PI / 180);
-    const theta = (lng + 180) * (Math.PI / 180);
+/* =========================
+   🌍 GLOBE DOTS (FRONT + BACK)
+========================= */
+function GlobePoints() {
+    const ref = useRef();
+    const [positions, setPositions] = useState([]);
 
-    return new THREE.Vector3(
-        -radius * Math.sin(phi) * Math.cos(theta),
-        radius * Math.cos(phi),
-        radius * Math.sin(phi) * Math.sin(theta)
-    );
-}
+    useEffect(() => {
+        const img = new Image();
+        img.src = "/HomePages/AboutUs/earth.jpg";
 
-// Fake country coordinates (you can replace with real data)
-const locations = [
-    { lat: 20.5937, lng: 78.9629 }, // India
-    { lat: 37.7749, lng: -122.4194 }, // USA
-    { lat: 51.5074, lng: -0.1278 }, // UK
-    { lat: 35.6762, lng: 139.6503 }, // Japan
-    { lat: -33.8688, lng: 151.2093 }, // Australia
-];
+        img.onload = () => {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
 
-function Earth() {
-    const meshRef = useRef();
+            canvas.width = img.width;
+            canvas.height = img.height;
 
-    // Points positions
-    const points = useMemo(() => {
-        const pts = locations.map((loc) =>
-            latLngToVector3(loc.lat, loc.lng, 2.05)
-        );
-        return new Float32Array(pts.flatMap((p) => [p.x, p.y, p.z]));
+            ctx.drawImage(img, 0, 0);
+
+            const imageData = ctx.getImageData(
+                0,
+                0,
+                canvas.width,
+                canvas.height
+            );
+
+            const dots = [];
+            const radius = 2.5;
+            const step = 12; // 🔥 spacing (clean look)
+
+            for (let y = 0; y < canvas.height; y += step) {
+                for (let x = 0; x < canvas.width; x += step) {
+                    const index = (y * canvas.width + x) * 4;
+                    const r = imageData.data[index];
+
+                    if (r < 80) {
+                        const lat = (y / canvas.height) * 180 - 90;
+                        const lng = (x / canvas.width) * 360 - 180;
+
+                        const phi = (90 - lat) * (Math.PI / 180);
+                        const theta = (lng + 180) * (Math.PI / 180);
+
+                        const px = -radius * Math.sin(phi) * Math.cos(theta);
+                        const py = radius * Math.cos(phi);
+                        const pz = radius * Math.sin(phi) * Math.sin(theta);
+
+                        dots.push(px, py, pz);
+                    }
+                }
+            }
+
+            setPositions(new Float32Array(dots));
+        };
     }, []);
 
     useFrame(() => {
-        if (meshRef.current) {
-            meshRef.current.rotation.y += 0.002;
+        if (ref.current) {
+            ref.current.rotation.y += 0.0015;
         }
     });
 
+    if (!positions.length) return null;
+
     return (
-        <group ref={meshRef}>
-            {/* Earth Sphere */}
-            <Sphere args={[2, 64, 64]}>
-                <meshStandardMaterial
-                    color="#0a0a23"
-                    emissive="#112244"
-                    roughness={0.8}
-                />
-            </Sphere>
+        <Points ref={ref} positions={positions} stride={3}>
+            <PointMaterial
+                size={0.025}
+                color="#3b0a45"      // 🔥 dark purple
+                transparent
+                opacity={0.9}
+                sizeAttenuation
 
-            {/* Glow Effect */}
-            <Sphere args={[2.2, 64, 64]}>
-                <meshBasicMaterial
-                    color="#3b82f6"
-                    transparent
-                    opacity={0.15}
-                />
-            </Sphere>
-
-            {/* Points */}
-            <Points positions={points} stride={3}>
-                <PointMaterial
-                    color="#38bdf8"
-                    size={0.05}
-                    sizeAttenuation
-                    depthWrite={false}
-                />
-            </Points>
-        </group>
+                depthWrite={false}   // ✅ IMPORTANT
+                depthTest={false}    // ✅ SHOW BACK DOTS
+            />
+        </Points>
     );
 }
 
+/* =========================
+   ⭐ BACKGROUND DOTS
+========================= */
+function SpaceDots() {
+    const positions = useMemo(() => {
+        const arr = [];
+        for (let i = 0; i < 1500; i++) {
+            const spread = 20;
+            arr.push(
+                (Math.random() - 0.5) * spread,
+                (Math.random() - 0.5) * spread,
+                (Math.random() - 0.5) * spread
+            );
+        }
+        return new Float32Array(arr);
+    }, []);
+
+    return (
+        <Points positions={positions} stride={3}>
+            <PointMaterial
+                size={0.01}
+                color="#9ca3af"
+                transparent
+                opacity={0.4}
+                depthWrite={false}
+            />
+        </Points>
+    );
+}
+
+/* =========================
+   🌍 EARTH BASE (TRANSPARENT GLASS)
+========================= */
+function EarthBase() {
+    return (
+        <mesh>
+            <sphereGeometry args={[2.45, 64, 64]} />
+            <meshPhysicalMaterial
+                color="#ececec"
+                transparent
+                opacity={0.1}       // 🔥 almost invisible
+                transmission={1}    // glass feel
+                roughness={0.3}
+                metalness={0}
+            />
+        </mesh>
+    );
+}
+
+/* =========================
+   🌍 MAIN COMPONENT
+========================= */
 export default function Globe() {
     return (
-        <div className="w-full h-[500px]">
-            <Canvas camera={{ position: [0, 0, 6] }}>
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[5, 5, 5]} />
+        <div className="w-full h-[1000px] relative overflow-hidden bg-white">
 
-                <Earth />
+            {/* 🌑 Soft background glow */}
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-[500px] h-[500px] rounded-full bg-gray-300 blur-3xl opacity-30"></div>
+            </div>
+
+            {/* 🎥 Canvas */}
+            <Canvas camera={{ position: [0, 0, 6] }}>
+
+                {/* ✅ Soft lighting */}
+                <ambientLight intensity={0.6} />
+                <directionalLight position={[2, 2, 2]} intensity={0.4} />
+
+                <SpaceDots />
+                <EarthBase />
+                <GlobePoints />
+
             </Canvas>
         </div>
     );
