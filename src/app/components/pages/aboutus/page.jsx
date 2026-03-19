@@ -334,10 +334,10 @@ function Aboutus() {
       <div className="block md:hidden">
         <div className="">
           <div className="relative flex items-center justify-center h-[50px] md:h-[120px] ">
-            <h1 className="absolute text-[26px] bottom-3 md:bottom-10 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+            <h1 className="absolute text-[30px] bottom-3 md:bottom-10 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
               Why Choose
             </h1>
-            <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+            <h1 className="absolute  text-[30px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
               Why Choose
             </h1>
 
@@ -345,17 +345,17 @@ function Aboutus() {
         </div>
         <div className="">
           <div className="relative flex items-center justify-center h-[50px]">
-            <h1 className="absolute text-[26px] bottom-3 md:bottom-2 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+            <h1 className="absolute text-[30px] bottom-3 md:bottom-2 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
               Woxxin Solution
             </h1>
-            <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+            <h1 className="absolute  text-[30px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
               Woxxin Solution
             </h1>
 
           </div>
         </div>
       </div>
-      <div className="hidden md:block">
+      <div className=" mt-10 md:mt-24 hidden md:block">
         <div className="relative flex items-center justify-center h-[120px]">
 
           <h1 className="absolute text-[50px] bottom-10 font-bold outline-softWS select-none">
