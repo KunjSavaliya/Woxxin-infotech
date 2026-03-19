@@ -44,7 +44,7 @@ function Aboutus() {
       link: "https://play.google.com/store/apps/details?id=com.pixelpuzzle.puzzle.game",
     },
     {
-      img: "/HomePages/AboutUS/G5.png",
+      img: "/HomePages/AboutUs/G5.png",
       hoverImg: "/HomePages/AboutUs/G5H.png",
       title: "Arrow Puzzle",
       link: "https://play.google.com/store/apps/details?id=com.techxsolution.ArrowsPuzzleEscapeGame",
@@ -82,7 +82,7 @@ function Aboutus() {
       link: "https://play.google.com/store/apps/details?id=com.caloriecounter.healthy.dietplan.nutrition&hl=en&gl=IN",
     },
     {
-      img: "/HomePages/AboutUS/A5.png",
+      img: "/HomePages/AboutUs/A5.png",
       hoverImg: "/HomePages/AboutUs/A5H.png",
       title: "AI Chat & Call : Lonely Call",
       link: "https://play.google.com/store/apps/details?id=com.ai.character.aichat.aicall&hl=en&gl=IN",
@@ -168,7 +168,7 @@ function Aboutus() {
       </div>
 
       <Globe />
-      <div>
+      <div className="max-w-[90rem] mx-auto">
         <div className="relative flex items-center justify-center h-[180px]">
           <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
             Mobile Apps
@@ -181,7 +181,7 @@ function Aboutus() {
         </div>
 
         {/* ---------------------------? */}
-        <div className="relative w-full py-14 px-4 md:px-10">
+        <div className="relative w-full py-14 px-4 md:px-10  ">
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
             {apps.map((app, index) => (
               <div
@@ -259,7 +259,7 @@ function Aboutus() {
       </div>
 
 
-      <div>
+      <div className="max-w-[90rem] mx-auto">
         <div className="relative flex items-center justify-center h-[180px]">
           <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
             Mobile Games
@@ -370,7 +370,7 @@ function Aboutus() {
 
       <div className="w-full px-4 md:px-8 xl:px-16 py-6">
 
-        <div className="relative w-full max-w-[1400px] mx-auto aspect-[16/12] md:aspect-[21/15]">
+        <div className="relative w-full max-w-[1400px] mx-auto aspect-[16/12] md:aspect-[21/15] xl:md:aspect-[21/18]">
 
           <img
             src="/HomePages/AboutUs/VM.png"
