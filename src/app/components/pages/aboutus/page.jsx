@@ -23,29 +23,37 @@ function Aboutus() {
   const games = [
     {
       img: "/HomePages/AboutUs/G1.png",
-      title: "Snake Arrow",
+      title: "Snake Arrow : Puzzle Escape",
       playstore: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
-      appstore: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
+      appstore: "",
     },
     {
       img: "/HomePages/AboutUs/G2.png",
-      title: "Screw Puzzle 3D",
+      title: "Screw Puzzle 3D - Brain Teaser",
       playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.ScrewPuzzle3DBrainTeaser",
+      appstore: "",
+
     },
     {
       img: "/HomePages/AboutUs/G3.png",
-      title: "Wool 3D Puzzle",
+      title: "Wool 3D Puzzle - Yarn Unravel",
       playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.Wool3DPuzzleYarnUnravel",
+      appstore: "",
+
     },
     {
       img: "/HomePages/AboutUs/G4.png",
       title: "Pixel Puzzle",
       playstore: "https://play.google.com/store/apps/details?id=com.pixelpuzzle.puzzle.game",
+      appstore: "",
+
     },
     {
       img: "/HomePages/AboutUs/G5.png",
-      title: "Arrow Puzzle",
+      title: "Arrow Puzzle - Escape Game",
       playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.ArrowsPuzzleEscapeGame",
+      appstore: "",
+
     },
     {
       img: "/HomePages/AboutUs/G6.png",
@@ -129,7 +137,8 @@ function Aboutus() {
           <div>
             <div className="relative flex items-center justify-center h-[180px]">
               <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
-                100M+
+                <CountUp end={100} duration={10} suffix="M+" />
+
               </h1>
               <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-blue-gradient glow-blue">
                 <CountUp end={100} duration={10} suffix="M+" />
@@ -146,7 +155,8 @@ function Aboutus() {
           <div>
             <div className="relative flex items-center justify-center h-[180px]">
               <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
-                50M+
+                <CountUp end={50} duration={10} suffix="M+" />
+
               </h1>
               <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-green-gradient glow-green">
                 <CountUp end={50} duration={10} suffix="M+" />
@@ -176,49 +186,70 @@ function Aboutus() {
 
         </div>
 
-        <div className=" mt-10 grid  grid-cols-2 sm:grid-cols-3  gap-2 sm:gap-10 md:gap-12 max-w-[80rem] mx-auto">
+        <div className="mt-10 px-4 sm:px-6 md:px-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 md:gap-10 max-w-[80rem] mx-auto">
 
+            {apps.map((app, index) => (
+              <div key={index} className="group flex flex-col items-center">
 
-          {apps.map((app, index) => (
-            <div key={index} className="group flex flex-col items-center">
+                <div
+                  className="
+            relative 
+            w-[160px] h-[160px]
+            sm:w-[200px] sm:h-[200px]
+            md:w-[250px] md:h-[250px]
+            lg:w-[280px] lg:h-[280px]
+            overflow-hidden
+          "
+                >
+                  {/* Image */}
+                  <Image
+                    src={app.img}
+                    alt={app.title}
+                    fill
+                    className="
+              object-cover 
+              transition-all duration-300
+              group-hover:blur-sm group-hover:scale-105
+            "
+                  />
 
-              <div
-                className="
-        relative 
-        w-[180px] h-[180px]
-        sm:w-[200px] sm:h-[200px]
-        md:w-[250px] md:h-[250px]
-        lg:w-[350px] lg:h-[350px]
-        rounded-2xl overflow-hidden
-      "
-              >
-                <Image
-                  src={app.img}
-                  alt={app.title}
-                  fill
-                  className="object-cover"
-                />
-
-                {/* Hover icons */}
-                <div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 group-hover:opacity-100 rounded-[50px] backdrop-blur-[10px] transition-all duration-300">
-                  {app.playstore && (
-                    <Link href={app.playstore} target="_blank" className="text-green-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
-                      <FaGooglePlay />
-                    </Link>
-                  )}
-                  {app.appstore && (
-                    <Link href={app.appstore} target="_blank" className="text-blue-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
-                      <FaAppStoreIos />
-                    </Link>
-                  )}
+                  {/* Hover overlay */}
+                  <div className="
+            absolute inset-0 
+            flex items-center justify-center gap-5
+            opacity-0 group-hover:opacity-100
+            transition-all duration-300
+          ">
+                    {app.playstore && (
+                      <Link
+                        href={app.playstore}
+                        target="_blank"
+                        className="text-green-400 text-[28px] sm:text-[60px] hover:scale-125 transition"
+                      >
+                        <FaGooglePlay />
+                      </Link>
+                    )}
+                    {app.appstore && (
+                      <Link
+                        href={app.appstore}
+                        target="_blank"
+                        className="text-blue-400 text-[28px] sm:text-[60px] hover:scale-125 transition"
+                      >
+                        <FaAppStoreIos />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[120px]">
-                {app.title}
-              </p>
-            </div>
-          ))}
+                {/* Title */}
+                <p className="text-white mt-3 text-sm sm:text-sm md:text-lg text-center max-w-[320px]">
+                  {app.title}
+                </p>
+              </div>
+            ))}
+
+          </div>
         </div>
       </div>
 
@@ -226,57 +257,80 @@ function Aboutus() {
       <div className="relative w-full py-14 px-4 md:px-10">
         <div className="relative flex items-center justify-center h-[180px]">
           <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
-            Mobile apps
+            Mobile Games
           </h1>
           <h1 className="absolute bottom-10 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
             Mobile Games
           </h1>
         </div>
-        <div className=" mt-10 grid  grid-cols-2 sm:grid-cols-3  gap-2 sm:gap-10 md:gap-12 max-w-[80rem] mx-auto">
+        <div className="mt-10 px-4 sm:px-6 md:px-10">
 
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 md:gap-10 max-w-[80rem] mx-auto">
 
-          {games.map((game, index) => (
-            <div key={index} className="group flex flex-col items-center">
+            {games.map((game, index) => (
+              <div key={index} className="group flex flex-col items-center">
 
-              <div
-                className="
-        relative 
-        w-[180px] h-[180px]
-        sm:w-[200px] sm:h-[200px]
-        md:w-[250px] md:h-[250px]
-        lg:w-[350px] lg:h-[350px]
-        rounded-2xl overflow-hidden
-      "
-              >
-                <Image
-                  src={game.img}
-                  alt={game.title}
-                  fill
-                  className="object-cover"
-                />
+                <div
+                  className="
+            relative 
+            w-[160px] h-[160px]
+            sm:w-[200px] sm:h-[200px]
+            md:w-[250px] md:h-[250px]
+            lg:w-[280px] lg:h-[280px]
+            overflow-hidden
+          "
+                >
+                  {/* Image */}
+                  <Image
+                    src={game.img}
+                    alt={game.title}
+                    fill
+                    className="
+              object-cover 
+              transition-all duration-300
+              group-hover:blur-sm group-hover:scale-105
+            "
+                  />
 
-                {/* Hover icons */}
-                <div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 group-hover:opacity-100  backdrop-blur-[10px] transition-all duration-300">
-                  {game.playstore && (
-                    <Link href={game.playstore} target="_blank" className="text-green-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
-                      <FaGooglePlay />
-                    </Link>
-                  )}
-                  {game.appstore && (
-                    <Link href={game.appstore} target="_blank" className="text-blue-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
-                      <FaAppStoreIos />
-                    </Link>
-                  )}
+                  {/* Hover overlay */}
+                  <div className="
+            absolute inset-0 
+            flex items-center justify-center gap-5
+            opacity-0 group-hover:opacity-100
+            transition-all duration-300
+          ">
+                    {game.playstore && (
+                      <Link
+                        href={game.playstore}
+                        target="_blank"
+                        className="text-green-400 text-[28px] sm:text-[60px] hover:scale-125 transition"
+                      >
+                        <FaGooglePlay />
+                      </Link>
+                    )}
+                    {game.appstore && (
+                      <Link
+                        href={game.appstore}
+                        target="_blank"
+                        className="text-blue-400 text-[28px] sm:text-[60px] hover:scale-125 transition"
+                      >
+                        <FaAppStoreIos />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-              </div>
 
-              <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[120px]">
-                {game.title}
-              </p>
-            </div>
-          ))}
+                {/* Title */}
+                <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[320px]">
+                  {game.title}
+                </p>
+              </div>
+            ))}
+
+          </div>
         </div>
       </div>
+
       <div className="block md:hidden">
         <div className="">
           <div className="relative flex items-center justify-center h-[50px] md:h-[120px] ">
