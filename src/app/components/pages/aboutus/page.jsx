@@ -196,8 +196,8 @@ function Aboutus() {
                   className="
             relative 
             w-[160px] h-[160px]
-            sm:w-[200px] sm:h-[200px]
-            md:w-[250px] md:h-[250px]
+            sm:w-[180px] sm:h-[180px]
+            md:w-[230px] md:h-[230px]
             lg:w-[280px] lg:h-[280px]
             overflow-hidden
           "
@@ -256,10 +256,10 @@ function Aboutus() {
 
       <div className="relative w-full py-14 px-4 md:px-10">
         <div className="relative flex items-center justify-center h-[180px]">
-          <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
+          <h1 className="absolute text-[41px] md:text-[80px] font-bold outline-soft select-none">
             Mobile Games
           </h1>
-          <h1 className="absolute bottom-10 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
+          <h1 className="absolute bottom-11 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
             Mobile Games
           </h1>
         </div>
@@ -275,7 +275,7 @@ function Aboutus() {
             relative 
             w-[160px] h-[160px]
             sm:w-[200px] sm:h-[200px]
-            md:w-[250px] md:h-[250px]
+            md:w-[240px] md:h-[240px]
             lg:w-[280px] lg:h-[280px]
             overflow-hidden
           "
@@ -321,7 +321,7 @@ function Aboutus() {
                 </div>
 
                 {/* Title */}
-                <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[320px]">
+                <p className="text-white mt-3 text-sm sm:text-sm md:text-lg  text-center max-w-[320px]">
                   {game.title}
                 </p>
               </div>
