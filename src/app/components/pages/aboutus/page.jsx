@@ -13,6 +13,8 @@ import Globe from "./earth/earth";
 import MobileAppSection from "@/app/Reusable/MobileSection";
 import Image from "next/image";
 import Link from "next/link";
+import FadeUp from "@/app/Reusable/FadeUp";
+
 
 
 function Aboutus() {
@@ -133,36 +135,40 @@ function Aboutus() {
 
       />
       <div className="flex flex-wrap justify-around mt-10">
-
-        <div>
-          <div className="relative flex items-center justify-center h-[180px]">
-            <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
-              100M+
-            </h1>
-            <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-blue-gradient glow-blue">
-              <CountUp end={100} duration={10} suffix="M+" />
-            </h1>
-          </div>
+        <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <div>
-            <Text className="text-white text-3xl font-bold">Global Downloads</Text>
+            <div className="relative flex items-center justify-center h-[180px]">
+              <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
+                100M+
+              </h1>
+              <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-blue-gradient glow-blue">
+                <CountUp end={100} duration={10} suffix="M+" />
+              </h1>
+            </div>
+            <div>
+              <Text className="text-white text-3xl font-bold">Global Downloads</Text>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
 
-        <div>
-          <div className="relative flex items-center justify-center h-[180px]">
-            <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
-              50M+
-            </h1>
-            <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-green-gradient glow-green">
-              <CountUp end={50} duration={10} suffix="M+" />
-            </h1>
-          </div>
+
           <div>
-            <Text className="text-white text-3xl font-bold">Monthly Active Users</Text>
+            <div className="relative flex items-center justify-center h-[180px]">
+              <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
+                50M+
+              </h1>
+              <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-green-gradient glow-green">
+                <CountUp end={50} duration={10} suffix="M+" />
+              </h1>
+            </div>
+            <div>
+              <Text className="text-white text-3xl font-bold">Monthly Active Users</Text>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
 
-      </div>
+      </div >
       <div className="">
         <div className="mt-10 w-full h-[1px] bg-gradient-to-r from-transparent via-[#434343] to-transparent opacity-50"></div>
       </div>
@@ -348,12 +354,23 @@ function Aboutus() {
       </div>
 
       <div className="">
-        <div className="relative flex items-center justify-center h-[180px]">
-          <h1 className="absolute text-[26px] sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
-            Why Choose Woxxin Solution
+        <div className="relative flex items-center justify-center h-[50px] md:h-[120px] ">
+          <h1 className="absolute text-[26px] bottom-3 md:bottom-10 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+            Why Choose
           </h1>
-          <h1 className="absolute bottom-16 sm:bottom-12 md:bottom-10 text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
-            Why Choose Woxxin Solution
+          <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+            Why Choose
+          </h1>
+
+        </div>
+      </div>
+      <div className="">
+        <div className="relative flex items-center justify-center h-[50px]">
+          <h1 className="absolute text-[26px] bottom-3 md:bottom-2 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+            Woxxin Solution
+          </h1>
+          <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+            Woxxin Solution
           </h1>
 
         </div>

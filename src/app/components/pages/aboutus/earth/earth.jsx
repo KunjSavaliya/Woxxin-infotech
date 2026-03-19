@@ -137,7 +137,7 @@ function EarthBase() {
 ========================= */
 export default function Globe() {
     return (
-        <div className="w-full h-[500px] md:h-[800px] relative overflow-hidden ">
+        <div className="w-full h-[500px] md:h-[1000px] relative overflow-hidden ">
 
             {/* 🌑 Glow Background */}
             <div className="absolute inset-0 flex items-center justify-center">

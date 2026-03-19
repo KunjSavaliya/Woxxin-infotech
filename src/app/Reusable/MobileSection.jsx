@@ -42,7 +42,7 @@ const MobileAppSection = ({
                     className="w-40 md:w-56"
                   />
                 </div>
-                <Text className="text-start leading-normal md:leading-[1.2] text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-semibold mt-6 sm:mt-16">
+                <Text className="text-start text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-bold mt-6 sm:mt-16">
                   {title}
                 </Text>
                 <Text className=" font-extralight text-2xl sm:text-3xl md:text-3xl lg:text-[30px] xl:text-3xl text-white text-start mt-10 sm:mt-16 ">
