@@ -124,7 +124,7 @@ function Aboutus() {
         iconClassNames=" md:w-auto lg:w-full h-[450px]"
 
       />
-      <div className="flex max-w-[90rem] flex-wrap justify-around mt-10">
+      <div className="flex  flex-wrap justify-evenlymt-10">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <div>
             <div className="relative flex items-center justify-center h-[180px]">
