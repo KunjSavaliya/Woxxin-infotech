@@ -7,7 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import CountUp from "react-countup";
 import { useRouter } from "next/navigation";
 import GlobalPartners from "@/app/Reusable/GlobalPartners";
-import { FaGooglePlay, FaApple } from "react-icons/fa";
+import { FaGooglePlay, FaAppStoreIos } from "react-icons/fa";
 import { useState } from "react";
 import Globe from "./earth/earth";
 import MobileAppSection from "@/app/Reusable/MobileSection";
@@ -23,39 +23,35 @@ function Aboutus() {
   const games = [
     {
       img: "/HomePages/AboutUs/G1.png",
-      hoverImg: "/HomePages/AboutUs/G1H.png",
       title: "Snake Arrow",
-      link: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
+      playstore: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
+      appstore: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
     },
     {
       img: "/HomePages/AboutUs/G2.png",
-      hoverImg: "/HomePages/AboutUs/G2H.png",
       title: "Screw Puzzle 3D",
-      link: "https://play.google.com/store/apps/details?id=com.techxsolution.ScrewPuzzle3DBrainTeaser",
+      playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.ScrewPuzzle3DBrainTeaser",
     },
     {
       img: "/HomePages/AboutUs/G3.png",
-      hoverImg: "/HomePages/AboutUs/G3H.png",
       title: "Wool 3D Puzzle",
-      link: "https://play.google.com/store/apps/details?id=com.techxsolution.Wool3DPuzzleYarnUnravel",
+      playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.Wool3DPuzzleYarnUnravel",
     },
     {
       img: "/HomePages/AboutUs/G4.png",
-      hoverImg: "/HomePages/AboutUs/G4H.png",
       title: "Pixel Puzzle",
-      link: "https://play.google.com/store/apps/details?id=com.pixelpuzzle.puzzle.game",
+      playstore: "https://play.google.com/store/apps/details?id=com.pixelpuzzle.puzzle.game",
     },
     {
       img: "/HomePages/AboutUs/G5.png",
-      hoverImg: "/HomePages/AboutUs/G5H.png",
       title: "Arrow Puzzle",
-      link: "https://play.google.com/store/apps/details?id=com.techxsolution.ArrowsPuzzleEscapeGame",
+      playstore: "https://play.google.com/store/apps/details?id=com.techxsolution.ArrowsPuzzleEscapeGame",
     },
     {
       img: "/HomePages/AboutUs/G6.png",
-      hoverImg: "/HomePages/AboutUS/G6H.png",
       title: "Horse Racing",
-      link: "",
+      playstore: "",
+      appstore: "",
     },
   ];
   const apps = [
@@ -279,77 +275,71 @@ function Aboutus() {
         <div className="relative w-full py-14 px-4 md:px-10">
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
             {games.map((game, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => setActive(game)}
-                className="flex flex-col items-center cursor-pointer"
-              >
-                <div className="
-          relative 
-          w-[140px] h-[140px]
-          sm:w-[180px] sm:h-[180px]
-          md:w-[220px] md:h-[220px]
-          lg:w-[250px] lg:h-[250px]
-          rounded-2xl overflow-hidden
-        ">
+              <div key={index} className="group flex flex-col items-center">
+                <div
+                  className="
+            relative 
+            w-[140px] h-[140px]
+            sm:w-[180px] sm:h-[180px]
+            md:w-[220px] md:h-[220px]
+            lg:w-[250px] lg:h-[250px]
+            rounded-2xl overflow-hidden
+          "
+                >
                   <Image
                     src={game.img}
                     alt={game.title}
                     fill
                     className="object-fill"
                   />
+
+                  {/* Hover icons */}
+                  <div
+                    className="
+              absolute inset-0
+              flex items-center justify-center gap-5
+              opacity-0 group-hover:opacity-100
+              backdrop-blur-[4px]
+              transition-all duration-300
+            "
+                  >
+                    {game.playstore && (
+                      <Link
+                        href={game.playstore}
+                        target="_blank"
+                        className="
+                  text-green-400 
+                  text-[36px] sm:text-[42px]
+                  hover:scale-125 hover:text-green-300
+                  transition
+                "
+                      >
+                        <FaGooglePlay />
+                      </Link>
+                    )}
+                    {game.appstore && (
+                      <Link
+                        href={game.appstore}
+                        target="_blank"
+                        className="
+                  text-blue-400 
+                  text-[38px] sm:text-[44px]
+                  hover:scale-125 hover:text-blue-300
+                  transition cursor-pointer
+                "
+                      >
+                        <FaAppStoreIos />
+                      </Link>
+                    )}
+                  </div>
                 </div>
-                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px]">
+
+                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px] sm:max-w-[180px] md:max-w-[220px]">
                   {game.title}
                 </p>
               </div>
             ))}
           </div>
-          {active && (
-            <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
-              <button
-                onClick={() => setActive(null)}
-                className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:scale-110 transition"
-              >
-                ✕
-              </button>
-              <Link href={active.link}>
-                <div
-                  className="
-            relative
-            w-[95vw] h-[60vh]
-            sm:w-[85vw] sm:h-[70vh]
-            md:w-[70vw] md:h-[80vh]
-            lg:w-[60vw] lg:h-[85vh]
-            rounded-3xl overflow-hidden
-            shadow-[0_40px_150px_rgba(0,0,0,0.9)]
-            cursor-pointer
-            animate-[zoomIn_0.3s_ease]
-          "
-                >
-                  <Image
-                    src={active.hoverImg}
-                    alt="popup"
-                    fill
-                    className="object-fill"
-                  />
-                </div>
-              </Link>
-            </div>
-          )}
-          <style jsx>{`
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-  `}</style>
-
         </div>
       </div>
 
