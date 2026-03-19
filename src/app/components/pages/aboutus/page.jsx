@@ -57,39 +57,33 @@ function Aboutus() {
   const apps = [
     {
       img: "/HomePages/AboutUs/A1.png",
-      hoverImg: "/HomePages/AboutUs/A1H.png",
       title: "Messages : SMS Organizer",
-      link: "https://play.google.com/store/apps/details?id=com.messagetext.sms.messenges.text&hl=en&gl=US",
+      playstore: "https://play.google.com/store/apps/details?id=com.messagetext.sms.messenges.text&hl=en&gl=US",
     },
     {
       img: "/HomePages/AboutUs/A2.png",
-      hoverImg: "/HomePages/AboutUs/A2H.png",
       title: "Alarm - Clock & Reminder",
-      link: "https://play.google.com/store/apps/details?id=com.alarmclock.reminder.alarm&hl=en&gl=IN",
+      playstore: "https://play.google.com/store/apps/details?id=com.alarmclock.reminder.alarm&hl=en&gl=IN",
     },
     {
       img: "/HomePages/AboutUs/A3.png",
-      hoverImg: "/HomePages/AboutUs/A3H.png",
       title: "Women Workout App",
-      link: "https://play.google.com/store/apps/details?id=com.workout.weightloss.losebellyfat.fatburning&hl=en&gl=IN",
+      playstore: "https://play.google.com/store/apps/details?id=com.workout.weightloss.losebellyfat.fatburning&hl=en&gl=IN",
     },
     {
       img: "/HomePages/AboutUs/A4.png",
-      hoverImg: "/HomePages/AboutUs/A4H.png",
       title: "Calorie Counter - My Diet Diary",
-      link: "https://play.google.com/store/apps/details?id=com.caloriecounter.healthy.dietplan.nutrition&hl=en&gl=IN",
+      playstore: "https://play.google.com/store/apps/details?id=com.caloriecounter.healthy.dietplan.nutrition&hl=en&gl=IN",
     },
     {
       img: "/HomePages/AboutUs/A5.png",
-      hoverImg: "/HomePages/AboutUs/A5H.png",
       title: "AI Chat & Call : Lonely Call",
-      link: "https://play.google.com/store/apps/details?id=com.ai.character.aichat.aicall&hl=en&gl=IN",
+      playstore: "https://play.google.com/store/apps/details?id=com.ai.character.aichat.aicall&hl=en&gl=IN",
     },
     {
       img: "/HomePages/AboutUs/A6.png",
-      hoverImg: "/HomePages/AboutUS/A6H.png",
       title: "Video Downloader 2025",
-      link: "https://play.google.com/store/apps/details?id=downloader.allvideodownloader.mp4videodownloader.hdvideo.fullhdvideo.mainlens&hl=en&gl=IN",
+      playstore: "https://play.google.com/store/apps/details?id=downloader.allvideodownloader.mp4videodownloader.hdvideo.fullhdvideo.mainlens&hl=en&gl=IN",
     },
   ];
 
@@ -130,7 +124,7 @@ function Aboutus() {
         iconClassNames=" md:w-auto lg:w-full h-[450px]"
 
       />
-      <div className="flex flex-wrap justify-around mt-10">
+      <div className="flex max-w-[90rem] flex-wrap justify-around mt-10">
         <ScrollAnimation animateIn="animate__animated animate__fadeInUp">
           <div>
             <div className="relative flex items-center justify-center h-[180px]">
@@ -182,185 +176,140 @@ function Aboutus() {
 
         </div>
 
-        {/* ---------------------------? */}
-        <div className="relative w-full py-14 px-4 md:px-10  ">
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
-            {apps.map((app, index) => (
-              <div
-                key={index}
-                onMouseEnter={() => setActive(app)}
-                className="flex flex-col items-center cursor-pointer"
-              >
-                <div className="
-          relative 
-          w-[140px] h-[140px]
-          sm:w-[180px] sm:h-[180px]
-          md:w-[220px] md:h-[220px]
-          lg:w-[250px] lg:h-[250px]
-          rounded-2xl overflow-hidden
-        ">
-                  <Image
-                    src={app.img}
-                    alt={app.title}
-                    fill
-                    className="object-fill"
-                  />
-                </div>
-                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px]">
-                  {app.title}
-                </p>
-              </div>
-            ))}
-          </div>
-          {active && (
-            <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
-              <button
-                onClick={() => setActive(null)}
-                className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:scale-110 transition"
-              >
-                ✕
-              </button>
-              <Link href={active.link}>
-                <div
-                  className="
-            relative
-            w-[95vw] h-[60vh]
-            sm:w-[85vw] sm:h-[70vh]
-            md:w-[70vw] md:h-[80vh]
-            lg:w-[60vw] lg:h-[85vh]
-            rounded-3xl overflow-hidden
-            shadow-[0_40px_150px_rgba(0,0,0,0.9)]
-            cursor-pointer
-            animate-[zoomIn_0.3s_ease]
-          "
-                >
-                  <Image
-                    src={active.hoverImg}
-                    alt="popup"
-                    fill
-                    className="object-fill"
-                  />
-                </div>
-              </Link>
-            </div>
-          )}
-          <style jsx>{`
-    @keyframes zoomIn {
-      from {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-  `}</style>
+        <div className=" mt-10 grid  grid-cols-2 sm:grid-cols-3  gap-2 sm:gap-10 md:gap-12 max-w-[80rem] mx-auto">
 
+
+          {apps.map((app, index) => (
+            <div key={index} className="group flex flex-col items-center">
+
+              <div
+                className="
+        relative 
+        w-[180px] h-[180px]
+        sm:w-[200px] sm:h-[200px]
+        md:w-[250px] md:h-[250px]
+        lg:w-[350px] lg:h-[350px]
+        rounded-2xl overflow-hidden
+      "
+              >
+                <Image
+                  src={app.img}
+                  alt={app.title}
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Hover icons */}
+                <div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 group-hover:opacity-100 rounded-[50px] backdrop-blur-[10px] transition-all duration-300">
+                  {app.playstore && (
+                    <Link href={app.playstore} target="_blank" className="text-green-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
+                      <FaGooglePlay />
+                    </Link>
+                  )}
+                  {app.appstore && (
+                    <Link href={app.appstore} target="_blank" className="text-blue-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
+                      <FaAppStoreIos />
+                    </Link>
+                  )}
+                </div>
+              </div>
+
+              <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[120px]">
+                {app.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
 
-      <div className="max-w-[90rem] mx-auto">
+      <div className="relative w-full py-14 px-4 md:px-10">
         <div className="relative flex items-center justify-center h-[180px]">
           <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
-            Mobile Games
+            Mobile apps
           </h1>
           <h1 className="absolute bottom-10 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
             Mobile Games
           </h1>
-
         </div>
-        {/* ---------------------------? */}
-        <div className="relative w-full py-14 px-4 md:px-10">
-          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
-            {games.map((game, index) => (
-              <div key={index} className="group flex flex-col items-center">
-                <div
-                  className="
-            relative 
-            w-[140px] h-[140px]
-            sm:w-[180px] sm:h-[180px]
-            md:w-[220px] md:h-[220px]
-            lg:w-[250px] lg:h-[250px]
-            rounded-2xl overflow-hidden
-          "
-                >
-                  <Image
-                    src={game.img}
-                    alt={game.title}
-                    fill
-                    className="object-fill"
-                  />
+        <div className=" mt-10 grid  grid-cols-2 sm:grid-cols-3  gap-2 sm:gap-10 md:gap-12 max-w-[80rem] mx-auto">
 
-                  {/* Hover icons */}
-                  <div
-                    className="
-              absolute inset-0
-              flex items-center justify-center gap-5
-              opacity-0 group-hover:opacity-100
-              backdrop-blur-[4px]
-              transition-all duration-300
-            "
-                  >
-                    {game.playstore && (
-                      <Link
-                        href={game.playstore}
-                        target="_blank"
-                        className="
-                  text-green-400 
-                  text-[36px] sm:text-[42px]
-                  hover:scale-125 hover:text-green-300
-                  transition
-                "
-                      >
-                        <FaGooglePlay />
-                      </Link>
-                    )}
-                    {game.appstore && (
-                      <Link
-                        href={game.appstore}
-                        target="_blank"
-                        className="
-                  text-blue-400 
-                  text-[38px] sm:text-[44px]
-                  hover:scale-125 hover:text-blue-300
-                  transition cursor-pointer
-                "
-                      >
-                        <FaAppStoreIos />
-                      </Link>
-                    )}
-                  </div>
+
+          {games.map((game, index) => (
+            <div key={index} className="group flex flex-col items-center">
+
+              <div
+                className="
+        relative 
+        w-[180px] h-[180px]
+        sm:w-[200px] sm:h-[200px]
+        md:w-[250px] md:h-[250px]
+        lg:w-[350px] lg:h-[350px]
+        rounded-2xl overflow-hidden
+      "
+              >
+                <Image
+                  src={game.img}
+                  alt={game.title}
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Hover icons */}
+                <div className="absolute inset-0 flex items-center justify-center gap-5 opacity-0 group-hover:opacity-100  backdrop-blur-[10px] transition-all duration-300">
+                  {game.playstore && (
+                    <Link href={game.playstore} target="_blank" className="text-green-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
+                      <FaGooglePlay />
+                    </Link>
+                  )}
+                  {game.appstore && (
+                    <Link href={game.appstore} target="_blank" className="text-blue-400 text-[24px] sm:text-[72px] hover:scale-125 transition">
+                      <FaAppStoreIos />
+                    </Link>
+                  )}
                 </div>
-
-                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px] sm:max-w-[180px] md:max-w-[220px]">
-                  {game.title}
-                </p>
               </div>
-            ))}
+
+              <p className="text-white mt-3 text-xs sm:text-sm md:text-lg text-center max-w-[120px]">
+                {game.title}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="block md:hidden">
+        <div className="">
+          <div className="relative flex items-center justify-center h-[50px] md:h-[120px] ">
+            <h1 className="absolute text-[26px] bottom-3 md:bottom-10 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+              Why Choose
+            </h1>
+            <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+              Why Choose
+            </h1>
+
+          </div>
+        </div>
+        <div className="">
+          <div className="relative flex items-center justify-center h-[50px]">
+            <h1 className="absolute text-[26px] bottom-3 md:bottom-2 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+              Woxxin Solution
+            </h1>
+            <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+              Woxxin Solution
+            </h1>
+
           </div>
         </div>
       </div>
+      <div className="hidden md:block">
+        <div className="relative flex items-center justify-center h-[120px]">
 
-      <div className="">
-        <div className="relative flex items-center justify-center h-[50px] md:h-[120px] ">
-          <h1 className="absolute text-[26px] bottom-3 md:bottom-10 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
-            Why Choose
-          </h1>
-          <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
-            Why Choose
+          <h1 className="absolute text-[50px] bottom-10 font-bold outline-softWS select-none">
+            Why Choose Woxxin Solution
           </h1>
 
-        </div>
-      </div>
-      <div className="">
-        <div className="relative flex items-center justify-center h-[50px]">
-          <h1 className="absolute text-[26px] bottom-3 md:bottom-2 sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
-            Woxxin Solution
-          </h1>
-          <h1 className="absolute  text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
-            Woxxin Solution
+          <h1 className="absolute text-[45px] font-semibold text-soft-gradientWS">
+            Why Choose Woxxin Solution
           </h1>
 
         </div>

@@ -137,7 +137,7 @@ function EarthBase() {
 ========================= */
 export default function Globe() {
     return (
-        <div className="w-full h-[500px] md:h-[1000px] relative overflow-hidden ">
+        <div className="w-full h-[500px] md:h-[1200px] relative overflow-hidden ">
 
             {/* 🌑 Glow Background */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -146,7 +146,7 @@ export default function Globe() {
 
             {/* ✨ CENTER TEXT */}
             <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
-                <p className="text-center text-white text-[18px] md:text-[22px] lg:text-[26px] leading-relaxed max-w-[600px] font-medium text-glow">
+                <p className="text-center text-white text-[18px] md:text-[22px] lg:text-[36px] leading-relaxed max-w-[600px] font-medium text-glow">
                     Empowering millions to live, work,<br />
                     and play better on a journey<br />
                     to reach a billion.
