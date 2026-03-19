@@ -11,9 +11,90 @@ import { FaGooglePlay, FaApple } from "react-icons/fa";
 import { useState } from "react";
 import Globe from "./earth/earth";
 import MobileAppSection from "@/app/Reusable/MobileSection";
+import Image from "next/image";
+import Link from "next/link";
 
 
 function Aboutus() {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [active, setActive] = useState(null);
+  const games = [
+    {
+      img: "/HomePages/AboutUs/G1.png",
+      hoverImg: "/HomePages/AboutUs/G1H.png",
+      title: "Snake Arrow",
+      link: "https://play.google.com/store/apps/details?id=com.snake.arrow.puzzle.game",
+    },
+    {
+      img: "/HomePages/AboutUs/G2.png",
+      hoverImg: "/HomePages/AboutUs/G2H.png",
+      title: "Screw Puzzle 3D",
+      link: "https://play.google.com/store/apps/details?id=com.techxsolution.ScrewPuzzle3DBrainTeaser",
+    },
+    {
+      img: "/HomePages/AboutUs/G3.png",
+      hoverImg: "/HomePages/AboutUs/G3H.png",
+      title: "Wool 3D Puzzle",
+      link: "https://play.google.com/store/apps/details?id=com.techxsolution.Wool3DPuzzleYarnUnravel",
+    },
+    {
+      img: "/HomePages/AboutUs/G4.png",
+      hoverImg: "/HomePages/AboutUs/G4H.png",
+      title: "Pixel Puzzle",
+      link: "https://play.google.com/store/apps/details?id=com.pixelpuzzle.puzzle.game",
+    },
+    {
+      img: "/HomePages/AboutUS/G5.png",
+      hoverImg: "/HomePages/AboutUs/G5H.png",
+      title: "Arrow Puzzle",
+      link: "https://play.google.com/store/apps/details?id=com.techxsolution.ArrowsPuzzleEscapeGame",
+    },
+    {
+      img: "/HomePages/AboutUs/G6.png",
+      hoverImg: "/HomePages/AboutUS/G6H.png",
+      title: "Horse Racing",
+      link: "",
+    },
+  ];
+  const apps = [
+    {
+      img: "/HomePages/AboutUs/A1.png",
+      hoverImg: "/HomePages/AboutUs/A1H.png",
+      title: "Messages : SMS Organizer",
+      link: "https://play.google.com/store/apps/details?id=com.messagetext.sms.messenges.text&hl=en&gl=US",
+    },
+    {
+      img: "/HomePages/AboutUs/A2.png",
+      hoverImg: "/HomePages/AboutUs/A2H.png",
+      title: "Alarm - Clock & Reminder",
+      link: "https://play.google.com/store/apps/details?id=com.alarmclock.reminder.alarm&hl=en&gl=IN",
+    },
+    {
+      img: "/HomePages/AboutUs/A3.png",
+      hoverImg: "/HomePages/AboutUs/A3H.png",
+      title: "Women Workout App",
+      link: "https://play.google.com/store/apps/details?id=com.workout.weightloss.losebellyfat.fatburning&hl=en&gl=IN",
+    },
+    {
+      img: "/HomePages/AboutUs/A4.png",
+      hoverImg: "/HomePages/AboutUs/A4H.png",
+      title: "Calorie Counter - My Diet Diary",
+      link: "https://play.google.com/store/apps/details?id=com.caloriecounter.healthy.dietplan.nutrition&hl=en&gl=IN",
+    },
+    {
+      img: "/HomePages/AboutUS/A5.png",
+      hoverImg: "/HomePages/AboutUs/A5H.png",
+      title: "AI Chat & Call : Lonely Call",
+      link: "https://play.google.com/store/apps/details?id=com.ai.character.aichat.aicall&hl=en&gl=IN",
+    },
+    {
+      img: "/HomePages/AboutUs/A6.png",
+      hoverImg: "/HomePages/AboutUS/A6H.png",
+      title: "Video Downloader 2025",
+      link: "https://play.google.com/store/apps/details?id=downloader.allvideodownloader.mp4videodownloader.hdvideo.fullhdvideo.mainlens&hl=en&gl=IN",
+    },
+  ];
+
   const router = useRouter();
   const [selectedGame, setSelectedGame] = useState(null);
   const handleMouseEnter = (game) => {
@@ -28,80 +109,7 @@ function Aboutus() {
       setSelectedGame(null);
     }, 200);
   };
-  const games = [
-    {
-      title: "Arrow Puzzle",
-      img: "/HomePages/G1.png",
-      logo: "/HomePages/logo1.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/G1-1.png",
-        "/HomePages/G1-2.png",
-        "/HomePages/G1-3.png"
-      ]
-    },
-    {
-      title: "Screw Puzzle",
-      img: "/HomePages/G2.png",
-      logo: "/HomePages/AboutUs/ScrewLogo.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/AboutUs/Screw1.png",
-        "/HomePages/AboutUs/Screw2.png",
-        "/HomePages/AboutUs/Screw3.png"
-      ]
-    },
-    {
-      title: "Screw Puzzle",
-      img: "/HomePages/G3.png",
-      logo: "/HomePages/logo3.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/G3-1.png",
-        "/HomePages/G3-2.png",
-        "/HomePages/G3-3.png"
-      ]
-    },
-    {
-      title: "Snake Arrow Puzzle",
-      img: "/HomePages/G4.png",
-      logo: "/HomePages/logo4.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/G4-1.png",
-        "/HomePages/G4-2.png",
-        "/HomePages/G4-3.png"
-      ]
-    },
-    {
-      title: "Wool 3D Puzzle",
-      img: "/HomePages/G5.png",
-      logo: "/HomePages/logo5.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/G5-1.png",
-        "/HomePages/G5-2.png",
-        "/HomePages/G5-3.png"
-      ]
-    },
-    {
-      title: "Arrow Puzzle",
-      img: "/HomePages/G6.png",
-      logo: "/HomePages/logo6.png",
-      playstore: "https://play.google.com",
-      appstore: "https://apple.com/app-store",
-      screenshots: [
-        "/HomePages/G6-1.png",
-        "/HomePages/G6-2.png",
-        "/HomePages/G6-3.png"
-      ]
-    }
-  ];
+
 
   useEffect(() => {
     document.title = "About Us - Woxxin Solution";
@@ -120,15 +128,15 @@ function Aboutus() {
         title1="Woxxin Solutions is a dynamic company focused on creating
               innovative Mobile Applications and engaging Mobile games, boasting
               over 650 million downloads globally."
-        bgImageClassNames="h-full"
-        iconClassNames=" md:w-auto lg:w-full h-[400px]"
+        bgImageClassNames="h-full "
+        iconClassNames=" md:w-auto lg:w-full h-[450px]"
 
       />
-      <div className="flex flex-wrap justify-center gap-28 mt-10">
+      <div className="flex flex-wrap justify-around mt-10">
 
         <div>
           <div className="relative flex items-center justify-center h-[180px]">
-            <h1 className="absolute text-[120px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
+            <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-blue opacity-50 select-none">
               100M+
             </h1>
             <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-blue-gradient glow-blue">
@@ -142,7 +150,7 @@ function Aboutus() {
 
         <div>
           <div className="relative flex items-center justify-center h-[180px]">
-            <h1 className="absolute text-[120px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
+            <h1 className="absolute text-[80px] md:text-[90px] font-bold text-transparent outline-green opacity-50 select-none">
               50M+
             </h1>
             <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-green-gradient glow-green">
@@ -160,203 +168,218 @@ function Aboutus() {
       </div>
 
       <Globe />
-
       <div>
         <div className="relative flex items-center justify-center h-[180px]">
-          <h1 className="absolute text-[90px] md:text-[80px] font-bold outline-soft select-none">
-            Mobile Games
+          <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
+            Mobile Apps
           </h1>
-          <h1 className="absolute bottom-4 text-[50px] md:text-[65px] font-semibold text-soft-gradient">
-            Mobile Games
+          <h1 className="absolute bottom-10 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
+            Mobile Apps
           </h1>
+
 
         </div>
-      </div>
 
-      <div>
-        <div className="relative flex items-center justify-center h-[180px]">
-          <h1 className="absolute text-[90px] md:text-[50px] font-bold outline-softWS select-none">
-            Why Choose Woxxin Solution
-          </h1>
-          <h1 className="absolute bottom-10 text-[50px] md:text-[45px] font-semibold text-soft-gradientWS">
-            Why Choose Woxxin Solution
-          </h1>
-
-        </div>
-      </div>
-      <div className="relative w-full h-[500px] md:h-[650px] lg:h-[750px] overflow-hidden">
-
-        {/* 🌌 BACKGROUND IMAGE */}
-        <img
-          src="/HomePages/AboutUs/WhyCBg.png"
-          alt="background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
-        {/* 📦 OVERLAY CONTENT IMAGE */}
-        <div className="relative z-10 flex items-center justify-center h-full px-4">
-          <img
-            src="/HomePages/AboutUs/WhyC.png"
-            alt="content"
-            className="w-full max-w-[900px] md:max-w-[1100px] lg:max-w-[1300px] object-contain"
-          />
-        </div>
-
-      </div>
-
-      <div className="flex flex-wrap justify-center gap-8 bg-gray-50 p-6 md:p-12">
-        {games.map((game, index) => (
-          <div
-            key={index}
-            onClick={() => setSelectedGame(game)}
-            className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 w-full sm:w-[320px] md:w-[360px] cursor-pointer"
-          >
-            {/* IMAGE */}
-            <div className="relative  overflow-hidden">
-              <img
-                src={game.img}
-                alt={game.title}
-                className="w-full h-full object-fill transition duration-500 group-hover:scale-110"
-              />
-
-              {/* HOVER OVERLAY */}
-              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-                <p className="text-white text-lg font-semibold">
-                  View Details
+        {/* ---------------------------? */}
+        <div className="relative w-full py-14 px-4 md:px-10">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
+            {apps.map((app, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setActive(app)}
+                className="flex flex-col items-center cursor-pointer"
+              >
+                <div className="
+          relative 
+          w-[140px] h-[140px]
+          sm:w-[180px] sm:h-[180px]
+          md:w-[220px] md:h-[220px]
+          lg:w-[250px] lg:h-[250px]
+          rounded-2xl overflow-hidden
+        ">
+                  <Image
+                    src={app.img}
+                    alt={app.title}
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px]">
+                  {app.title}
                 </p>
               </div>
-            </div>
-
-            {/* FOOTER */}
-            <div className="p-4 flex items-center justify-center bg-[#6510d5]">
-              <p className="text-lg md:text-xl text-white font-medium">
-                {game.title}
-              </p>
-            </div>
+            ))}
           </div>
-        ))}
+          {active && (
+            <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
+              <button
+                onClick={() => setActive(null)}
+                className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:scale-110 transition"
+              >
+                ✕
+              </button>
+              <Link href={active.link}>
+                <div
+                  className="
+            relative
+            w-[95vw] h-[60vh]
+            sm:w-[85vw] sm:h-[70vh]
+            md:w-[70vw] md:h-[80vh]
+            lg:w-[60vw] lg:h-[85vh]
+            rounded-3xl overflow-hidden
+            shadow-[0_40px_150px_rgba(0,0,0,0.9)]
+            cursor-pointer
+            animate-[zoomIn_0.3s_ease]
+          "
+                >
+                  <Image
+                    src={active.hoverImg}
+                    alt="popup"
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+              </Link>
+            </div>
+          )}
+          <style jsx>{`
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  `}</style>
+
+        </div>
       </div>
 
-      {selectedGame && (
-        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-3 sm:p-6">
 
-          {/* CLOSE BUTTON */}
-          <button
-            onClick={() => setSelectedGame(null)}
-            className="fixed top-4 right-4 z-50 text-white text-3xl hover:scale-110 transition"
-          >
-            ✕
-          </button>
-
-          {/* MODAL BOX */}
-          <div className="w-full max-w-6xl max-h-[90vh] bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row">
-
-            {/* LEFT SIDE */}
-            <div className="w-full md:w-[20%] flex flex-row sm:flex-row md:flex-col  items-center justify-center p-5 sm:p-6 gap-4 text-center bg-gray-100">
-
-              <img
-                src={selectedGame.logo || selectedGame.img}
-                alt="logo"
-                className="w-16 h-16 sm:w-32 sm:h-32 object-contain"
-              />
-
-              <h2 className="text-xl sm:text-3xl font-bold text-black">
-                {selectedGame.title}
-              </h2>
-
-              {/* BUTTONS */}
-              <div className="flex flex-col gap-3 w-full sm:w-auto">
-                <a
-                  href={selectedGame.playstore}
-                  target="_blank"
-                  className="flex justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-md hover:scale-105 transition w-full sm:w-auto"
-                >
-                  <FaGooglePlay />
-                  Play Store
-                </a>
-
-                <a
-                  href={selectedGame.appstore}
-                  target="_blank"
-                  className="flex justify-center items-center gap-2 bg-black text-white px-4 py-2 rounded-md hover:scale-105 transition w-full sm:w-auto"
-                >
-                  <FaApple />
-                  App Store
-                </a>
-              </div>
-            </div>
-
-            {/* RIGHT SIDE */}
-            <div className="w-full md:w-[80%] overflow-y-auto p-4">
-
-              <div className="flex gap-4">
-                {(selectedGame.screenshots || [selectedGame.img]).map(
-                  (img, i) => (
-                    <img
-                      key={i}
-                      src={img}
-                      alt="screenshot"
-                      className="w-full h-[350px] sm:h-[350px] md:h-[400px] xl:h-[500px] object-fill rounded-lg"
-                    />
-                  )
-                )}
-              </div>
-
-            </div>
-          </div>
-        </div>
-      )}
       <div>
-        <GlobalPartners />
-      </div>
-      <div className="mt-[-3px] xl:p-0  p-6">
-        <div className="flex flex-col justify-between gap-28 text-white md:flex-row max-w-[90rem] mx-auto">
-          <div className="flex items-center w-full md:w-3/5 ">
-            <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-              <Text className="text-4xl md:text-4xl lg:text-5xl xl:text-[55px] text-white font-light text-start break-words">
-                Enhancing Personalized App Experiences for Billions
-              </Text>
-            </ScrollAnimation>
+        <div className="relative flex items-center justify-center h-[180px]">
+          <h1 className="absolute text-[50px] md:text-[80px] font-bold outline-soft select-none">
+            Mobile Games
+          </h1>
+          <h1 className="absolute bottom-10 md:bottom-4 text-[40px] md:text-[65px] font-semibold text-soft-gradient">
+            Mobile Games
+          </h1>
+
+        </div>
+        {/* ---------------------------? */}
+        <div className="relative w-full py-14 px-4 md:px-10">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 md:gap-12">
+            {games.map((game, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => setActive(game)}
+                className="flex flex-col items-center cursor-pointer"
+              >
+                <div className="
+          relative 
+          w-[140px] h-[140px]
+          sm:w-[180px] sm:h-[180px]
+          md:w-[220px] md:h-[220px]
+          lg:w-[250px] lg:h-[250px]
+          rounded-2xl overflow-hidden
+        ">
+                  <Image
+                    src={game.img}
+                    alt={game.title}
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+                <p className="text-white mt-3 text-xs sm:text-lg text-center max-w-[140px]">
+                  {game.title}
+                </p>
+              </div>
+            ))}
           </div>
-          <div className="w-full mt-6 md:w-2/5 md:mt-0 ">
-            <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-              <ul className="space-y-4">
-                {[
-                  "Market Research",
-                  "Marketing Optimization",
-                  "Product Optimization",
-                  "Monetization/Subscription Optimization",
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <span className="mt-2 h-2 w-2 rounded-full bg-[#AAB0C0] opacity-80"></span>
-                    <span className="text-xl  md:text-lg lg:text-[27px] text-[#AAB0C0]">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </ScrollAnimation>
-          </div>
+          {active && (
+            <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center">
+              <button
+                onClick={() => setActive(null)}
+                className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:scale-110 transition"
+              >
+                ✕
+              </button>
+              <Link href={active.link}>
+                <div
+                  className="
+            relative
+            w-[95vw] h-[60vh]
+            sm:w-[85vw] sm:h-[70vh]
+            md:w-[70vw] md:h-[80vh]
+            lg:w-[60vw] lg:h-[85vh]
+            rounded-3xl overflow-hidden
+            shadow-[0_40px_150px_rgba(0,0,0,0.9)]
+            cursor-pointer
+            animate-[zoomIn_0.3s_ease]
+          "
+                >
+                  <Image
+                    src={active.hoverImg}
+                    alt="popup"
+                    fill
+                    className="object-fill"
+                  />
+                </div>
+              </Link>
+            </div>
+          )}
+          <style jsx>{`
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  `}</style>
+
         </div>
       </div>
-      <div className="relative  mt-[-3px]">
-        <div>
+
+      <div className="">
+        <div className="relative flex items-center justify-center h-[180px]">
+          <h1 className="absolute text-[26px] sm:text-[40px] md:text-[50px] font-bold outline-softWS select-none">
+            Why Choose Woxxin Solution
+          </h1>
+          <h1 className="absolute bottom-16 sm:bottom-12 md:bottom-10 text-[21px] sm:text-[35px] md:text-[45px] font-semibold text-soft-gradientWS">
+            Why Choose Woxxin Solution
+          </h1>
+
+        </div>
+      </div>
+      <div className="w-full aspect-[16/8] md:aspect-[21/9] lg:aspect-[24/9] overflow-hidden ">
+        <img
+          src="/HomePages/AboutUs/WhyC.png"
+          alt="background"
+          className="w-full h-full object-fill"
+        />
+      </div>
+
+
+
+      <div className="w-full px-4 md:px-8 xl:px-16 py-6">
+
+        <div className="relative w-full max-w-[1400px] mx-auto aspect-[16/12] md:aspect-[21/15]">
+
           <img
-            src="/HomePages/Home6.png"
-            alt="Main Background"
-            className="w-full h-[35vh] "
+            src="/HomePages/AboutUs/VM.png"
+            alt="Mission Vision"
+            className="w-full h-full object-contain"
           />
+
         </div>
-        <div className="absolute top-0 items-center w-full h-full ">
-          <div className="flex justify-center mt-20 sm:mt-12 lg:mt-10 xl:mt-28">
-            <Button
-              text="Discover Ecosystem"
-              iconColor="#6C63FF"
-              className="mt-2 sm:mt-5 text-white font-bold border border-[#5961F9]  "
-              onButtonClick={handleClick}
-            />
-          </div>
-        </div>
+
       </div>
     </>
   );

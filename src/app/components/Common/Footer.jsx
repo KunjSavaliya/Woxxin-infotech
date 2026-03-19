@@ -16,7 +16,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[#110f27] text-gray-300 mt-[-3px]">
+    <footer className="bg-[#03000F] text-gray-300 mt-[-3px]">
       <div className="max-w-[99rem] mx-auto pl-16 pr-16 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 ">
