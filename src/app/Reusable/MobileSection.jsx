@@ -35,13 +35,13 @@ const MobileAppSection = ({
           <div>
             <div className="flex items-center justify-between md:gap-10 lg:gap-32">
               <div className=" w-auto md:w-[70%] lg:w-2/3">
-                <div>
+                {/* <div>
                   <img
                     src="/HomePages/Google.png"
                     alt="Google"
                     className="w-40 md:w-56"
                   />
-                </div>
+                </div> */}
                 <Text className="text-start text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[80px] font-bold mt-6 sm:mt-16">
                   {title}
                 </Text>

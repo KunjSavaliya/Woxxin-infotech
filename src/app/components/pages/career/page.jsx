@@ -82,11 +82,11 @@ function MainPage() {
         />
         <div className="relative z-10 flex flex-col items-center w-full h-full text-left">
           <div className=" flex flex-col gap-12  mt-32 text-white sm:mt-40 sm:gap-7 xl:gap-16 max-w-[90rem] mx-auto xl:p-5  p-6">
-            <img
+            {/* <img
               src="/HomePages/Google.png"
               alt="Google"
               className="w-40 md:w-56"
-            />
+            /> */}
             <Text className="text-gradient-mobiletext text-4xl sm:text-5xl md:text-6xl lg:text-[80px] xl:text-[80px] font-bold text-white text-start">
               Career
             </Text>

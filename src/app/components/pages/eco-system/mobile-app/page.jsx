@@ -32,13 +32,13 @@ function MobilePage() {
               <div className="flex justify-between md:gap-10 lg:gap-5">
                 {/* Left Content */}
                 <div className=" w-auto md:w-[70%] lg:w-1/2">
-                  <div>
+                  {/* <div>
                     <img
                       src="/HomePages/Google.png"
                       alt="Google"
                       className="w-40 md:w-56"
                     />
-                  </div>
+                  </div> */}
                   <FadeUp>
                     <Text className="text-gradient-mobiletext text-5xl sm:text-5xl  md:text-6xl lg:text-[80px] xl:text-[85px] font-bold  text-white text-start mt-6 sm:mt-10">
                       Woxxin Intelligent Mobile Apps
