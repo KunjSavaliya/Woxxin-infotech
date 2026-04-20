@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect } from "react";
-import Text from "../../../Reusable/Text";
 import Button from "@/app/Reusable/Button";
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -14,6 +13,7 @@ import MobileAppSection from "@/app/Reusable/MobileSection";
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/app/Reusable/FadeUp";
+import Text from "../Reusable/Text";
 
 
 
@@ -116,7 +116,7 @@ function Aboutus() {
   }, []);
 
   const handleClick = () => {
-    router.push("/components/pages/eco-system/eco-system");
+    router.push("/eco-system");
   };
   return (
     <>

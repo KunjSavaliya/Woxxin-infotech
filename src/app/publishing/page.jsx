@@ -18,7 +18,7 @@ function Publishing() {
     document.title = "Publishing- Woxxin Solution";
   }, []);
   const handleClick = () => {
-    router.push("/components/pages/contact-us");
+    router.push("/contact");
   };
 
   const logos = [

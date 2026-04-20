@@ -15,7 +15,7 @@ function Investment() {
     document.title = "Investment - Woxxin Solution";
   }, []);
   const handleClick = () => {
-    router.push("/components/pages/contact-us");
+    router.push("/contact");
   };
   const [loading, setLoading] = useState(false);
 

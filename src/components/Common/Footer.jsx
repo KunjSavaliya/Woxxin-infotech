@@ -6,13 +6,13 @@ import Text from "@/app/Reusable/Text";
 
 function Footer() {
   const AdFormats = [
-    { name: "Mobile Apps", link: "/components/pages/eco-system/mobile-app" },
-    { name: "Mobile Games", link: "/components/pages/eco-system/mobile-game" },
-    { name: "H5 Games / Quiz", link: "/components/pages/eco-system/h5-game" },
-    { name: "Video Ads", link: "/components/pages/eco-system/video-ads" },
-    { name: "Google Ads", link: "/components/pages/eco-system/google-ads" },
-    { name: "Investment", link: "/components/pages/investment" },
-    { name: "Publishing", link: "/components/pages/publishing" },
+    { name: "Mobile Apps", link: "/mobile-app" },
+    { name: "Mobile Games", link: "/mobile-game" },
+    { name: "H5 Games / Quiz", link: "/h5-game" },
+    { name: "Video Ads", link: "/video-ads" },
+    { name: "Google Ads", link: "/google-ads" },
+    { name: "Investment", link: "/investment" },
+    { name: "Publishing", link: "/publishing" },
   ];
 
   return (
@@ -133,7 +133,7 @@ function Footer() {
               <ul className="space-y-2 text-[16px] md:text-[18px]">
                 <li className="group">
                   <Link
-                    href="/components/pages/aboutus"
+                    href="/aboutus"
                     className="relative inline-block pb-1"
                   >
                     About Us
@@ -143,7 +143,7 @@ function Footer() {
 
                 <li className="group">
                   <Link
-                    href="/components/pages/career"
+                    href="/career"
                     className="relative inline-block pb-1"
                   >
                     Career
@@ -153,7 +153,7 @@ function Footer() {
 
                 <li className="group">
                   <Link
-                    href="/components/pages/contactus"
+                    href="/contact"
                     className="relative inline-block pb-1"
                   >
                     Contact Us
@@ -163,7 +163,7 @@ function Footer() {
 
                 <li className="group">
                   <Link
-                    href="/components/pages/investment"
+                    href="/investment"
                     className="relative inline-block pb-1"
                   >
                     Investment

@@ -19,7 +19,7 @@ function GoogleAds() {
   const cardRef = useRef(null);
 
   const handleClick = () => {
-    router.push("/components/pages/contact-us");
+    router.push("/contact");
   };
 
   const services = [
