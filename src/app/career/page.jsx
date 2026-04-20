@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Text from "../../../Reusable/Text";
 import Button from "@/app/Reusable/Button";
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -17,10 +16,11 @@ import {
 } from "react-icons/fa";
 import { MdCampaign } from "react-icons/md";
 import Image from "next/image";
-import Form from "../../../Reusable/Form/page";
+import Form from "../Reusable/Form/page";
 import { useRouter } from "next/navigation";
+import Text from "../Reusable/Text";
 
-function MainPage() {
+function Career() {
   const router = useRouter();
 
   useEffect(() => {
@@ -70,7 +70,7 @@ function MainPage() {
   const closeForm = () => setShowForm(false);
 
   const handleClickbtn = () => {
-    router.push("/components/pages/contact-us");
+    router.push("/contact");
   };
   return (
     <>
@@ -249,4 +249,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default Career;

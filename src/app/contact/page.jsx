@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import MobileAppSection from "@/app/Reusable/MobileSection";
 import { useRouter } from "next/navigation";
 
-function ContactUs() {
+function Contact() {
 
   const [loading, setLoading] = useState(false);
   const [portfolioAnswer, setPortfolioAnswer] = useState("");
@@ -345,4 +345,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Contact;

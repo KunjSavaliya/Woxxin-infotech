@@ -1,7 +1,6 @@
-import Footer from "./components/Common/Footer";
-import Navbar from "./components/Common/Navbar";
+import Footer from "../components/Common/Footer";
+import Navbar from "../components/Common/Navbar";
 import "./globals.css";
-import CustomCursor from "./Reusable/CustomCursor";
 import RouterLoader from "./Reusable/RouteLoader";
 import { DM_Sans } from "next/font/google";
 import SmoothScrollProvider from "./Reusable/SmoothScrollProvider";
@@ -21,7 +20,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={dmSans.className}>
         <RouterLoader>
-          <CustomCursor />
           <Navbar />
           <SmoothScrollProvider>
             {children}

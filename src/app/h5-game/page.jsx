@@ -1,56 +1,60 @@
 "use client";
 import React, { useEffect } from "react";
+
+import Button from "@/app/Reusable/Button";
+
 import "animate.css";
 import ScrollAnimation from "react-animate-on-scroll";
-import MobileAppSection from "@/app/Reusable/MobileSection";
-import "swiper/css"; // core styles
-import "swiper/css/autoplay"; // autoplay module
-import GlobalPartners from "@/app/Reusable/GlobalPartners";
-import Button from "@/app/Reusable/Button";
 import Text from "@/app/Reusable/Text";
+import MobileAppSection from "@/app/Reusable/MobileSection";
+import GlobalPartners from "@/app/Reusable/GlobalPartners";
 import { useRouter } from "next/navigation";
 
-function VideoAds() {
+function H5Game() {
   const router = useRouter();
 
   useEffect(() => {
-    document.title = "Video Ads - Woxxin Solution";
+    document.title = "H5 Games / Quiz - Woxxin Solution";
   }, []);
 
   const handleQuiz = () => {
     window.open("https://quizwinz.com/", "_blank", "noopener,noreferrer");
   };
 
-  const handleClick = () => {
-    router.push("/components/pages/career");
+  const handleGame = () => {
+    window.open("https://robuxgames.com/", "_blank", "noopener,noreferrer");
   };
 
+  const handleClick = () => {
+    router.push("/career");
+  };
   return (
     <>
       <div>
         <MobileAppSection
           bgImageSrc="/HomePages/Homedesign.png"
           logoSrc="/HomePages/Google.png"
-          iconSrc="/HomePages/VideoAdsImg.webp"
-          title="Video Player Ads"
-          title1="For Unique Video Content & Ads"
-          description="Introducing our cutting-edge AI-powered video player,
-designed to connect you with top-tier direct and programmatic advertisers.
-Boost your ad revenue by as much as 60% with our state-of-the-art
-optimization technology and compliant video formats. With years
-of expertise in ad tech, our V-Stream player delivers outstanding
-CPMs and fill rates, making it the best choice in the market!"
+          iconSrc="/HomePages/H5.webp"
+          title="H5 Games / Quiz"
+          title1="For Incremental Revenues and Better Engagement"
+          description="Boost your ad revenues with our exciting HTML5 quiz and
+gaming solutions! Experience up to 40% more incremental
+revenue while enhancing user engagement. Our easy-to-integrate,
+plug-and-play products are designed to elevate your platform's
+performance."
           bgImageClassNames="h-full"
           iconClassNames=" md:w-auto lg:w-full h-[400px]"
-          descriptionClassName="text-2xl font-extralight "
-          buttonText="Quiz Demo"
+          descriptionClassName="text-2xl mt-10"
+          buttonText="Quiz Platform"
           onButtonClick={() => handleQuiz()}
+          onButtonClick2={() => handleGame()}
+          buttonText1="Game Platform"
         />
-
         <GlobalPartners />
+
         <div className="max-w-[90rem] mx-auto xl:p-0  p-6">
           <ScrollAnimation animateIn="animate__animated animate__zoomIn">
-            <Text className="pt-12 text-4xl text-white sm:pt-24 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl">
+            <Text className="pt-12 text-4xl text-white  sm:pt-24 sm:text-6xl md:text-6xl lg:text-8xl xl:text-8xl">
               Your Future Career Opportunities
             </Text>
           </ScrollAnimation>
@@ -79,4 +83,4 @@ CPMs and fill rates, making it the best choice in the market!"
   );
 }
 
-export default VideoAds;
+export default H5Game;

@@ -10,7 +10,6 @@ import MobileAppSection from "@/app/Reusable/MobileSection";
 import "swiper/css";
 import "swiper/css/autoplay";
 import Image from "next/image";
-import CustomCursor from "@/app/Reusable/CustomCursor";
 import "animate.css";
 import Button from "@/app/Reusable/Button";
 import { useRouter } from "next/navigation";
@@ -22,7 +21,7 @@ function Eco() {
   }, []);
 
   const handleClick = () => {
-    router.push("/components/pages/contact-us");
+    router.push("/contact");
   };
 
   const features = [
@@ -68,7 +67,6 @@ function Eco() {
 
   return (
     <>
-      <CustomCursor />
       <div>
         <MobileAppSection
           bgImageSrc="/HomePages/Homedesign.png"
